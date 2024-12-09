@@ -1,0 +1,26 @@
+@use "../_variables" as *;
+@use "utils" as *;
+
+.container {
+  margin: 0 auto;
+  max-width: 1352px;
+  padding: 0 16px;
+}
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none!important;
+  }
+}

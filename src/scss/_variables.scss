@@ -1,0 +1,37 @@
+@use "sass:map";
+
+$color-accent-light: #758B9D !default;
+$color-accent: #59AFFF !default;
+$color-accent-01: rgba(89, 175, 255, 0.1);
+$color-accent-03: rgba(89, 175, 255, 0.3);
+$dark-blue: rgba(60, 81, 98, 1);
+$light-blue: rgba(159, 219, 252, 1);
+$subtitle: rgba(117, 139, 157, 1);
+$border-color: rgb(71 71 71 / 30%);
+$border-color-2: rgba(217, 241, 255, 0.2);
+$white: #FFFFFF;
+$grey: #696767;
+$dark-grey: #1F2327;
+$bg-color: #000000 !default;
+$green-accent: #0FF47F;
+$text-green: #759D98;
+$line-green: #122220;
+
+$breakpoints: (
+  xs: 768px,
+  sm: 992px,
+  md: 1200px,
+  lg: 1440px,
+  xl: 1920px
+) !default;
+
+@mixin breakpoint($name) {
+  @if not map.has-key($breakpoints, $name) {
+    @warn "Warning: `#{$name}` is not a valid breakpoint name.";
+  } @else {
+    @media screen and (min-width: map.get($breakpoints, $name)) {
+      @content;
+    }
+  }
+}
+

@@ -1,0 +1,168 @@
+@use "variables" as *;
+
+footer {
+    position: relative;
+    z-index: 2;
+    padding: 1rem 0;
+    color: #B9B3B3;
+    font-size: 14px;
+    line-height: 1;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        .footer-logo {
+            margin-bottom: 1rem;
+
+            a {
+                display: block;
+                margin-bottom: 16px;
+            }
+
+            p {
+                font-family: Inter;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 14.52px;
+                color: $grey
+            }
+        }
+
+        .footer-navbar {
+            display: flex;
+            flex-wrap: wrap;
+
+            .navbar-section {
+                padding: 1rem 0;
+                border-top: 1px $dark-grey solid;
+                width: 50%;
+
+
+                &:last-child {
+                    padding-right: 0;
+                    border-right: none;
+                    width: 100%;
+                }
+
+                b {
+                    display: block;
+                    color: $white;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 19.36px;
+                    margin-bottom: 16px;
+                }
+
+                ul {
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+
+                    li {
+                        transition: all .5s;
+
+                        a {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 16.41px;
+                            color: $grey;
+                            transition: color .5s;
+                        }
+
+                        &:hover {
+                            border-left: 3px $color-accent solid;
+                            padding-left: 16px;
+
+                            a {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+
+                .socials {
+                    display: flex;
+                    gap: 8px;
+                    margin-left: -10px;
+                    justify-content: center;
+
+                    &__item {
+                        display: block;
+                        transition: all .5s;
+
+                        img {
+                            width: 100%;
+                        }
+
+                        &:hover {
+                            filter: brightness(5);
+                        }
+                    }
+                }
+            }
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            a {
+                width: 36px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #fff;
+                border-radius: 100%;
+
+                &:hover {
+                    border: 1px solid #E55E79;
+                    background: #E55E79;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(sm) {
+    footer {
+        padding: 80px 0;
+
+        .container {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .footer-logo {
+                margin-bottom: 0;
+            }
+
+            .footer-navbar {
+                display: flex;
+                flex-wrap: wrap;
+
+                .navbar-section {
+                    padding: 0 60px;
+                    border-top: none;
+                    border-right: 1px $dark-grey solid;
+                    width: auto;
+
+                    &:last-child {
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        .socials {
+            justify-content: flex-start;
+        }
+    }
+}
+
+
+
