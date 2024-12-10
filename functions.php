@@ -149,6 +149,7 @@ function aitech_scripts() {
     wp_enqueue_script('lenis', get_template_directory_uri() . '/js/lenis.js', array(), _S_VERSION, true);
     wp_enqueue_script('custom-lenis-init', get_template_directory_uri() . '/js/lenis-init.js', array('lenis'), _S_VERSION, true);
     wp_enqueue_script( 'marketplace-functions', get_template_directory_uri() . '/src/js/marketplace-functions.js', array('swiper'), _S_VERSION, true );
+    wp_enqueue_script( 'homepage-functions', get_template_directory_uri() . '/src/js/homepage-functions.js', array('swiper'), _S_VERSION, true );
 
     wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper-bundle.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'aitech-navigation', get_template_directory_uri() . '/js/navigation.js', array('swiper'), _S_VERSION, true );

@@ -1,0 +1,479 @@
+@use "variables" as *;
+html {
+  width: 100%;
+}
+
+.home-wrapper {
+  .container {
+    max-width: 1380px;
+  }
+  .teams-section {
+    padding: 56px 0;
+    overflow: hidden;
+    @include breakpoint(sm) {
+      padding: 80px 0;
+    }
+
+    .heading {
+      text-align: center;
+      margin-bottom: 24px;
+      @include breakpoint(sm) {
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 32px;
+        line-height: 32px;
+        font-weight: 400;
+        margin-bottom: 16px;
+        color: $white;
+        @include breakpoint(sm) {
+          font-size: 4.45vw;
+          line-height: 4.8vw;
+          margin-bottom: 24px;
+        }
+        @include breakpoint(lg) {
+          font-size: 64px;
+          line-height: 64px;
+        }
+        span {
+          font-weight: 700;
+          background: linear-gradient(84.48deg, #CAB8F9 43.77%, #875FF2 67.2%, #6231E6 83.26%, #381D89 100.28%, #020416 117.35%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      p {
+        font-size: 12px;
+        line-height: 16px;
+        color: $light-purple;
+        @include breakpoint(sm) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+      .btn-list {
+        margin: 40px auto 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        background: url("/wp-content/themes/aitech/src/img/heading-bg-home.png");
+        padding: 8px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @include breakpoint(sm) {
+          margin: 60px auto 0;
+        }
+        &:before {
+          content: "";
+          background: url("/wp-content/themes/aitech/src/img/heading-line-home.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-75%);
+          inset-inline-start: calc(-38% - 16px);
+          width: 40%;
+          height: 80%;
+          @include breakpoint(xs) {
+            width: 19vw;
+            height: 6.5vw;
+            transform: translateY(-74%);
+            inset-inline-start: -20vw;
+          }
+        }
+        &:after {
+          content: "";
+          background: url("/wp-content/themes/aitech/src/img/heading-line-home.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-75%) scaleX(-1);
+          inset-inline-end: calc(-38% - 16px);
+          width: 40%;
+          height: 80%;
+          @include breakpoint(xs) {
+            width: 19vw;
+            height: 6.5vw;
+            transform: translateY(-74%) scaleX(-1);
+            inset-inline-end: -20vw;
+          }
+        }
+        .tab-btn {
+          font-family: 'Darker Grotesque', sans-serif;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 16px;
+          color: $lighter-purple;
+          text-transform: uppercase;
+          padding: 6px 2px;
+          cursor: pointer;
+          position: relative;
+          margin: 0 16px;
+          @include breakpoint(sm) {
+            font-family: 'Roboto Flex', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 18px;
+            margin: 0 24px;
+            padding: 14px 2px;
+          }
+          &:before {
+            content: "";
+            background: url("/wp-content/themes/aitech/src/img/active-tab-bg.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 16px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            inset-inline-start: -14px;
+            display: none;
+            @include breakpoint(sm) {
+              width: 24px;
+              inset-inline-start: -21px;
+            }
+          }
+          &:after {
+            content: "";
+            background: url("/wp-content/themes/aitech/src/img/active-tab-bg.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 16px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            inset-inline-end: -14px;
+            transform: scaleX(-1);
+            display: none;
+            @include breakpoint(sm) {
+              width: 24px;
+              inset-inline-end: -21px;
+            }
+          }
+          &.active {
+            cursor: default;
+            background: $purple-accent;
+            color: $white;
+            &:before,
+            &:after {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .tab-body {
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+      overflow: hidden;
+      transition: opacity .3s, visibility .3s;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        height: 100%;
+        overflow: visible;
+      }
+      .tabs-slider {
+        margin-top: 24px;
+        @include breakpoint(sm) {
+          margin-top: 80px;
+        }
+        .swiper {
+          overflow: visible;
+          .swiper-wrapper {
+            @include breakpoint(sm) {
+              transform: none;
+              display: grid;
+              column-gap: 16px;
+              row-gap: 36px;
+              grid-template-columns: repeat(2, 1fr);
+            }
+            @include breakpoint(md) {
+              grid-template-columns: repeat(4, 1fr);
+            }
+          }
+          .swiper-slide {
+            max-width: 330px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            @include breakpoint(sm) {
+              max-width: 100%;
+            }
+            .slide-holder {
+              min-height: 411px;
+              display: flex;
+              flex-direction: column;
+              border-radius: 15px;
+              background: linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+              radial-gradient(69.68% 64.72% at 94.24% 7.98%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+              position: relative;
+              transition: all .3s;
+              @include breakpoint(sm) {
+                min-height: 414px;
+              }
+
+              .bg {
+                border-radius: 15px;
+                width: calc(100% - 2px);
+                height: calc(100% - 2px);
+                position: absolute;
+                inset-inline-start: 1px;
+                inset-block-start: 1px;
+                background: $bg-color;
+                overflow: hidden;
+                .media-block {
+                  position: relative;
+                  z-index: 1;
+                  border-radius: 15px;
+                  height: 100%;
+                  background: radial-gradient(87.93% 73.93% at 47.87% 14.81%, #190B30 0%, #01020A 100%), linear-gradient(180deg, rgba(1, 2, 10, 0) 13.25%, #01020A 94.21%);
+                  img,
+                  video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all .3s;
+                    visibility: visible;
+                    opacity: 1;
+                  }
+                  .back-side {
+                    visibility: hidden;
+                    opacity: 0;
+                    padding: 24px;
+                    position: absolute;
+                    inset-block-start: 0;
+                    inset-inline-start: 0;
+                    z-index: 1;
+                    p {
+                      font-size: 12px;
+                      line-height: 16px;
+                      color: $white;
+                      margin: 0 0 10px;
+                      &:last-of-type {
+                        margin-bottom: 0;
+                      }
+                    }
+                  }
+                  &:after {
+                    content: "";
+                    background: radial-gradient(87.93% 73.93% at 47.87% 14.81%, #190B30 0%, #01020A 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                    background: #410BB4;
+                    background: linear-gradient(180deg, rgba(1, 2, 10, 0) 13.25%, #01020A 94.21%);
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    inset-block-start: 0;
+                    inset-inline-start: 0;
+                  }
+                }
+              }
+              .content {
+                margin-top: auto;
+                padding: 24px 24px 24px;
+                position: relative;
+                z-index: 1;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                .descr {
+                  padding-inline-end: 10px;
+                }
+                h4 {
+                  font-size: 32px;
+                  line-height: 34px;
+                  margin: 0 0 8px;
+                  span {
+                    background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                }
+                .position {
+                  font-size: 10px;
+                  line-height: 12px;
+                  color: $light-purple;
+                  margin: 0;
+                }
+                .cta-holder {
+                  display: flex;
+                  align-items: center;
+                  column-gap: 8px;
+                  row-gap: 8px;
+                  .cta {
+                    border: 1px solid rgba(117, 104, 151, 0.3);
+                    border-radius: 3px;
+                    background: radial-gradient(80% 87.5% at 12.5% 77.5%, rgba(25, 11, 48, 0.2) 0%, rgba(1, 2, 10, 0.2) 100%);
+                    width: 32px;
+                    height: 32px;
+                    a {
+                      line-height: 0;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      width: 100%;
+                      height: 100%;
+                    }
+                    &.toggle-btn {
+                      a {
+                        background-image: url("/wp-content/themes/aitech/src/img/plus-btn.svg");
+                        background-size: 130%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            &.content-active {
+              .slide-holder {
+                .bg {
+                  .media-block {
+                    img,
+                    video {
+                      visibility: hidden;
+                      opacity: 0;
+                    }
+                    .back-side {
+                      visibility: visible;
+                      opacity: 1;
+                    }
+                  }
+                }
+                .content {
+                  .cta-holder {
+                    .cta {
+                      &.toggle-btn {
+                        a {
+                          background-image: url("/wp-content/themes/aitech/src/img/minus-btn.svg");
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .navigation {
+          margin-top: 16px;
+          @include breakpoint(sm) {
+            display: none;
+          }
+          .nav-btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            column-gap: 16px;
+            width: 100%;
+            opacity: 1;
+            visibility: visible;
+            justify-content: center;
+            .swiper-button-prev,
+            .swiper-button-next {
+              position: initial;
+              opacity: 1;
+              width: 40px;
+              height: 40px;
+              margin-top: 0;
+
+              svg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                path {
+                  transition: all .3s;
+                }
+              }
+              &.swiper-button-disabled {
+                opacity: .4;
+              }
+              &:after {
+                display: none;
+              }
+            }
+          }
+          .swiper-pagination {
+            position: initial;
+            transform: none;
+            width: fit-content;
+            span {
+              font-family: 'Darker Grotesque', sans-serif;
+              font-size: 14px;
+              line-height: 18px;
+              color: $light-purple;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      &.founders {
+        max-width: 1144px;
+        margin: 0 auto;
+        .tabs-slider {
+          .swiper {
+            .swiper-wrapper {
+              @include breakpoint(sm) {
+                grid-template-columns: repeat(2, 1fr);
+              }
+            }
+            .swiper-slide {
+              max-width: 330px;
+              @include breakpoint(sm) {
+                max-width: 100%;
+              }
+              .slide-holder {
+                min-height: 411px;
+                @include breakpoint(sm) {
+                  min-height: 702px;
+                }
+                .bg {
+                  .media-block {
+                    .back-side {
+                      @include breakpoint(sm) {
+                        padding: 40px;
+                      }
+                      p {
+                        @include breakpoint(sm) {
+                          font-size: 16px;
+                          line-height: 24px;
+                        }
+                      }
+                    }
+                  }
+                }
+                .content {
+                  padding: 24px;
+                  @include breakpoint(sm) {
+                    padding: 40px;
+                  }
+                  h4 {
+                    @include breakpoint(sm) {
+                      font-size: 40px;
+                      line-height: 40px;
+                    }
+                  }
+                  .position {
+                    @include breakpoint(sm) {
+                      font-size: 12px;
+                      line-height: 16px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
