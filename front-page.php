@@ -41,7 +41,7 @@ get_header();
                                                 </a>
                                             </span>
                                             <span class="cta toggle-btn">
-                                                <a href=""></a>
+                                                <a href="javascript:void(0);"></a>
                                             </span>
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@ get_header();
                                                 </a>
                                             </span>
                                             <span class="cta toggle-btn">
-                                                <a href=""></a>
+                                                <a href="javascript:void(0);"></a>
                                             </span>
                                         </div>
                                     </div>
@@ -141,7 +141,7 @@ get_header();
                                                 </a>
                                             </span>
                                             <span class="cta toggle-btn">
-                                                <a href=""></a>
+                                                <a href="javascript:void(0);"></a>
                                             </span>
                                         </div>
                                     </div>
@@ -170,7 +170,7 @@ get_header();
                                                 </a>
                                             </span>
                                             <span class="cta toggle-btn">
-                                                <a href=""></a>
+                                                <a href="javascript:void(0);"></a>
                                             </span>
                                         </div>
                                     </div>
@@ -199,7 +199,7 @@ get_header();
                                                 </a>
                                             </span>
                                             <span class="cta toggle-btn">
-                                                <a href=""></a>
+                                                <a href="javascript:void(0);"></a>
                                             </span>
                                         </div>
                                     </div>
@@ -228,7 +228,7 @@ get_header();
                                                 </a>
                                             </span>
                                             <span class="cta toggle-btn">
-                                                <a href=""></a>
+                                                <a href="javascript:void(0);"></a>
                                             </span>
                                         </div>
                                     </div>
@@ -257,7 +257,7 @@ get_header();
                                                 </a>
                                             </span>
                                             <span class="cta toggle-btn">
-                                                <a href=""></a>
+                                                <a href="javascript:void(0);"></a>
                                             </span>
                                         </div>
                                     </div>
@@ -286,7 +286,7 @@ get_header();
                                                 </a>
                                             </span>
                                             <span class="cta toggle-btn">
-                                                <a href=""></a>
+                                                <a href="javascript:void(0);"></a>
                                             </span>
                                         </div>
                                     </div>
@@ -315,7 +315,7 @@ get_header();
                                                 </a>
                                             </span>
                                             <span class="cta toggle-btn">
-                                                <a href=""></a>
+                                                <a href="javascript:void(0);"></a>
                                             </span>
                                         </div>
                                     </div>
@@ -344,7 +344,7 @@ get_header();
                                                 </a>
                                             </span>
                                             <span class="cta toggle-btn">
-                                                <a href=""></a>
+                                                <a href="javascript:void(0);"></a>
                                             </span>
                                         </div>
                                     </div>
@@ -392,6 +392,346 @@ get_header();
             </div>
 	    </div>
 	</section>
+	<section class="partners-section">
+        <div class="container">
+            <div class="heading">
+                <h2><span>Partners</span></h2>
+                <p>Meet the Trusted Partners Driving Innovation with Us</p>
+                <div class="btn-list">
+                    <div class="tab-btn">Exchange</div>
+                    <div class="tab-btn">Partners + backers</div>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div class="logos-holder">
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo1.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo2.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo2.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo3.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo3.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo4.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo4.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo5.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo5.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo6.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo6.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo7.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo7.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo8.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo8.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo9.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo9.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo10.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo10.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo11.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo11.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo12.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo12.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo13.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo13.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo2.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div class="logos-holder">
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo1.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo2.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo2.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo3.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo3.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo4.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo4.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo5.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo5.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo6.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo6.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo7.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo7.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo8.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo8.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo9.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo9.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo10.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo10.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo11.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo11.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo12.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo12.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo13.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo13.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo2.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo2.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo3.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo3.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo4.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo4.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo5.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo5.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo6.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo6.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo7.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-holder">
+                            <div class="front">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo7.svg" alt="Logo">
+                            </div>
+                            <div class="back">
+                                <img src="<?php echo get_template_directory_uri() ?>/src/img/partners/partner-logo8.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
 <?php
