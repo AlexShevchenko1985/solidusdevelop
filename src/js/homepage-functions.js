@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const teamBlock = document.querySelector('.teams-section');
   if (!teamBlock) return;
 
-  const tabsContent = document.querySelectorAll('.tab-body');
-  const tabsBtn = document.querySelectorAll('.btn-list .tab-btn');
+  const tabsContent = document.querySelectorAll('.teams-section .tab-body');
+  const tabsBtn = document.querySelectorAll('.teams-section .btn-list .tab-btn');
 
   tabsBtn[0].classList.add('active');
   tabsContent[0].classList.add('active');
@@ -99,6 +99,57 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+
+  const partnersBlock = document.querySelector('.partners-section');
+  if (!partnersBlock) return;
+
+  const partnersTabsContent = document.querySelectorAll('.partners-section .tab-body');
+  const partnersTabsBtn = document.querySelectorAll('.partners-section .btn-list .tab-btn');
+
+  partnersTabsBtn[0].classList.add('active');
+  partnersTabsContent[0].classList.add('active');
+
+  partnersTabsBtn.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      partnersTabsBtn.forEach(btn => btn.classList.remove('active'));
+      partnersTabsContent.forEach(content => content.classList.remove('active'));
+
+      tab.classList.add('active');
+      partnersTabsContent[index].classList.add('active');
+    });
+  });
+
+  const logoItems = document.querySelectorAll('.partners-section .logo-item');
+  let animationInterval;
+
+
+  function toggleAnimation() {
+    logoItems.forEach(item => {
+      if (item.classList.contains('back-side-active')) {
+        item.classList.add('front-side-active');
+        item.classList.remove('back-side-active');
+      } else {
+        item.classList.remove('front-side-active');
+        item.classList.add('back-side-active');
+      }
+    });
+  }
+
+  function startAnimation() {
+    animationInterval = setInterval(toggleAnimation, 5000);
+  }
+
+  function stopAnimation() {
+    clearInterval(animationInterval);
+  }
+
+  logoItems.forEach(item => {
+    item.addEventListener('mouseenter', stopAnimation);
+    item.addEventListener('mouseleave', startAnimation);
+  });
+
+  startAnimation();
 });
 
 

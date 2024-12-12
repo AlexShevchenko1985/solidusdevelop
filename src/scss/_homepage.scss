@@ -640,6 +640,330 @@ html {
       height: 0;
       overflow: hidden;
       transition: opacity .3s, visibility .3s;
+      .logos-holder {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 16px;
+        row-gap: 16px;
+        margin-top: 50px;
+        @include breakpoint(sm) {
+          margin-top: 80px;
+        }
+        @include breakpoint(sm) {
+          grid-template-columns: repeat(6, 1fr);
+        }
+        .logo-item {
+          .logo-holder {
+            transform-style: preserve-3d;
+            width: 100%;
+            height: 121px;
+            .front,
+            .back {
+              backface-visibility: hidden;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              inset-inline-start: 0;
+              inset-block-start: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+              mask-repeat: no-repeat;
+              mask-position: left;
+              background:
+                linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+              border-radius: 15px;
+              overflow: hidden;
+              transition: all .3s;
+              a {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                z-index: 1;
+              }
+              &:after {
+                content: "";
+                background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                position: absolute;
+                width: calc(100% - 2px);
+                height: calc(100% - 2px);
+                inset-inline-start: 1px;
+                inset-block-start: 1px;
+                mask-repeat: no-repeat;
+                mask-position: left;
+                border-radius: 15px;
+                transition: all .3s;
+              }
+              img {
+                position: relative;
+                z-index: 1;
+                max-width: 143px;
+                height: auto;
+              }
+            }
+            .back {
+              transform: rotateX( -180deg );
+            }
+          }
+          &.back-side-active {
+            .logo-holder {
+              animation: flip .3s ease-in-out forwards;
+            }
+          }
+          &.front-side-active {
+            .logo-holder {
+              transform: rotateX(-180deg);
+              animation: flip-reverse .3s ease-in-out forwards;
+            }
+          }
+          &:nth-child(n+2) {
+            &.back-side-active,
+            &.front-side-active {
+              .logo-holder {
+                animation-delay: calc((var(--i) - 1) * 0.1s);
+              }
+            }
+          }
+          &:nth-child(n+7) {
+            &.back-side-active,
+            &.front-side-active {
+              .logo-holder {
+                animation-delay: calc((var(--i) - 6) * 0.1s);
+              }
+            }
+            .logo-holder {
+              .front,
+              .back {
+                mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                background:
+                  linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                  radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                mask-position: center;
+                &:after {
+                  background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+                  mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                  mask-position: right;
+                }
+              }
+            }
+            &:hover {
+              .logo-holder {
+                .front,
+                .back {
+                  background:
+                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                    radial-gradient(62.5% 75.18% at 91.61% 100%, #AB8FF6 0%, #1F1254 100%);
+                  &:after {
+                    background: radial-gradient(62.66% 56.61% at 86.81% 83.88%, #361769 0%, #01020A 100%);
+                  }
+                }
+              }
+            }
+          }
+          &:nth-child(n+13) {
+            &.back-side-active,
+            &.front-side-active {
+              .logo-holder {
+                animation-delay: calc((var(--i) - 11) * 0.1s);
+              }
+            }
+            .logo-holder {
+              .front,
+              .back {
+                mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                mask-repeat: no-repeat;
+                mask-position: left;
+                background:
+                  linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                  radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                &:after {
+                  background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                  mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                  mask-position: left;
+                }
+              }
+            }
+            &:hover {
+              .logo-holder {
+                .front,
+                .back {
+                  background:
+                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                    radial-gradient(62.5% 75.18% at 8.39% 100%, #AB8FF6 0%, #1F1254 100%);
+                  &:after {
+                    background: radial-gradient(62.66% 56.61% at 13.19% 83.88%, #361769 0%, #01020A 100%);
+                  }
+                }
+              }
+            }
+          }
+          &:nth-child(n+19) {
+            &.back-side-active,
+            &.front-side-active {
+              .logo-holder {
+                animation-delay: calc((var(--i) - 16) * 0.1s);
+              }
+            }
+            .logo-holder {
+              .front,
+              .back {
+                mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                background:
+                  linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                  radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                mask-position: center;
+                &:after {
+                  background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+                  mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                  mask-position: right;
+                }
+              }
+            }
+            &:hover {
+              .logo-holder {
+                .front,
+                .back {
+                  background:
+                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                    radial-gradient(62.5% 75.18% at 91.61% 100%, #AB8FF6 0%, #1F1254 100%);
+                  &:after {
+                    background: radial-gradient(62.66% 56.61% at 86.81% 83.88%, #361769 0%, #01020A 100%);
+                  }
+                }
+              }
+            }
+          }
+          &:nth-child(n+25) {
+            &.back-side-active,
+            &.front-side-active {
+              .logo-holder {
+                animation-delay: calc((var(--i) - 21) * 0.1s);
+              }
+            }
+            .logo-holder {
+              .front,
+              .back {
+                mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                mask-repeat: no-repeat;
+                mask-position: left;
+                background:
+                  linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                  radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                &:after {
+                  background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                  mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                  mask-position: left;
+                }
+              }
+            }
+            &:hover {
+              .logo-holder {
+                .front,
+                .back {
+                  background:
+                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                    radial-gradient(62.5% 75.18% at 8.39% 100%, #AB8FF6 0%, #1F1254 100%);
+                  &:after {
+                    background: radial-gradient(62.66% 56.61% at 13.19% 83.88%, #361769 0%, #01020A 100%);
+                  }
+                }
+              }
+            }
+          }
+          &:nth-child(n+31) {
+            &.back-side-active,
+            &.front-side-active {
+              .logo-holder {
+                animation-delay: calc((var(--i) - 26) * 0.1s);
+              }
+            }
+            .logo-holder {
+              .front,
+              .back {
+                mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                background:
+                  linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                  radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                mask-position: center;
+                &:after {
+                  background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+                  mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                  mask-position: right;
+                }
+              }
+            }
+            &:hover {
+              .logo-holder {
+                .front,
+                .back {
+                  background:
+                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                    radial-gradient(62.5% 75.18% at 91.61% 100%, #AB8FF6 0%, #1F1254 100%);
+                  &:after {
+                    background: radial-gradient(62.66% 56.61% at 86.81% 83.88%, #361769 0%, #01020A 100%);
+                  }
+                }
+              }
+            }
+          }
+          &:nth-child(n+37) {
+            &.back-side-active,
+            &.front-side-active {
+              .logo-holder {
+                animation-delay: calc((var(--i) - 31) * 0.1s);
+              }
+            }
+            .logo-holder {
+              .front,
+              .back {
+                mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                mask-repeat: no-repeat;
+                mask-position: left;
+                background:
+                  linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                  radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                &:after {
+                  background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                  mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                  mask-position: left;
+                }
+              }
+            }
+            &:hover {
+              .logo-holder {
+                .front,
+                .back {
+                  background:
+                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                    radial-gradient(62.5% 75.18% at 8.39% 100%, #AB8FF6 0%, #1F1254 100%);
+                  &:after {
+                    background: radial-gradient(62.66% 56.61% at 13.19% 83.88%, #361769 0%, #01020A 100%);
+                  }
+                }
+              }
+            }
+          }
+          &:hover {
+            .logo-holder {
+              .front,
+              .back {
+                background:
+                  linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                  radial-gradient(62.5% 75.18% at 8.39% 100%, #AB8FF6 0%, #1F1254 100%);
+                &:after {
+                  background: radial-gradient(62.66% 56.61% at 13.19% 83.88%, #361769 0%, #01020A 100%);
+                }
+              }
+            }
+          }
+        }
+      }
       &.active {
         opacity: 1;
         visibility: visible;
@@ -647,6 +971,30 @@ html {
         overflow: visible;
       }
     }
+    .contract-audit {
+      margin-top: 48px;
+      display: none;
+      @include breakpoint(sm) {
+        display: block;
+      }
+    }
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(-180deg);
+  }
+}
+@keyframes flip-reverse {
+  0% {
+    transform: rotateX(-180deg);
+  }
+  100% {
+    transform: rotateX(0);
   }
 }
 
