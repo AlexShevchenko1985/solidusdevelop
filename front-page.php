@@ -734,5 +734,12 @@ get_header();
     </section>
 </div>
 
+
+<?php
+/**
+ * Form block
+ */
+get_template_part('template-parts/home/form');
+?>
 <?php
 get_footer();

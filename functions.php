@@ -143,6 +143,7 @@ add_action( 'widgets_init', 'aitech_widgets_init' );
  * Enqueue scripts and styles.
  */
 function aitech_scripts() {
+
     wp_enqueue_style( 'swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), _S_VERSION );
     wp_enqueue_style('style', get_template_directory_uri() . '/build/assets/css/app.min.css', array('swiper-style'), _S_VERSION);
 
@@ -150,6 +151,7 @@ function aitech_scripts() {
     wp_enqueue_script('custom-lenis-init', get_template_directory_uri() . '/js/lenis-init.js', array('lenis'), _S_VERSION, true);
     wp_enqueue_script( 'marketplace-functions', get_template_directory_uri() . '/src/js/marketplace-functions.js', array('swiper'), _S_VERSION, true );
     wp_enqueue_script( 'homepage-functions', get_template_directory_uri() . '/src/js/homepage-functions.js', array('swiper'), _S_VERSION, true );
+    wp_enqueue_script('aitech-cf7', get_template_directory_uri() . '/src/js/form/cf7.js', [], _S_VERSION, true);
 
     wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper-bundle.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'aitech-navigation', get_template_directory_uri() . '/js/navigation.js', array('swiper'), _S_VERSION, true );
