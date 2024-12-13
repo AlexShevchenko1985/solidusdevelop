@@ -732,14 +732,28 @@ get_header();
             </div>
         </div>
     </section>
+    <section class="solutions-form">
+        <div class="container">
+            <div class="mask-holder">
+                <div class="icon">
+                    <img src="<?php echo get_template_directory_uri() ?>/src/img/mail-icon.svg" alt="Icon">
+                </div>
+                <div class="form-section-holder">
+                    <h2>Your Questions, <br><span>Our Solutions</span></h2>
+                    <p>Please leave us a message. <br>Our team will contact you as soon as possible.</p>
+                    <div class="form-holder">
+                        <?php
+                        /**
+                         * Form block
+                         */
+                        get_template_part('template-parts/home/form');
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
-
-<?php
-/**
- * Form block
- */
-get_template_part('template-parts/home/form');
-?>
 <?php
 get_footer();

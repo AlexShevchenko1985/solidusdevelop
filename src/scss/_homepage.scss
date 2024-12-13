@@ -645,9 +645,11 @@ html {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 16px;
         row-gap: 16px;
-        margin-top: 50px;
+        margin: 50px auto 0;
+        max-width: 430px;
         @include breakpoint(sm) {
           margin-top: 80px;
+          max-width: 100%;
         }
         @include breakpoint(sm) {
           grid-template-columns: repeat(6, 1fr);
@@ -656,7 +658,10 @@ html {
           .logo-holder {
             transform-style: preserve-3d;
             width: 100%;
-            height: 121px;
+            height: 91px;
+            @include breakpoint(sm) {
+              height: 121px;
+            }
             .front,
             .back {
               backface-visibility: hidden;
@@ -685,6 +690,7 @@ html {
                 align-items: center;
                 position: relative;
                 z-index: 1;
+                padding: 0 15px;
               }
               &:after {
                 content: "";
@@ -703,8 +709,12 @@ html {
               img {
                 position: relative;
                 z-index: 1;
-                max-width: 143px;
+                max-width: 108px;
+                width: 100%;
                 height: auto;
+                @include breakpoint(sm) {
+                  max-width: 143px;
+                }
               }
             }
             .back {
@@ -730,220 +740,413 @@ html {
               }
             }
           }
-          &:nth-child(n+7) {
-            &.back-side-active,
-            &.front-side-active {
-              .logo-holder {
-                animation-delay: calc((var(--i) - 6) * 0.1s);
+          @media only screen and (max-width: 922px) {
+            &:nth-child(n+3) {
+              &.back-side-active,
+              &.front-side-active {
+                .logo-holder {
+                  animation-delay: calc((var(--i) - 2) * 0.1s);
+                }
               }
             }
-            .logo-holder {
-              .front,
-              .back {
-                mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
-                background:
-                  linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                  radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
-                mask-position: center;
-                &:after {
-                  background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+          }
+          @media only screen and (max-width: 922px) {
+            &:nth-child(n+5) {
+              &.back-side-active,
+              &.front-side-active {
+                .logo-holder {
+                  animation-delay: calc((var(--i) - 3) * 0.1s);
+                }
+              }
+            }
+          }
+          @include breakpoint(sm) {
+            &:nth-child(n+7) {
+              &.back-side-active,
+              &.front-side-active {
+                .logo-holder {
+                  animation-delay: calc((var(--i) - 6) * 0.1s);
+                }
+              }
+              .logo-holder {
+                .front,
+                .back {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                  background:
+                    linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                    radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
                   mask-position: right;
+                  &:after {
+                    background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+                    mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                    mask-position: right;
+                    inset-block-start: auto;
+                    inset-block-end: 1px;
+                    width: calc(100% - 3px);
+                    inset-inline-start: auto;
+                    inset-inline-end: 1px;
+                  }
                 }
               }
-            }
-            &:hover {
-              .logo-holder {
-                .front,
-                .back {
-                  background:
-                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                    radial-gradient(62.5% 75.18% at 91.61% 100%, #AB8FF6 0%, #1F1254 100%);
-                  &:after {
-                    background: radial-gradient(62.66% 56.61% at 86.81% 83.88%, #361769 0%, #01020A 100%);
+              &:hover {
+                .logo-holder {
+                  .front,
+                  .back {
+                    background:
+                      linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                      radial-gradient(62.5% 75.18% at 91.61% 100%, #AB8FF6 0%, #1F1254 100%);
+                    &:after {
+                      background: radial-gradient(62.66% 56.61% at 86.81% 83.88%, #361769 0%, #01020A 100%);
+                    }
                   }
                 }
               }
             }
-          }
-          &:nth-child(n+13) {
-            &.back-side-active,
-            &.front-side-active {
-              .logo-holder {
-                animation-delay: calc((var(--i) - 11) * 0.1s);
+            &:nth-child(n+13) {
+              &.back-side-active,
+              &.front-side-active {
+                .logo-holder {
+                  animation-delay: calc((var(--i) - 11) * 0.1s);
+                }
               }
-            }
-            .logo-holder {
-              .front,
-              .back {
-                mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
-                mask-repeat: no-repeat;
-                mask-position: left;
-                background:
-                  linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                  radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
-                &:after {
-                  background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+              .logo-holder {
+                .front,
+                .back {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                  mask-repeat: no-repeat;
                   mask-position: left;
-                }
-              }
-            }
-            &:hover {
-              .logo-holder {
-                .front,
-                .back {
                   background:
                     linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                    radial-gradient(62.5% 75.18% at 8.39% 100%, #AB8FF6 0%, #1F1254 100%);
+                    radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
                   &:after {
-                    background: radial-gradient(62.66% 56.61% at 13.19% 83.88%, #361769 0%, #01020A 100%);
+                    background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                    mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                    mask-position: left;
+                  }
+                }
+              }
+              &:hover {
+                .logo-holder {
+                  .front,
+                  .back {
+                    background:
+                      linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                      radial-gradient(62.5% 75.18% at 8.39% 100%, #AB8FF6 0%, #1F1254 100%);
+                    &:after {
+                      background: radial-gradient(62.66% 56.61% at 13.19% 83.88%, #361769 0%, #01020A 100%);
+                    }
                   }
                 }
               }
             }
-          }
-          &:nth-child(n+19) {
-            &.back-side-active,
-            &.front-side-active {
-              .logo-holder {
-                animation-delay: calc((var(--i) - 16) * 0.1s);
+            &:nth-child(n+19) {
+              &.back-side-active,
+              &.front-side-active {
+                .logo-holder {
+                  animation-delay: calc((var(--i) - 16) * 0.1s);
+                }
               }
-            }
-            .logo-holder {
-              .front,
-              .back {
-                mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
-                background:
-                  linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                  radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
-                mask-position: center;
-                &:after {
-                  background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+              .logo-holder {
+                .front,
+                .back {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                  background:
+                    linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                    radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
                   mask-position: right;
+                  &:after {
+                    background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+                    mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                    mask-position: right;
+                    inset-block-start: auto;
+                    inset-block-end: 1px;
+                    width: calc(100% - 3px);
+                    inset-inline-start: auto;
+                    inset-inline-end: 1px;
+                  }
                 }
               }
-            }
-            &:hover {
-              .logo-holder {
-                .front,
-                .back {
-                  background:
-                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                    radial-gradient(62.5% 75.18% at 91.61% 100%, #AB8FF6 0%, #1F1254 100%);
-                  &:after {
-                    background: radial-gradient(62.66% 56.61% at 86.81% 83.88%, #361769 0%, #01020A 100%);
+              &:hover {
+                .logo-holder {
+                  .front,
+                  .back {
+                    background:
+                      linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                      radial-gradient(62.5% 75.18% at 91.61% 100%, #AB8FF6 0%, #1F1254 100%);
+                    &:after {
+                      background: radial-gradient(62.66% 56.61% at 86.81% 83.88%, #361769 0%, #01020A 100%);
+                    }
                   }
                 }
               }
             }
-          }
-          &:nth-child(n+25) {
-            &.back-side-active,
-            &.front-side-active {
-              .logo-holder {
-                animation-delay: calc((var(--i) - 21) * 0.1s);
+            &:nth-child(n+25) {
+              &.back-side-active,
+              &.front-side-active {
+                .logo-holder {
+                  animation-delay: calc((var(--i) - 21) * 0.1s);
+                }
               }
-            }
-            .logo-holder {
-              .front,
-              .back {
-                mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
-                mask-repeat: no-repeat;
-                mask-position: left;
-                background:
-                  linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                  radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
-                &:after {
-                  background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+              .logo-holder {
+                .front,
+                .back {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                  mask-repeat: no-repeat;
                   mask-position: left;
-                }
-              }
-            }
-            &:hover {
-              .logo-holder {
-                .front,
-                .back {
                   background:
                     linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                    radial-gradient(62.5% 75.18% at 8.39% 100%, #AB8FF6 0%, #1F1254 100%);
+                    radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
                   &:after {
-                    background: radial-gradient(62.66% 56.61% at 13.19% 83.88%, #361769 0%, #01020A 100%);
+                    background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                    mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                    mask-position: left;
+                  }
+                }
+              }
+              &:hover {
+                .logo-holder {
+                  .front,
+                  .back {
+                    background:
+                      linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                      radial-gradient(62.5% 75.18% at 8.39% 100%, #AB8FF6 0%, #1F1254 100%);
+                    &:after {
+                      background: radial-gradient(62.66% 56.61% at 13.19% 83.88%, #361769 0%, #01020A 100%);
+                    }
                   }
                 }
               }
             }
-          }
-          &:nth-child(n+31) {
-            &.back-side-active,
-            &.front-side-active {
-              .logo-holder {
-                animation-delay: calc((var(--i) - 26) * 0.1s);
+            &:nth-child(n+31) {
+              &.back-side-active,
+              &.front-side-active {
+                .logo-holder {
+                  animation-delay: calc((var(--i) - 26) * 0.1s);
+                }
               }
-            }
-            .logo-holder {
-              .front,
-              .back {
-                mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
-                background:
-                  linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                  radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
-                mask-position: center;
-                &:after {
-                  background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+              .logo-holder {
+                .front,
+                .back {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                  background:
+                    linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                    radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
                   mask-position: right;
+                  &:after {
+                    background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+                    mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                    mask-position: right;
+                    inset-block-start: auto;
+                    inset-block-end: 1px;
+                    width: calc(100% - 3px);
+                    inset-inline-start: auto;
+                    inset-inline-end: 1px;
+                  }
                 }
               }
-            }
-            &:hover {
-              .logo-holder {
-                .front,
-                .back {
-                  background:
-                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                    radial-gradient(62.5% 75.18% at 91.61% 100%, #AB8FF6 0%, #1F1254 100%);
-                  &:after {
-                    background: radial-gradient(62.66% 56.61% at 86.81% 83.88%, #361769 0%, #01020A 100%);
+              &:hover {
+                .logo-holder {
+                  .front,
+                  .back {
+                    background:
+                      linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                      radial-gradient(62.5% 75.18% at 91.61% 100%, #AB8FF6 0%, #1F1254 100%);
+                    &:after {
+                      background: radial-gradient(62.66% 56.61% at 86.81% 83.88%, #361769 0%, #01020A 100%);
+                    }
                   }
                 }
               }
             }
-          }
-          &:nth-child(n+37) {
-            &.back-side-active,
-            &.front-side-active {
-              .logo-holder {
-                animation-delay: calc((var(--i) - 31) * 0.1s);
-              }
-            }
-            .logo-holder {
-              .front,
-              .back {
-                mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
-                mask-repeat: no-repeat;
-                mask-position: left;
-                background:
-                  linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                  radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
-                &:after {
-                  background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
-                  mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
-                  mask-position: left;
+            &:nth-child(n+37) {
+              &.back-side-active,
+              &.front-side-active {
+                .logo-holder {
+                  animation-delay: calc((var(--i) - 31) * 0.1s);
                 }
               }
-            }
-            &:hover {
               .logo-holder {
                 .front,
                 .back {
+                  mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                  mask-repeat: no-repeat;
+                  mask-position: left;
                   background:
                     linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                    radial-gradient(62.5% 75.18% at 8.39% 100%, #AB8FF6 0%, #1F1254 100%);
+                    radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
                   &:after {
-                    background: radial-gradient(62.66% 56.61% at 13.19% 83.88%, #361769 0%, #01020A 100%);
+                    background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                    mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                    mask-position: left;
+                  }
+                }
+              }
+              &:hover {
+                .logo-holder {
+                  .front,
+                  .back {
+                    background:
+                      linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                      radial-gradient(62.5% 75.18% at 8.39% 100%, #AB8FF6 0%, #1F1254 100%);
+                    &:after {
+                      background: radial-gradient(62.66% 56.61% at 13.19% 83.88%, #361769 0%, #01020A 100%);
+                    }
+                  }
+                }
+              }
+            }
+            &:nth-child(n+43) {
+              &.back-side-active,
+              &.front-side-active {
+                .logo-holder {
+                  animation-delay: calc((var(--i) - 36) * 0.1s);
+                }
+              }
+              .logo-holder {
+                .front,
+                .back {
+                  mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                  background:
+                    linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                    radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                  mask-position: right;
+                  &:after {
+                    background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+                    mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                    mask-position: right;
+                    inset-block-start: auto;
+                    inset-block-end: 1px;
+                    width: calc(100% - 3px);
+                    inset-inline-start: auto;
+                    inset-inline-end: 1px;
+                  }
+                }
+              }
+              &:hover {
+                .logo-holder {
+                  .front,
+                  .back {
+                    background:
+                      linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                      radial-gradient(62.5% 75.18% at 91.61% 100%, #AB8FF6 0%, #1F1254 100%);
+                    &:after {
+                      background: radial-gradient(62.66% 56.61% at 86.81% 83.88%, #361769 0%, #01020A 100%);
+                    }
+                  }
+                }
+              }
+            }
+            &:nth-child(n+49) {
+              &.back-side-active,
+              &.front-side-active {
+                .logo-holder {
+                  animation-delay: calc((var(--i) - 41) * 0.1s);
+                }
+              }
+              .logo-holder {
+                .front,
+                .back {
+                  mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                  mask-repeat: no-repeat;
+                  mask-position: left;
+                  background:
+                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                    radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                  &:after {
+                    background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                    mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                    mask-position: left;
+                  }
+                }
+              }
+              &:hover {
+                .logo-holder {
+                  .front,
+                  .back {
+                    background:
+                      linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                      radial-gradient(62.5% 75.18% at 8.39% 100%, #AB8FF6 0%, #1F1254 100%);
+                    &:after {
+                      background: radial-gradient(62.66% 56.61% at 13.19% 83.88%, #361769 0%, #01020A 100%);
+                    }
+                  }
+                }
+              }
+            }
+            &:nth-child(n+55) {
+              &.back-side-active,
+              &.front-side-active {
+                .logo-holder {
+                  animation-delay: calc((var(--i) - 46) * 0.1s);
+                }
+              }
+              .logo-holder {
+                .front,
+                .back {
+                  mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                  background:
+                    linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                    radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                  mask-position: right;
+                  &:after {
+                    background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+                    mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
+                    mask-position: right;
+                    inset-block-start: auto;
+                    inset-block-end: 1px;
+                    width: calc(100% - 3px);
+                    inset-inline-start: auto;
+                    inset-inline-end: 1px;
+                  }
+                }
+              }
+              &:hover {
+                .logo-holder {
+                  .front,
+                  .back {
+                    background:
+                      linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                      radial-gradient(62.5% 75.18% at 91.61% 100%, #AB8FF6 0%, #1F1254 100%);
+                    &:after {
+                      background: radial-gradient(62.66% 56.61% at 86.81% 83.88%, #361769 0%, #01020A 100%);
+                    }
+                  }
+                }
+              }
+            }
+            &:nth-child(n+61) {
+              &.back-side-active,
+              &.front-side-active {
+                .logo-holder {
+                  animation-delay: calc((var(--i) - 51) * 0.1s);
+                }
+              }
+              .logo-holder {
+                .front,
+                .back {
+                  mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                  mask-repeat: no-repeat;
+                  mask-position: left;
+                  background:
+                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                    radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                  &:after {
+                    background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                    mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
+                    mask-position: left;
+                  }
+                }
+              }
+              &:hover {
+                .logo-holder {
+                  .front,
+                  .back {
+                    background:
+                      linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+                      radial-gradient(62.5% 75.18% at 8.39% 100%, #AB8FF6 0%, #1F1254 100%);
+                    &:after {
+                      background: radial-gradient(62.66% 56.61% at 13.19% 83.88%, #361769 0%, #01020A 100%);
+                    }
                   }
                 }
               }
@@ -976,6 +1179,119 @@ html {
       display: none;
       @include breakpoint(sm) {
         display: block;
+      }
+    }
+  }
+
+  .solutions-form {
+    padding: 112px 0;
+    @include breakpoint(sm) {
+      padding: 160px 0;
+    }
+    .mask-holder {
+      position: relative;
+      .icon {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        background: linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+        radial-gradient(49.06% 62.78% at 50.24% 0%, rgba(171, 143, 246, 0.25) 0%, rgba(31, 18, 84, 0.25) 100%);
+        inset-block-start: 10px;
+        inset-inline-start: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        &:after {
+          content: "";
+          position: absolute;
+          width: calc(100% - 2px);
+          height: calc(100% - 2px);
+          inset-inline-start: 1px;
+          inset-block-start: 1px;
+          background: radial-gradient(89.36% 51.51% at 50.15% 54.87%, #190B30 0%, #01020A 100%);
+          z-index: 1;
+        }
+        img {
+          width: 70px;
+          height: 59px;
+          margin: -5px;
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+    .form-section-holder {
+      position: relative;
+      min-height: 595px;
+      background: linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+      radial-gradient(30.74% 33.75% at 94.26% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+      mask-image: url("/wp-content/themes/aitech/src/img/form-mask-mobile.webp");
+      mask-repeat: no-repeat;
+      mask-position: center top;
+      overflow: hidden;
+      border-radius: 15px;
+      padding: 80px 16px 40px;
+      @include breakpoint(sm) {
+        min-height: 750px;
+        mask-image: url("/wp-content/themes/aitech/src/img/form-mask.webp");
+        padding: 133px 20px;
+      }
+      & > * {
+        position: relative;
+        z-index: 2;
+      }
+      h2 {
+        text-align: center;
+        font-size: 32px;
+        line-height: 32px;
+        font-weight: 400;
+        color: $white;
+        margin-bottom: 16px;
+        @include breakpoint(sm) {
+          font-size: 4.45vw;
+          line-height: 4.8vw;
+          margin-bottom: 24px;
+        }
+        @include breakpoint(lg) {
+          font-size: 64px;
+          line-height: 64px;
+        }
+        span {
+          font-weight: 700;
+          background: linear-gradient(84.48deg, #CAB8F9 43.77%, #875FF2 67.2%, #6231E6 83.26%, #381D89 100.28%, #020416 117.35%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        br {
+          @include breakpoint(sm) {
+            display: none;
+          }
+        }
+      }
+      p {
+        font-size: 12px;
+        line-height: 16px;
+        color: $light-purple;
+        text-align: center;
+        @include breakpoint(sm) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: calc(100% - 3px);
+        height: calc(100% - 3px);
+        inset-inline-start: 1px;
+        inset-block-start: 2px;
+        border-radius: 15px;
+        mask-image: url("/wp-content/themes/aitech/src/img/form-mask-mobile.webp");
+        mask-repeat: no-repeat;
+        mask-position: center top;
+        background: radial-gradient(36.34% 66.67% at 40.08% 58.67%, #190B30 0%, #01020A 100%);
+        @include breakpoint(sm) {
+          mask-image: url("/wp-content/themes/aitech/src/img/form-mask.webp");
+        }
       }
     }
   }
