@@ -1216,6 +1216,9 @@ html {
           margin: -5px;
           position: relative;
           z-index: 2;
+          @include breakpoint(sm) {
+            margin-top: 3px;
+          }
         }
       }
     }
@@ -1233,7 +1236,7 @@ html {
       @include breakpoint(sm) {
         min-height: 750px;
         mask-image: url("/wp-content/themes/aitech/src/img/form-mask.webp");
-        padding: 133px 20px;
+        padding: 133px 20px 30px;
       }
       & > * {
         position: relative;
@@ -1260,6 +1263,11 @@ html {
           background: linear-gradient(84.48deg, #CAB8F9 43.77%, #875FF2 67.2%, #6231E6 83.26%, #381D89 100.28%, #020416 117.35%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @include breakpoint(sm) {
+            background: transparent;
+            color: $purple-accent;
+            -webkit-text-fill-color: $purple-accent;
+          }
         }
         br {
           @include breakpoint(sm) {
@@ -1276,6 +1284,188 @@ html {
           font-size: 16px;
           line-height: 24px;
         }
+      }
+      .form-holder {
+        max-width: 780px;
+        margin: 0 auto;
+        .form-block-message {
+          display: none;
+          padding-top: 102px;
+          @include breakpoint(sm) {
+            padding-top: 137px;
+          }
+          .subtitle {
+            font-size: 12px;
+            line-height: 16px;
+            color: $light-purple;
+            text-align: center;
+            @include breakpoint(sm) {
+              font-size: 16px;
+              line-height: 24px;
+            }
+
+          }
+        }
+        .form-block {
+          .wpcf7 {
+            margin-top: 40px;
+            @include breakpoint(sm) {
+              margin: 64px auto 0;
+              max-width: 564px;
+            }
+            form {
+              text-align: left;
+              .wpcf7-spinner {
+                display: none;
+              }
+              .wpcf7-response-output {
+                display: none;
+              }
+              .submit {
+                display: block;
+                position: relative;
+                margin-top: 24px;
+                padding: 2px;
+                &:before {
+                  content: "";
+                  background: linear-gradient(83.94deg, #CAB8F9 2.42%, #875FF2 36.13%, #6231E6 59.23%, #381D89 83.71%, #020416 108.26%);
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  inset-inline-start: 0;
+                  inset-block-start: 0;
+                  border-top-right-radius: 16px;
+                  border-top-left-radius: 2px;
+                  border-bottom-right-radius: 2px;
+                  border-bottom-left-radius: 16px;
+                }
+                .wpcf7-submit {
+                  border: none;
+                  border-top-right-radius: 16px;
+                  border-top-left-radius: 2px;
+                  border-bottom-right-radius: 2px;
+                  border-bottom-left-radius: 16px;
+                  text-align: center;
+                  display: block;
+                  font-family: 'Roboto Flex', sans-serif;
+                  font-weight: 600;
+                  font-size: 14px;
+                  line-height: 16px;
+                  color: $white;
+                  background: transparent;
+                  transition: all .3s;
+                  position: relative;
+                  z-index: 1;
+                  cursor: pointer;
+                  padding: 16px;
+                  width: 100%;
+                  @include breakpoint(sm) {
+                    padding: 15px;
+                  }
+                  &:hover {
+                    background: $button-bg;
+                  }
+                }
+              }
+
+              .two.column {
+                margin-bottom: 4px;
+                @include breakpoint(sm) {
+                  margin-bottom: 16px;
+                }
+                p {
+                  display: flex;
+                  flex-direction: column;
+                  @include breakpoint(sm) {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    column-gap: 16px;
+                    row-gap: 12px;
+                  }
+                  br {
+                    display: none;
+                  }
+                }
+              }
+              label {
+                font-family: 'Darker Grotesque', sans-serif;
+                font-weight: 600;
+                text-align: left;
+                font-size: 14px;
+                line-height: 18px;
+                color: $light-purple;
+                position: relative;
+                width: 100%;
+                display: block;
+                margin-bottom: 12px;
+                @include breakpoint(sm) {
+                  font-size: 18px;
+                  line-height: 25px;
+                  margin-bottom: 0;
+                }
+                .wpcf7-form-control-wrap {
+                  position: relative;
+                  display: block;
+                  line-height: 0;
+                }
+                input,
+                textarea {
+                  width: 100%;
+                  padding: 12px;
+                  border: 1px solid rgba(117, 104, 151, 0.3);
+                  font-size: 10px;
+                  color: rgba(225, 227, 254, .3);
+                  background: rgba(1, 2, 10, 0.3);
+                  border-radius: 6px;
+                  transition: all .3s ease-in-out;
+                  margin-top: 2px;
+                  resize: none;
+                  @include breakpoint(sm) {
+                    font-size: 12px;
+                    padding: 16px;
+                    margin-top: 4px;
+                  }
+                  &::placeholder {
+                    font-size: 10px;
+                    color: rgba(255, 255, 255, 0.5);
+                    @include breakpoint(sm) {
+                      font-size: 12px;
+                    }
+                  }
+                  &:focus,
+                  &:focus-within,
+                  &:focus-visible {
+                    outline: none;
+                    color: rgba(225, 227, 254, 1);
+                    border: 1px solid rgba(117, 104, 151, 1);
+                  }
+                  &:hover {
+                    border: 1px solid rgba(117, 104, 151, 1);
+                  }
+                  &.wpcf7-not-valid {
+                    border: 1px solid rgba(188, 71, 71, 0.3) !important;
+                  }
+                }
+                textarea {
+                  height: 72px;
+                  @include breakpoint(sm) {
+                    height: 96px;
+                  }
+                }
+                .wpcf7-not-valid-tip {
+                  position: absolute;
+                  font-size: 10px;
+                  line-height: 12px;
+                  inset-inline-start: 0;
+                  top: 100%;
+                  color: #E12B2B;
+                }
+              }
+            }
+          }
+        }
+
       }
       &:after {
         content: "";
@@ -1295,6 +1485,11 @@ html {
       }
     }
   }
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: none;
+  -webkit-text-fill-color: $white;
+  transition: background-color 5000s ease-in-out 0s !important;
 }
 
 @keyframes flip {

@@ -5,36 +5,32 @@
         $form     = get_sub_field('form_shortcode');
         $message  = get_sub_field('form_message');
         ?>
-        <section id="section7" class="banner-section">
 
-            <div class="hero-block">
-                <?php if (!empty($title)): ?>
-                    <h4><?php echo $title; ?></h4>
-                <?php endif; ?>
+        <?php if (!empty($title)): ?>
+            <h2><?php echo $title; ?></h2>
+        <?php endif; ?>
 
-                <div class="form-block" id="form-block">
 
-                    <?php if (!empty($subtitle)): ?>
-                        <span class="subtitle"><?php echo $subtitle; ?></span>
-                    <?php endif; ?>
+        <div class="form-block" id="form-block">
 
-                    <?php if (!empty($form)): ?>
-                        <?php echo do_shortcode($form)?>
-                    <?php endif; ?>
+			<?php if (!empty($subtitle)): ?>
+	            <p><?php echo $subtitle; ?></p>
+	        <?php endif; ?>
 
-                </div>
+            <?php if (!empty($form)): ?>
+                <?php echo do_shortcode($form)?>
+            <?php endif; ?>
 
-                <div class="form-block-message" id="form-block-message">
+        </div>
 
-                    <?php if (!empty($message)): ?>
-                        <p class="subtitle"><?php echo $message; ?></p>
-                    <?php endif; ?>
+        <div class="form-block-message" id="form-block-message">
 
-                    <a href="javascript:void(0)" id="form-message-button"><?php echo __('Resend', 'aitech'); ?></a>
+            <?php if (!empty($message)): ?>
+                <p class="subtitle"><?php echo $message; ?></p>
+            <?php endif; ?>
 
-                </div>
+            <a href="javascript:void(0)" id="form-message-button"><?php echo __('Resend', 'aitech'); ?></a>
 
-            </div>
-        </section>
+        </div>
     <?php endwhile; ?>
 <?php endif; ?>
