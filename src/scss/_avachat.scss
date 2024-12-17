@@ -132,7 +132,7 @@
           padding: 2rem 1.5rem 2.5rem;
           background: $bg-color;
           position: relative;
-          clip-path: polygon(0 0, calc(100% - 40px) 0, 90% -4px, 99% 33px, 100% 40px, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, calc(100% - 44px) 0, calc(100% - 34px) 4px, 99% 34px, 100% 43px, 100% 100%, 0 100%);
           width: -webkit-fill-available;
 
           &:before {
@@ -140,22 +140,21 @@
             position: absolute;
             inset: 0;
             padding: 1px;
-            background: linear-gradient(309.75deg, rgba(0, 128, 128, 0.4) 39.75%, #008080 73.24%, #0FF47F 86.58%);
+            background: linear-gradient(330deg, rgba(0, 128, 128, 0.4) 39.75%, #008080 73.24%, #0FF47F 86.58%);
             border-radius: inherit;
             mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
             z-index: 2;
-            clip-path: polygon(0 0, calc(100% - 40px) 0, 90% -4px, 99% 33px, 100% 40px, 100% 100%, 0 100%);
           }
 
           &:after {
             content: "";
             position: absolute;
-            width: 0.125rem;
-            height: 4.375rem;
-            background: rgba(0, 128, 128, .25);
-            top: -0.8125rem;
-            right: 1rem;
-            rotate: -46deg;
+            background-image: url("data:image/svg+xml,%0A%3Csvg width='65' height='65' viewBox='0 0 65 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M64 65V47.6274C64 43.384 62.3143 39.3143 59.3137 36.3137L44 21L28.6863 5.68629C25.6857 2.68571 21.616 1 17.3726 1L0 1' stroke='%23122220'/%3E%3Cpath d='M64 65V47.6274C64 43.384 62.3143 39.3143 59.3137 36.3137L44 21L28.6863 5.68629C25.6857 2.68571 21.616 1 17.3726 1L0 1' stroke='url(%23paint0_linear_853_3247)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_853_3247' x1='-151.38' y1='160.192' x2='-233.652' y2='31.1203' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23008080' stop-opacity='0'/%3E%3Cstop offset='0.715' stop-color='%23008080'/%3E%3Cstop offset='1' stop-color='%230FF47F'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");            right: 0;
+            top: 0;
+            width: 62.5px;
+            height: 62.5px;
+            background-size: contain;
+            background-repeat: no-repeat;
           }
 
           &__title {
