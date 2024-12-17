@@ -7,8 +7,21 @@
  * @package aitech
  */
 
+/**
+ * Inc. post types
+ */
+include_once "App/Base/AbstractPostType.php";
+include_once "App/Base/AbstractTaxonomy.php";
+include_once "App/PostType/Member.php";
+include_once "App/Taxonomy/Position.php";
+
+new Member();
+new Position();
+
+
 include_once "inc/acf_options_page.php";
 include_once "inc/gpu_marketplace_page_fields.php";
+include_once "inc/avachat_page_fields.php";
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
@@ -154,8 +167,14 @@ function aitech_scripts() {
     wp_enqueue_script('aitech-cf7', get_template_directory_uri() . '/src/js/form/cf7.js', [], _S_VERSION, true);
 
     wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper-bundle.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'aitech-navigation', get_template_directory_uri() . '/js/navigation.js', array('swiper'), _S_VERSION, true );
 
+    if (is_page_template('page-computer-marketplace.php')) {
+        wp_enqueue_script('aitech-navigation', get_template_directory_uri() . '/js/navigation.js', array('swiper'), _S_VERSION, true);
+    }
+
+    if (is_page_template('page-avachat.php')) {
+        wp_enqueue_script( 'avachat-functions', get_template_directory_uri() . '/src/js/avachat-functions.js', array('swiper'), _S_VERSION, true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'aitech_scripts' );
 

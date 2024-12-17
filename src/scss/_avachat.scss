@@ -1,0 +1,246 @@
+@use "variables" as *;
+@use "general/utils" as *;
+
+.page-template-page-avachat {
+
+  .round-btn {
+    display: block;
+    font-family: Darker Grotesque;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: $green-accent;
+    padding: 0.4375rem 1rem 0.75rem;
+    text-transform: uppercase;
+    border: 1px $green-accent solid;
+    width: fit-content;
+    border-radius: 54px;
+    box-shadow: 0px 0px 62px 10px $green-shadow;
+
+    @include breakpoint(sm) {
+      font-size: 1.28rem;
+    }
+  }
+
+  .btn {
+    border: 2px $green-accent solid;
+    color: $green-accent;
+
+    &:hover {
+      background: $green-accent;
+      color: $bg-color;
+    }
+
+    &.inverted {
+      background: $green-accent;
+      color: $bg-color;
+
+      &:hover {
+        color: $green-accent;
+        background: $bg-color;
+      }
+    }
+  }
+
+  .site-header .side-navigation-wrap {
+    display: none;
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+
+    &__content {
+      max-width: 46.875rem;
+      text-align: center;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+
+      .round-btn {
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 1.5rem 0 3.5rem;
+        padding: 0 1rem;
+
+        @include breakpoint(sm) {
+          padding: 0;
+        }
+      }
+
+      p {
+        color: $white;
+      }
+
+      .btn-wrap {
+        display: flex;
+        gap: 1.5rem;
+        margin: 3.5rem auto 0;
+        width: fit-content;
+      }
+    }
+
+    &__info {
+      position: relative;
+      z-index: 1;
+      margin-top: -5rem;
+
+      @include breakpoint(sm) {
+        margin-top: -6.25rem;
+      }
+
+      .girl {
+        max-width: calc(100vw);
+        margin-left: -16px;
+        margin-right: -16px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+
+        img {
+          min-width: 800px
+        }
+      }
+
+      .hero__info-items {
+        position: relative;
+        display: flex;
+        gap: 1rem;
+        max-width: 64.25rem;
+        margin: 0;
+        flex-direction: column;
+        max-width: 100vw;
+        margin-top: -6rem;
+
+        @include breakpoint(sm) {
+          margin: -9.375rem auto 0;
+        }
+
+        @include breakpoint(sm) {
+          flex-direction: row;
+        }
+
+        .item {
+          border-radius: 1rem;
+          padding: 2rem 1.5rem 2.5rem;
+          background: $bg-color;
+          position: relative;
+          clip-path: polygon(0 0, calc(100% - 40px) 0, 90% -4px, 99% 33px, 100% 40px, 100% 100%, 0 100%);
+          width: -webkit-fill-available;
+
+          &:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 1px;
+            background: linear-gradient(309.75deg, rgba(0, 128, 128, 0.4) 39.75%, #008080 73.24%, #0FF47F 86.58%);
+            border-radius: inherit;
+            mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
+            z-index: 2;
+            clip-path: polygon(0 0, calc(100% - 40px) 0, 90% -4px, 99% 33px, 100% 40px, 100% 100%, 0 100%);
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            width: 0.125rem;
+            height: 4.375rem;
+            background: rgba(0, 128, 128, .25);
+            top: -0.8125rem;
+            right: 1rem;
+            rotate: -46deg;
+          }
+
+          &__title {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            color: $green-accent;
+            font-family: Darker Grotesque;
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.5rem;
+          }
+
+          &__content {
+            margin-top: 1.5rem;
+            font-family: Roboto Flex;
+            font-size: 0.75rem;
+            font-weight: 400;
+            line-height: 1rem;
+            color: $white;
+            max-width: 16.25rem;
+          }
+        }
+      }
+    }
+  }
+
+  .faq {
+    padding: 10rem 0 3.75rem;
+
+    .faq-carousel {
+      margin-bottom: 1rem;
+    }
+
+    .swiper-wrapper {
+      transition-timing-function: linear;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+
+    &__item {
+      padding: 1.5rem;
+      height: initial;
+
+      &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 1px;
+        background: linear-gradient(314.92deg, rgba(0, 128, 128, 0.3) 44.74%, rgba(0, 128, 128, 0.4) 75.45%, rgba(15, 244, 127, 0.4) 87.69%);
+        mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
+        z-index: 2;
+        border-radius: 0.5rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: $white;
+
+        .arrow {
+          display: inline-block;
+          height: 17px;
+          width: 18px;
+          background-image: url("data:image/svg+xml,%0A%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.3211 6.83376C18.3364 6.18005 17.8181 5.6617 17.1644 5.67705L8.79691 5.87351C8.1432 5.88886 7.59993 6.43213 7.58458 7.08584C7.56923 7.73955 8.08758 8.2579 8.74129 8.24255L14.256 8.11046L6.04537 16.3211C5.57168 16.7948 5.55412 17.5426 6.00608 17.9946C6.45804 18.4466 7.20588 18.429 7.67957 17.9553L15.8876 9.74733L15.7608 15.2567C15.7455 15.9104 16.2638 16.4288 16.9175 16.4134C17.5712 16.3981 18.1145 15.8548 18.1298 15.2011L18.3263 6.83364L18.3211 6.83376Z' fill='white'/%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+  }
+
+  .section-bring {
+    .container {
+      background-size: auto;
+      background-position: center -1.4375rem;
+      padding-top: 12rem;
+      padding-bottom: 12rem;
+
+      .video-container {
+        .play-button {
+          border: 1px $green-accent solid;
+          background-color: rgba(89, 175, 255, .1);
+          background-image: url("data:image/svg+xml,%0A%3Csvg width='26' height='28' viewBox='0 0 26 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 11.4019C26 12.5566 26 15.4434 24 16.5981L5.24999 27.4234C3.24999 28.5781 0.749999 27.1347 0.749999 24.8253L0.75 3.17468C0.75 0.865276 3.25 -0.578094 5.25 0.576606L24 11.4019Z' fill='%230FF47F'/%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+  }
+}
