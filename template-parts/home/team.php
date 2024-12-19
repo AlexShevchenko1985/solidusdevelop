@@ -47,16 +47,15 @@
                                                         <?php if (has_post_thumbnail($founder->ID)): ?>
                                                             <?php echo wp_get_attachment_image(get_post_thumbnail_id($founder->ID), 'large');?>
                                                         <?php endif; ?>
-
-                                                        <?php if (!empty($founder->post_content)):
-                                                            $post_content = apply_filters('the_content', $founder->post_content);
-                                                            ?>
-                                                            <div class="back-side">
-                                                                <?php echo truncate_html($post_content, 1200); ?>
-                                                            </div>
-                                                        <?php endif; ?>
                                                     </div>
                                                 </div>
+                                                <?php if (!empty($founder->post_content)):
+                                                    $post_content = apply_filters('the_content', $founder->post_content);
+                                                    ?>
+                                                    <div class="back-side">
+                                                        <?php echo truncate_html($post_content, 1200); ?>
+                                                    </div>
+                                                <?php endif; ?>
                                                 <div class="content">
                                                     <div class="descr">
                                                         <?php if (!empty($founder->post_title)): ?>
@@ -145,16 +144,15 @@
                                                             <?php if (has_post_thumbnail($team_item->ID)): ?>
                                                                 <?php echo wp_get_attachment_image(get_post_thumbnail_id($team_item->ID), 'large'); ?>
                                                             <?php endif; ?>
-
-                                                            <?php if (!empty($team_item->post_content)):
-                                                                $post_content = apply_filters('the_content', $team_item->post_content);
-                                                                ?>
-                                                                <div class="back-side">
-                                                                    <?php echo truncate_html($post_content, 600); ?>
-                                                                </div>
-                                                            <?php endif; ?>
                                                         </div>
                                                     </div>
+                                                    <?php if (!empty($team_item->post_content)):
+                                                        $post_content = apply_filters('the_content', $team_item->post_content);
+                                                        ?>
+                                                        <div class="back-side">
+                                                            <?php echo truncate_html($post_content, 600); ?>
+                                                        </div>
+                                                    <?php endif; ?>
                                                     <div class="content">
                                                         <div class="descr">
                                                             <?php if (!empty($team_item->post_title)): ?>

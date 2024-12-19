@@ -150,6 +150,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   startAnimation();
+
+  const powerfulProductsHolder = document.querySelector('.powerful-products-holder');
+  if (!powerfulProductsHolder) {
+    return;
+  }
+
+  const items = document.querySelectorAll('.powerful-products-holder .item');
+
+  items.forEach(item => {
+
+    const video = item.querySelector('video');
+    if (video) {
+
+      item.addEventListener('mouseenter', () => {
+        video.play();
+      });
+      item.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+    }
+  });
 });
 
 

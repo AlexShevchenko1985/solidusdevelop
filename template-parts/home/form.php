@@ -29,7 +29,7 @@
                 <p class="subtitle"><?php echo $message; ?></p>
             <?php endif; ?>
 
-            <a href="javascript:void(0)" id="form-message-button"><?php echo __('Resend', 'aitech'); ?></a>
+            <div class="submit"><a href="javascript:void(0)" id="form-message-button"><?php echo __('Resend', 'aitech'); ?></a></div>
 
         </div>
     <?php endwhile; ?>

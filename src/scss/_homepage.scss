@@ -215,8 +215,22 @@ html {
               radial-gradient(69.68% 64.72% at 94.24% 7.98%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
               position: relative;
               transition: all .3s;
+              height: 100%;
               @include breakpoint(sm) {
                 min-height: 414px;
+              }
+              &:after {
+                content: "";
+                background: radial-gradient(87.93% 73.93% at 47.87% 14.81%, #190B30 0%, #01020A 100%);
+                background: #410BB4;
+                background: linear-gradient(180deg, rgba(1, 2, 10, 0) 13.25%, #01020A 94.21%);
+                position: absolute;
+                width: calc(100% - 2px);
+                height: calc(100% - 2px);
+                inset-block-start: 1px;
+                inset-inline-start: 1px;
+                z-index: 1;
+                border-radius: 15px;
               }
 
               .bg {
@@ -243,34 +257,21 @@ html {
                     visibility: visible;
                     opacity: 1;
                   }
-                  .back-side {
-                    visibility: hidden;
-                    opacity: 0;
-                    padding: 24px;
-                    position: absolute;
-                    inset-block-start: 0;
-                    inset-inline-start: 0;
-                    z-index: 1;
-                    p {
-                      font-size: 12px;
-                      line-height: 16px;
-                      color: $white;
-                      margin: 0 0 10px;
-                      &:last-of-type {
-                        margin-bottom: 0;
-                      }
-                    }
-                  }
-                  &:after {
-                    content: "";
-                    background: radial-gradient(87.93% 73.93% at 47.87% 14.81%, #190B30 0%, #01020A 100%);
-                    background: #410BB4;
-                    background: linear-gradient(180deg, rgba(1, 2, 10, 0) 13.25%, #01020A 94.21%);
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    inset-block-start: 0;
-                    inset-inline-start: 0;
+                }
+              }
+              .back-side {
+                visibility: hidden;
+                opacity: 0;
+                padding: 24px;
+                position: relative;
+                z-index: 2;
+                p {
+                  font-size: 12px;
+                  line-height: 16px;
+                  color: $white;
+                  margin: 0 0 10px;
+                  &:last-of-type {
+                    margin-bottom: 0;
                   }
                 }
               }
@@ -278,7 +279,7 @@ html {
                 margin-top: auto;
                 padding: 24px 24px 24px;
                 position: relative;
-                z-index: 1;
+                z-index: 2;
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
@@ -341,11 +342,11 @@ html {
                       visibility: hidden;
                       opacity: 0;
                     }
-                    .back-side {
-                      visibility: visible;
-                      opacity: 1;
-                    }
                   }
+                }
+                .back-side {
+                  opacity: 1;
+                  visibility: visible;
                 }
                 .content {
                   .cta-holder {
@@ -434,18 +435,14 @@ html {
                 @include breakpoint(sm) {
                   min-height: 702px;
                 }
-                .bg {
-                  .media-block {
-                    .back-side {
-                      @include breakpoint(sm) {
-                        padding: 40px;
-                      }
-                      p {
-                        @include breakpoint(sm) {
-                          font-size: 16px;
-                          line-height: 24px;
-                        }
-                      }
+                .back-side {
+                  @include breakpoint(sm) {
+                    padding: 40px;
+                  }
+                  p {
+                    @include breakpoint(sm) {
+                      font-size: 16px;
+                      line-height: 24px;
                     }
                   }
                 }
@@ -1190,6 +1187,11 @@ html {
     }
     .mask-holder {
       position: relative;
+      max-width: 343px;
+      margin: 0 auto;
+      @include breakpoint(sm) {
+        max-width: 100%;
+      }
       .icon {
         position: absolute;
         width: 180px;
@@ -1286,8 +1288,11 @@ html {
         }
       }
       .form-holder {
-        max-width: 780px;
+        max-width: 340px;
         margin: 0 auto;
+        @include breakpoint(sm) {
+          max-width: 780px;
+        }
         .form-block-message {
           display: none;
           padding-top: 102px;
@@ -1304,6 +1309,79 @@ html {
               line-height: 24px;
             }
 
+          }
+          .submit {
+            display: flex;
+            position: relative;
+            margin: 24px auto 0;
+            padding: 2px;
+            width: fit-content;
+            &:before {
+              content: "";
+             background: linear-gradient(83.94deg, #CAB8F9 2.42%, #875FF2 36.13%, #6231E6 59.23%, #381D89 83.71%, #020416 108.26%);
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              inset-inline-start: 0;
+              inset-block-start: 0;
+              border-top-right-radius: 16px;
+              border-top-left-radius: 2px;
+              border-bottom-right-radius: 2px;
+              border-bottom-left-radius: 16px;
+            }
+            &:after {
+              content: "";
+              background: $button-bg;
+              width: calc(100% - 4px);
+              height: calc(100% - 4px);
+              position: absolute;
+              inset-inline-start: 2px;
+              inset-block-start: 2px;
+              border-top-right-radius: 16px;
+              border-top-left-radius: 2px;
+              border-bottom-right-radius: 2px;
+              border-bottom-left-radius: 16px;
+              transition: all .3s;
+            }
+            #form-message-button {
+              border: none;
+              border-top-right-radius: 16px;
+              border-top-left-radius: 2px;
+              border-bottom-right-radius: 2px;
+              border-bottom-left-radius: 16px;
+              text-align: center;
+              display: block;
+              font-family: 'Roboto Flex', sans-serif;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 16px;
+              color: $white;
+              background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: rgba(0, 0, 0, 0);
+              transition: all .3s;
+              position: relative;
+              z-index: 1;
+              cursor: pointer;
+              padding: 16px;
+              width: fit-content;
+              min-width: 169px;
+              @include breakpoint(sm) {
+                padding: 15px 24px;
+                font-size: 16px;
+                min-width: auto;
+              }
+            }
+            &:hover {
+              &:after {
+                background: transparent;
+              }
+              #form-message-button {
+                background: rgba(0, 0, 0, 0);
+                color: #fff;
+                -webkit-text-fill-color: #fff;
+              }
+            }
           }
         }
         .form-block {
@@ -1490,6 +1568,399 @@ input:-webkit-autofill {
   -webkit-box-shadow: none;
   -webkit-text-fill-color: $white;
   transition: background-color 5000s ease-in-out 0s !important;
+}
+
+.powerful-products {
+  padding: 112px 0 56px;
+  @include breakpoint(sm) {
+    padding: 155px 0 80px;
+  }
+  h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 400;
+    color: $white;
+    @include breakpoint(sm) {
+      font-size: 64px;
+      line-height: 64px;
+    }
+    span {
+      background: linear-gradient(84.48deg, #CAB8F9 43.77%, #875FF2 67.2%, #6231E6 83.26%, #381D89 100.28%, #020416 117.35%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    }
+  }
+  .powerful-products-holder {
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    max-width: 340px;
+    @include breakpoint(sm) {
+      margin: 80px auto 0;
+      max-width: 100%;
+    }
+    .item {
+      position: relative;
+      .icon {
+        position: absolute;
+        width: 181px;
+        height: 180px;
+        background: linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+        radial-gradient(24.78% 25.42% at 3.04% 100%, rgba(171, 143, 246, 0.25) 0%, rgba(31, 18, 84, 0.25) 100%);
+        inset-block-start: 8px;
+        inset-inline-start: 8px;
+        display: flex;
+        border-radius: 16px;
+        @include breakpoint(sm) {
+          border-radius: 25px;
+          inset-block-end: 8px;
+          inset-inline-start: 8px;
+          inset-block-start: auto;
+          width: 115px;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          width: calc(100% - 2px);
+          height: calc(100% - 2px);
+          inset-inline-start: 1px;
+          inset-block-start: 1px;
+          background: radial-gradient(89.36% 51.51% at 50.15% 54.87%, #190B30 0%, #01020A 100%);
+          z-index: 1;
+          border-radius: 16px;
+          @include breakpoint(sm) {
+            border-radius: 25px;
+          }
+        }
+        img {
+          width: 52px;
+          height: 52px;
+          margin: 2px 0 0;
+          position: relative;
+          z-index: 2;
+          @include breakpoint(sm) {
+            width: 72px;
+            height: 72px;
+            margin: auto 0 0;
+          }
+        }
+      }
+      .bg-block {
+        position: relative;
+        min-height: 612px;
+        overflow: hidden;
+        border-radius: 25px;
+        z-index: 1;
+        transition: all .4s ease-in-out;
+        background: linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+        radial-gradient(69.4% 51.5% at 5.81% -7.7%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+        mask-image: url(/wp-content/themes/aitech/src/img/sol-mask-mobile.webp);
+        mask-repeat: no-repeat;
+        mask-position: left top;
+        mask-size: cover;
+        @include breakpoint(sm) {
+          min-height: 766px;
+          mask-image: url(/wp-content/themes/aitech/src/img/sol-mask1.webp);
+          mask-position: left bottom;
+        }
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          inset-inline-start: 0;
+          inset-block-start: 0;
+          transition: all .4s ease-in-out;
+          background: linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+          radial-gradient(69.4% 51.5% at 5.81% -7.7%, #AB8FF6 0%, #1F1254 100%);
+          opacity: 0;
+          visibility: hidden;
+
+        }
+        &:hover {
+          &:before {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          width: calc(100% - 2px);
+          height: calc(100% - 2px);
+          inset-inline-start: 1px;
+          inset-block-start: 1px;
+          border-radius: 25px;
+          mask-image: url(/wp-content/themes/aitech/src/img/sol-mask-mobile.webp);
+          mask-repeat: no-repeat;
+          mask-position: left top;
+          background: radial-gradient(36.34% 66.67% at 40.08% 58.67%, #190B30 0%, #01020A 100%);
+          mask-size: cover;
+          @include breakpoint(sm) {
+            mask-image: url(/wp-content/themes/aitech/src/img/sol-mask1.webp);
+            mask-position: left bottom;
+          }
+        }
+        .media {
+          position: absolute;
+          width: calc(100% - 2px);
+          height: calc(100% - 2px);
+          inset-inline-start: 2px;
+          inset-block-start: 1px;
+          border-radius: 25px;
+          mask-image: url(/wp-content/themes/aitech/src/img/sol-mask-mobile.webp);
+          mask-repeat: no-repeat;
+          mask-position: left top;
+          z-index: 1;
+          mask-size: cover;
+          @include breakpoint(sm) {
+            mask-image: url(/wp-content/themes/aitech/src/img/sol-mask1.webp);
+            mask-position: left bottom;
+          }
+          &:after {
+            content: "";
+            background: radial-gradient(129.59% 30.7% at 22.59% 25.54%, #190B30 0%, #01020A 100%);
+            background: #410BB4;
+            background: linear-gradient(360deg, #01020A 36.42%, rgba(1, 2, 10, 0) 86.78%);
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            position: absolute;
+            inset-block-start: 1px;
+            inset-inline-start: 1px;
+            @include breakpoint(sm) {
+              background: radial-gradient(32.3% 60.1% at 80.7% 50%, #190B30 0%, #01020A 100%);
+              background: #410BB4;
+              background: linear-gradient(83.04deg, #01020A 8.63%, rgba(1, 2, 10, 0) 91.41%);
+            }
+          }
+          img,
+          video {
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            margin-top: 1px;
+            margin-left: 1px;
+            object-fit: cover;
+          }
+        }
+        .content {
+          padding: 160px 24px 24px;
+          position: relative;
+          z-index: 2;
+          @include breakpoint(sm) {
+            padding: 48px 40px;
+            max-width: 630px;
+          }
+          .label {
+            background: linear-gradient(83.94deg, #CAB8F9 2.42%, #875FF2 36.13%, #6231E6 59.23%, #381D89 83.71%, #020416 108.26%);
+            border-radius: 54px;
+            box-shadow: 0 0 62px 10px rgba(111, 37, 245, 0.28);
+            padding: 2px 8px;
+            position: relative;
+            text-align: center;
+            display: inline-block;
+            @include breakpoint(sm) {
+              padding: 2px 12px;
+            }
+            &:before {
+              content: "";
+              background: rgba(1, 2, 10, 0.9);
+              position: absolute;
+              width: calc(100% - 2px);
+              height: calc(100% - 2px);
+              inset-block-start: 1px;
+              inset-inline-start: 1px;
+              border-radius: 54px;
+            }
+            span {
+              font-family: 'Darker Grotesque', sans-serif;
+              position: relative;
+              z-index: 1;
+              font-size: 12px;
+              line-height: 12px;
+              font-weight: 600;
+              background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: rgba(0, 0, 0, 0);
+              @include breakpoint(sm) {
+                font-size: 18px;
+                line-height: 18px;
+              }
+            }
+          }
+          h3 {
+            margin: 12px 0 32px;
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: 600;
+            background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: rgba(0, 0, 0, 0);
+            @include breakpoint(sm) {
+              font-size: 48px;
+              line-height: 48px;
+              font-weight: 700;
+            }
+          }
+          p {
+            font-size: 12px;
+            line-height: 16px;
+            color: $light-purple;
+            margin-bottom: 24px;
+            @include breakpoint(sm) {
+              font-size: 16px;
+              line-height: 24px;
+              margin-bottom: 40px;
+              max-width: 468px;
+            }
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+          ul {
+            margin-bottom: 16px;
+            list-style: disc;
+            padding-left: 25px;
+            @include breakpoint(sm) {
+              margin-bottom: 20px;
+              max-width: 468px;
+            }
+            li {
+              font-size: 12px;
+              line-height: 16px;
+              color: $light-purple;
+              @include breakpoint(sm) {
+                font-size: 16px;
+                line-height: 24px;
+              }
+            }
+          }
+
+          .btn-holder {
+            margin-top: 32px;
+            @include breakpoint(sm) {
+              margin-top: 40px;
+            }
+            .primary-btn {
+              display: inline-block;
+              padding: 11px 20px;
+              position: relative;
+              text-align: center;
+              background: linear-gradient(83.94deg, #CAB8F9 2.42%, #875FF2 36.13%, #6231E6 59.23%, #381D89 83.71%, #020416 108.26%);
+              border-top-left-radius: 2px;
+              border-top-right-radius: 16px;
+              border-bottom-left-radius: 16px;
+              border-bottom-right-radius: 2px;
+              width: 100%;
+              @include breakpoint(sm) {
+                width: fit-content;
+                padding: 11px 24px;
+              }
+              &:after {
+                content: "";
+                background: $button-bg;
+                position: absolute;
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                inset-inline-start: 2px;
+                inset-block-start: 2px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all .3s;
+                border-top-left-radius: 2px;
+                border-top-right-radius: 16px;
+                border-bottom-left-radius: 16px;
+                border-bottom-right-radius: 2px;
+              }
+              span {
+                position: relative;
+                z-index: 1;
+                font-family: 'Roboto Flex', sans-serif;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                color: $white;
+                @include breakpoint(sm) {
+                  font-size: 16px;
+                  line-height: 18px;
+                }
+              }
+              &:hover {
+                &:after {
+                  opacity: 1;
+                  visibility: visible;
+                }
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(2n) {
+        .icon {
+          @include breakpoint(sm) {
+            border-radius: 25px;
+            inset-inline-start: auto;
+            inset-inline-end: 8px;
+            inset-block-start: 8px;
+            inset-block-end: auto;
+            width: 115px;
+          }
+          img {
+            @include breakpoint(sm) {
+              width: 72px;
+              height: 72px;
+              margin: 2px 0 0 42px;
+            }
+          }
+        }
+        .bg-block {
+          @include breakpoint(sm) {
+            mask-image: url(/wp-content/themes/aitech/src/img/sol-mask2.webp);
+            mask-position: right top;
+          }
+          &:after {
+            @include breakpoint(sm) {
+              mask-image: url(/wp-content/themes/aitech/src/img/sol-mask2.webp);
+              mask-position: right top;
+            }
+          }
+          .media {
+            inset-inline-start: 1px;
+            @include breakpoint(sm) {
+              mask-image: url(/wp-content/themes/aitech/src/img/sol-mask2.webp);
+              mask-position: right top;
+            }
+            &:after {
+              content: "";
+              background: radial-gradient(129.59% 30.7% at 22.59% 25.54%, #190B30 0%, #01020A 100%);
+              background: #410BB4;
+              background: linear-gradient(360deg, #01020A 36.42%, rgba(1, 2, 10, 0) 86.78%);
+              width: calc(100% - 2px);
+              height: calc(100% - 2px);
+              position: absolute;
+              inset-block-start: 1px;
+              inset-inline-start: 1px;
+              @include breakpoint(sm) {
+                background: radial-gradient(32.3% 60.1% at 80.7% 50%, #190B30 0%, #01020A 100%);
+                background: #410BB4;
+                background: linear-gradient(83.04deg, #01020A 8.63%, rgba(1, 2, 10, 0) 91.41%);
+              }
+            }
+            img,
+            video {
+              width: calc(100% - 2px);
+              height: calc(100% - 2px);
+              margin-top: 1px;
+              margin-left: 1px;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @keyframes flip {
