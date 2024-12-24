@@ -172,6 +172,26 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+
+  const dataCenterSection = document.querySelector('.data-center');
+  if (!dataCenterSection) return;
+
+  const dataCenterTabsContent = document.querySelectorAll('.data-center .tab-body');
+  const dataCenterTabsBtn = document.querySelectorAll('.data-center .btn-list .tab-btn');
+
+  dataCenterTabsBtn[0].classList.add('active');
+  dataCenterTabsContent[0].classList.add('active');
+
+  dataCenterTabsBtn.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      dataCenterTabsBtn.forEach(btn => btn.classList.remove('active'));
+      dataCenterTabsContent.forEach(content => content.classList.remove('active'));
+
+      tab.classList.add('active');
+      dataCenterTabsContent[index].classList.add('active');
+    });
+  });
 });
 
 

@@ -434,6 +434,170 @@ get_header();
             </div>
         </div>
     </section>
+    <section class="data-center">
+        <div class="container">
+            <div class="heading">
+                <h2>Data <span>Center</span></h2>
+                <p>Tier 3 Compliant Datacenter (Sign off 2025)</p>
+                <div class="btn-list">
+                    <div class="tab-btn">Key features</div>
+                    <div class="tab-btn">Stats</div>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div class="columns-holder">
+                    <div class="col">
+                        <div class="item-block">
+                            <h4>Compute Power</h4>
+                            <div class="content-holder">
+                                <div class="content-item">
+                                    <div class="title">Initially</div>
+                                    <div class="descr">624 teraFLOPS</div>
+                                </div>
+                                <div class="content-item">
+                                    <div class="title">2025 Target</div>
+                                    <div class="descr">6240 teraFLOPS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-block">
+                            <h4>High-Speed Storage</h4>
+                            <div class="content-holder">
+                                <div class="content-item">
+                                    <div class="title">Initially</div>
+                                    <div class="descr">40 TB with InfiniBand</div>
+                                </div>
+                                <div class="content-item">
+                                    <div class="title">2025 Target</div>
+                                    <div class="descr">400 TB with InfiniBand</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col double-col">
+                        <div class="item-block">
+                            <h4>Networking Speed</h4>
+                            <div class="content-holder">
+                                <div class="content-item">
+                                    <div class="title">Ultra-low Latency</div>
+                                    <div class="descr">100 Gbps connectivity</div>
+                                </div>
+                                <div class="content-item">
+                                    <div class="title">Government-grade options:</div>
+                                    <div class="descr">Dark Fiber availability</div>
+                                </div>
+                                <div class="content-item">
+                                    <div class="title">ISP Redundancy:</div>
+                                    <div class="descr">Multiple providers with aerial backup</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="item-block">
+                            <h4>Military-Grade Security</h4>
+                            <div class="content-holder">
+                                <div class="content-item">
+                                    <ul>
+                                        <li>ISO 27001 certification</li>
+                                        <li>NextGen cybersecurity</li>
+                                        <li>Failover and disaster recovery</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-block">
+                            <h4>Sustainability</h4>
+                            <div class="content-holder">
+                                <div class="content-item">
+                                    <div class="title">2025 planned</div>
+                                    <div class="descr">Renewable energy and water cooling</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-holder">
+                    <video playsinline muted loop autoplay>
+                        <source src="<?php echo get_template_directory_uri() ?>/src/video/data-center-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="advantages-list">
+                    <div class="title">Benefits / Use cases</div>
+                    <ul>
+                        <li>AI & Machine Learning</li>
+                        <li>Big Data Analysis</li>
+                        <li>Scientific Simulations</li>
+                        <li>Financial Services</li>
+                        <li>Rendering & Gaming</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-body table-layout">
+                <div class="heading">
+                    <div class="title"><span>99.99%</span> Uptime</div>
+                    <div class="subtitle">Located in Eastern Europe</div>
+                </div>
+                <div class="columns-holder">
+                    <div class="column">
+                        <div class="table-row">
+                            <div class="table-col">
+                                <div class="table-title">Initially</div>
+                            </div>
+                            <div class="table-col">
+                                 <div class="table-title">2025 Target</div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-col">
+                                <div class="table-title">CPUs/GPUs:</div>
+                                <div class="descr">10 x Intel Xeon E5 x 14 Core – 128 GB RAM + A100s & H100s</div>
+                            </div>
+                            <div class="table-col">
+                                 <div class="table-title">CPUs/GPUs:</div>
+                                 <div class="descr">50 x Supermicro HPC CPU + GPU NVIDIA B200</div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-col">
+                                <div class="table-title">Compute Capacity</div>
+                                <div class="descr">624 teraFLOPS</div>
+                            </div>
+                            <div class="table-col">
+                                 <div class="table-title">Compute Capacity:</div>
+                                 <div class="descr">6240 teraFLOPS</div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-col">
+                                <div class="table-title">Storage</div>
+                                <div class="descr">40 TB</div>
+                            </div>
+                            <div class="table-col">
+                                 <div class="table-title">Storage</div>
+                                 <div class="descr">400 TB</div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-col">
+                                <div class="table-title">Bandwidth</div>
+                                <div class="descr">10 x 10 Gbps Ports</div>
+                            </div>
+                            <div class="table-col">
+                                 <div class="table-title">Bandwidth</div>
+                                 <div class="descr">10 x 10 Gbps Ports</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="image">
+                             <img src="<?php echo get_template_directory_uri() ?>/src/img/stats-img.webp" alt="Icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
 <?php

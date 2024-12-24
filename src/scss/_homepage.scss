@@ -772,7 +772,7 @@ html {
                   background:
                     linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
                     radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
-                  mask-position: right;
+                  mask-position: center;
                   &:after {
                     background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
@@ -850,7 +850,7 @@ html {
                   background:
                     linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
                     radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
-                  mask-position: right;
+                  mask-position: center;
                   &:after {
                     background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
@@ -928,7 +928,7 @@ html {
                   background:
                     linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
                     radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
-                  mask-position: right;
+                  mask-position: center;
                   &:after {
                     background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
@@ -1006,7 +1006,7 @@ html {
                   background:
                     linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
                     radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
-                  mask-position: right;
+                  mask-position: center;
                   &:after {
                     background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
@@ -1084,7 +1084,7 @@ html {
                   background:
                     linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
                     radial-gradient(62.5% 75.18% at 91.61% 0%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
-                  mask-position: right;
+                  mask-position: center;
                   &:after {
                     background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
@@ -1955,6 +1955,472 @@ input:-webkit-autofill {
               margin-top: 1px;
               margin-left: 1px;
               object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.data-center {
+  padding: 80px 0;
+  overflow: hidden;
+  @include breakpoint(sm) {
+    padding: 56px 0;
+  }
+
+  .heading {
+    text-align: center;
+    margin-bottom: 24px;
+    @include breakpoint(sm) {
+      margin-bottom: 0;
+    }
+    h2 {
+      font-size: 32px;
+      line-height: 32px;
+      font-weight: 400;
+      margin-bottom: 16px;
+      color: $white;
+      @include breakpoint(sm) {
+        font-size: 4.45vw;
+        line-height: 4.8vw;
+        margin-bottom: 24px;
+      }
+      @include breakpoint(lg) {
+        font-size: 64px;
+        line-height: 64px;
+      }
+      span {
+        font-weight: 700;
+        background: linear-gradient(84.48deg, #CAB8F9 43.77%, #875FF2 67.2%, #6231E6 83.26%, #381D89 100.28%, #020416 117.35%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    p {
+      font-size: 12px;
+      line-height: 16px;
+      color: $light-purple;
+      @include breakpoint(sm) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    .btn-list {
+      margin: 40px auto 0;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      background: url("/wp-content/themes/aitech/src/img/data-center-heading.png");
+      padding: 8px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      @include breakpoint(sm) {
+        margin: 60px auto 0;
+      }
+      &:before {
+        content: "";
+        background: url("/wp-content/themes/aitech/src/img/heading-line-home.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-75%);
+        inset-inline-start: calc(-38% - 16px);
+        width: 40%;
+        height: 80%;
+        display: none;
+        @include breakpoint(xs) {
+          width: 19vw;
+          height: 6.5vw;
+          transform: translateY(-74%);
+          inset-inline-start: -20vw;
+          display: block;
+        }
+      }
+      &:after {
+        content: "";
+        background: url("/wp-content/themes/aitech/src/img/heading-line-home.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-75%) scaleX(-1);
+        inset-inline-end: calc(-38% - 16px);
+        width: 40%;
+        height: 80%;
+        display: none;
+        @include breakpoint(xs) {
+          width: 19vw;
+          height: 6.5vw;
+          transform: translateY(-74%) scaleX(-1);
+          inset-inline-end: -20vw;
+          display: block;
+        }
+      }
+      .tab-btn {
+        font-family: 'Darker Grotesque', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        color: $lighter-purple;
+        text-transform: uppercase;
+        padding: 6px 2px;
+        cursor: pointer;
+        position: relative;
+        margin: 0 16px;
+        @include breakpoint(sm) {
+          font-family: 'Roboto Flex', sans-serif;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 18px;
+          margin: 0 24px;
+          padding: 14px 2px;
+        }
+        &:before {
+          content: "";
+          background: url("/wp-content/themes/aitech/src/img/active-tab-bg.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 16px;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          inset-inline-start: -14px;
+          display: none;
+          @include breakpoint(sm) {
+            width: 24px;
+            inset-inline-start: -21px;
+          }
+        }
+        &:after {
+          content: "";
+          background: url("/wp-content/themes/aitech/src/img/active-tab-bg.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 16px;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          inset-inline-end: -14px;
+          transform: scaleX(-1);
+          display: none;
+          @include breakpoint(sm) {
+            width: 24px;
+            inset-inline-end: -21px;
+          }
+        }
+        &.active {
+          cursor: default;
+          background: $purple-accent;
+          color: $white;
+          &:before,
+          &:after {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .tab-body {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: opacity .3s, visibility .3s;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      height: 100%;
+      overflow: visible;
+    }
+    .columns-holder {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 40px;
+      @include breakpoint(sm) {
+        margin-top: 80px;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .col {
+        width: 100%;
+        @include breakpoint(sm) {
+          width: calc(33% - 8px);
+        }
+        &.double-col {
+          .item-block {
+            height: 100%;
+          }
+        }
+      }
+      .item-block {
+        background: linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+        radial-gradient(69.4% 51.5% at 5.81% -7.7%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+        border-radius: 16px;
+        padding: 24px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+        min-height: 209px;
+        @include breakpoint(sm) {
+          border-radius: 24px;
+        }
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        &:after {
+          content: "";
+          background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%), rgba(0, 0, 0, .7);
+          backdrop-filter: blur(34px);
+          width: calc(100% - 2px);
+          height: calc(100% - 2px);
+          position: absolute;
+          inset-block-start: 1px;
+          inset-inline-start: 1px;
+          border-radius: 16px;
+          @include breakpoint(sm) {
+            border-radius: 24px;
+            background: radial-gradient(32.3% 60.1% at 80.7% 50%, rgba(25, 11, 48, 0.2) 0%, rgba(1, 2, 10, 0.2) 100%), #000000;
+          }
+        }
+        & * {
+          position: relative;
+          z-index: 1;
+        }
+        h4 {
+          background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 24px;
+          line-height: 27px;
+          font-weight: 600;
+          margin: 0 0 24px;
+          @include breakpoint(sm) {
+            font-size: 32px;
+            line-height: 35px;
+            font-weight: 700;
+          }
+        }
+        .content-holder {
+          display: flex;
+          flex-wrap: wrap;
+          column-gap: 24px;
+          row-gap: 12px;
+          @include breakpoint(sm) {
+            column-gap: 24px;
+            row-gap: 16px;
+          }
+          .content-item {
+            .title {
+              font-family: 'Darker Grotesque', sans-serif;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 18px;
+              background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              margin-bottom: 8px;
+            }
+            .descr {
+              font-size: 12px;
+              line-height: 16px;
+              color: $light-purple;
+              @include breakpoint(sm) {
+                font-size: 16px;
+                line-height: 24px;
+              }
+            }
+            ul {
+              margin: 0;
+              padding: 0;
+              list-style: none;
+              li {
+                font-size: 12px;
+                line-height: 16px;
+                color: $light-purple;
+                margin-bottom: 4px;
+                @include breakpoint(sm) {
+                  font-size: 16px;
+                  line-height: 24px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .video-holder {
+      position: relative;
+      margin-top: 60px;
+      justify-content: center;
+      display: none;
+      @include breakpoint(sm) {
+        display: flex;
+      }
+      video {
+        width: 70%;
+        margin: 0 auto;
+      }
+      .advantages-list {
+        position: relative;
+        z-index: 1;
+      }
+    }
+    .advantages-list {
+      display: none;
+      @include breakpoint(sm) {
+        display: block;
+      }
+      .title {
+        background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Darker Grotesque', sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 66px;
+        row-gap: 20px;
+        li {
+          font-family: 'Darker Grotesque', sans-serif;
+          font-size: 24px;
+          line-height: 24px;
+          font-weight: 600;
+          color: $white;
+        }
+      }
+    }
+    &.table-layout {
+      .heading {
+        margin-top: 32px;
+        text-align: left;
+        @include breakpoint(sm) {
+          margin-top: 80px;
+        }
+        .title {
+          font-family: 'Darker Grotesque', sans-serif;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 28px;
+          color: $white;
+          margin-bottom: 8px;
+          @include breakpoint(sm) {
+            font-size: 48px;
+            line-height: 52px;
+            font-weight: 700;
+            margin-bottom: 16px;
+          }
+          span {
+            background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        .subtitle {
+          font-size: 12px;
+          line-height: 16px;
+          color: $light-purple;
+          @include breakpoint(sm) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+      .columns-holder {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+        @include breakpoint(sm) {
+          justify-content: space-between;
+          flex-direction: row;
+          flex-wrap: nowrap;
+        }
+        .column {
+          margin-top: 16px;
+          width: 100%;
+          @include breakpoint(sm) {
+            margin-top: 60px;
+            width: 50%;
+          }
+
+          .table-row {
+            padding: 12px 0;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 42px;
+            @include breakpoint(sm) {
+              padding: 24px 0;
+              column-gap: 100px;
+            }
+            &:after {
+              content: "";
+              background: linear-gradient(269.82deg, #CAB8F9 0%, #875FF2 36.3%, #6231E6 61.17%, #381D89 87.53%, #020416 113.96%);
+              width: 100%;
+              height: 1px;
+              position: absolute;
+              inset-inline-start: 0;
+              inset-block-end: 0;
+              transform: scale(-1);
+              opacity: .2;
+            }
+            &:first-of-type {
+              padding-top: 0;
+            }
+            &:last-of-type {
+              padding-bottom: 0;
+              &:after {
+                display: none;
+              }
+            }
+            .table-col {
+              width: calc(50% - 20px);
+              @include breakpoint(sm) {
+                width: calc(50% - 100px);
+              }
+              .table-title {
+                background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-family: 'Darker Grotesque', sans-serif;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 18px;
+              }
+              .descr {
+                margin-top: 8px;
+                font-size: 10px;
+                line-height: 12px;
+                color: $light-purple;
+                @include breakpoint(sm) {
+                  font-size: 16px;
+                  line-height: 24px;
+                }
+              }
+            }
+          }
+          .image {
+            @include breakpoint(sm) {
+              transform: translateY(-6vw);
+            }
+            img {
+              width: 100%;
             }
           }
         }
