@@ -22,10 +22,12 @@ new Position();
 include_once "inc/acf_options_page.php";
 include_once "inc/gpu_marketplace_page_fields.php";
 include_once "inc/avachat_page_fields.php";
+include_once "inc/currencies_fields.php";
+include_once "inc/socials_fiels.php";
 
 if ( ! defined( '_S_VERSION' ) ) {
-    // Replace the version number of the theme on each release.
-    define( '_S_VERSION', '1.0.1' );
+	// Replace the version number of the theme on each release.
+	define( '_S_VERSION', '1.0.1' );
 }
 
 /**
@@ -36,87 +38,89 @@ if ( ! defined( '_S_VERSION' ) ) {
  * as indicating support for post thumbnails.
  */
 function aitech_setup() {
-    /*
-        * Make theme available for translation.
-        * Translations can be filed in the /languages/ directory.
-        * If you're building a theme based on aitech, use a find and replace
-        * to change 'aitech' to the name of your theme in all the template files.
-        */
-    load_theme_textdomain( 'aitech', get_template_directory() . '/languages' );
+	/*
+		* Make theme available for translation.
+		* Translations can be filed in the /languages/ directory.
+		* If you're building a theme based on aitech, use a find and replace
+		* to change 'aitech' to the name of your theme in all the template files.
+		*/
+	load_theme_textdomain( 'aitech', get_template_directory() . '/languages' );
 
-    // Add default posts and comments RSS feed links to head.
-    add_theme_support( 'automatic-feed-links' );
+	// Add default posts and comments RSS feed links to head.
+	add_theme_support( 'automatic-feed-links' );
 
-    /*
-        * Let WordPress manage the document title.
-        * By adding theme support, we declare that this theme does not use a
-        * hard-coded <title> tag in the document head, and expect WordPress to
-        * provide it for us.
-        */
-    add_theme_support( 'title-tag' );
+	/*
+		* Let WordPress manage the document title.
+		* By adding theme support, we declare that this theme does not use a
+		* hard-coded <title> tag in the document head, and expect WordPress to
+		* provide it for us.
+		*/
+	add_theme_support( 'title-tag' );
 
-    /*
-        * Enable support for Post Thumbnails on posts and pages.
-        *
-        * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-        */
-    add_theme_support( 'post-thumbnails' );
+	/*
+		* Enable support for Post Thumbnails on posts and pages.
+		*
+		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		*/
+	add_theme_support( 'post-thumbnails' );
 
-    // This theme uses wp_nav_menu() in one location.
-    register_nav_menus(
-        array(
-            'menu-1' => esc_html__( 'Primary', 'aitech' ),
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus(
+		array(
+			'menu-1' => esc_html__( 'Primary', 'aitech' ),
             'footer_menu_1' => __( 'Footer Menu Company', 'aitech' ),
             'footer_menu_2' => __( 'Footer Menu Resource', 'aitech' ),
-        )
-    );
+            'footer_menu_product' => __( 'Footer Menu Product', 'aitech' ),
+            'footer_menu_privacy' => __( 'Footer Menu Privacy', 'aitech' ),
+		)
+	);
 
-    /*
-        * Switch default core markup for search form, comment form, and comments
-        * to output valid HTML5.
-        */
-    add_theme_support(
-        'html5',
-        array(
-            'search-form',
-            'comment-form',
-            'comment-list',
-            'gallery',
-            'caption',
-            'style',
-            'script',
-        )
-    );
+	/*
+		* Switch default core markup for search form, comment form, and comments
+		* to output valid HTML5.
+		*/
+	add_theme_support(
+		'html5',
+		array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+			'style',
+			'script',
+		)
+	);
 
-    // Set up the WordPress core custom background feature.
-    add_theme_support(
-        'custom-background',
-        apply_filters(
-            'aitech_custom_background_args',
-            array(
-                'default-color' => 'ffffff',
-                'default-image' => '',
-            )
-        )
-    );
+	// Set up the WordPress core custom background feature.
+	add_theme_support(
+		'custom-background',
+		apply_filters(
+			'aitech_custom_background_args',
+			array(
+				'default-color' => 'ffffff',
+				'default-image' => '',
+			)
+		)
+	);
 
-    // Add theme support for selective refresh for widgets.
-    add_theme_support( 'customize-selective-refresh-widgets' );
+	// Add theme support for selective refresh for widgets.
+	add_theme_support( 'customize-selective-refresh-widgets' );
 
-    /**
-     * Add support for core custom logo.
-     *
-     * @link https://codex.wordpress.org/Theme_Logo
-     */
-    add_theme_support(
-        'custom-logo',
-        array(
-            'height'      => 250,
-            'width'       => 250,
-            'flex-width'  => true,
-            'flex-height' => true,
-        )
-    );
+	/**
+	 * Add support for core custom logo.
+	 *
+	 * @link https://codex.wordpress.org/Theme_Logo
+	 */
+	add_theme_support(
+		'custom-logo',
+		array(
+			'height'      => 250,
+			'width'       => 250,
+			'flex-width'  => true,
+			'flex-height' => true,
+		)
+	);
 }
 add_action( 'after_setup_theme', 'aitech_setup' );
 
@@ -128,7 +132,7 @@ add_action( 'after_setup_theme', 'aitech_setup' );
  * @global int $content_width
  */
 function aitech_content_width() {
-    $GLOBALS['content_width'] = apply_filters( 'aitech_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'aitech_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'aitech_content_width', 0 );
 
@@ -138,17 +142,17 @@ add_action( 'after_setup_theme', 'aitech_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function aitech_widgets_init() {
-    register_sidebar(
-        array(
-            'name'          => esc_html__( 'Sidebar', 'aitech' ),
-            'id'            => 'sidebar-1',
-            'description'   => esc_html__( 'Add widgets here.', 'aitech' ),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</section>',
-            'before_title'  => '<h2 class="widget-title">',
-            'after_title'   => '</h2>',
-        )
-    );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar', 'aitech' ),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Add widgets here.', 'aitech' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'aitech_widgets_init' );
 
@@ -165,6 +169,17 @@ function aitech_scripts() {
     wp_enqueue_script( 'marketplace-functions', get_template_directory_uri() . '/src/js/marketplace-functions.js', array('swiper'), _S_VERSION, true );
     wp_enqueue_script( 'homepage-functions', get_template_directory_uri() . '/src/js/homepage-functions.js', array('swiper'), _S_VERSION, true );
     wp_enqueue_script('aitech-cf7', get_template_directory_uri() . '/src/js/form/cf7.js', [], _S_VERSION, true);
+
+    wp_enqueue_script(
+        'currency-widgets',
+        'https://files.coinmarketcap.com/static/widget/currency.js',
+        [],
+        false,
+        [
+            'in_footer' => true,
+            'strategy'  => 'defer',
+        ]
+    );
 
     wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper-bundle.min.js', array(), _S_VERSION, true );
 
@@ -183,7 +198,7 @@ add_action( 'wp_enqueue_scripts', 'aitech_scripts' );
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
-    require get_template_directory() . '/inc/jetpack.php';
+	require get_template_directory() . '/inc/jetpack.php';
 }
 
 /**

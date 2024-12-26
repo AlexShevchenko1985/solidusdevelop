@@ -19,6 +19,8 @@ $line-green: #122220;
 $light-purple: #E1E3FE;
 $light-purple-04: rgba(225, 227, 254, 0.4);
 $light-purple-08: rgba(225, 227, 254, 0.8);
+$light-purple-06: rgba(225, 227, 254, 0.6);
+$light-purple-04: rgba(225, 227, 254, 0.4);
 $light-purple-03: rgba(117, 104, 151, 0.3);
 $light-purple-20: #7E759D;
 $lighter-purple: #D8D7FD;
@@ -26,6 +28,7 @@ $purple-accent: #562BD6;
 $button-bg: #01020A;
 $green-shadow: #0FF47F4D;
 
+$gradient-purple: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
 
 $breakpoints: (
   xs: 768px,
@@ -45,3 +48,8 @@ $breakpoints: (
   }
 }
 
+@mixin gradient-text($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

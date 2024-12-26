@@ -1,0 +1,117 @@
+@use "variables" as *;
+@use "general/utils" as *;
+
+
+.section-ai-tech {
+  padding: 56px 0;
+
+  @include breakpoint(sm) {
+    padding: 80px 0;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+      gap: 32px;
+    }
+
+    .item {
+      position: relative;
+      width: calc(100% - 80px);
+      margin-left: 16px;
+
+      @include breakpoint(sm) {
+        width: 50%;
+      }
+
+      &:before {
+        content: '';
+        width: 102px;
+        height: 100%;
+        position: absolute;
+        background-image: url("../../img/left-frame-purple.svg");
+        background-size: contain;
+        top: -40px;
+        left: -40px;
+        background-repeat: no-repeat;
+        z-index: 2;
+
+        @include breakpoint(sm) {
+          top: -66px;
+          left: -55px;
+        }
+      }
+
+      h3 {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
+
+        @include breakpoint(sm) {
+          margin-bottom: 24px;
+          padding-left: 24px;
+        }
+      }
+
+      p {
+        color: $white;
+        max-width: 440px;
+        padding-left: 16px;
+        position: relative;
+        z-index: 2;
+
+        @include breakpoint(sm) {
+          padding-left: 40px;
+        }
+      }
+
+      .btn {
+        margin-top: 16px;
+        margin-left: 16px;
+        background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
+        position: relative;
+        border: none;
+        width: fit-content;
+        text-align: center;
+        z-index: 2;
+
+        backdrop-filter: blur(10px); // Background blur
+        background-color: rgba(255, 255, 255, 0.2); // Semi-transparent background for visibility
+
+        @include breakpoint(sm) {
+          margin-top: 32px;
+          margin-left: 40px;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          padding: 2px;
+          background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+          border-radius: inherit;
+          mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
+          z-index: 1; // Move below the button content
+        }
+      }
+
+
+      .item-img {
+        position: relative;
+        z-index: 1;
+
+        @include breakpoint(sm) {
+          margin-top: -75px;
+        }
+      }
+    }
+  }
+}

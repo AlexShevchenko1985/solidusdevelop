@@ -1,0 +1,266 @@
+@use "variables" as *;
+@use "general/utils" as *;
+
+.home-roadmap {
+  color: $light-purple;
+  padding: 80px 0;
+
+  h2 {
+    margin: 0 auto 24px;
+    text-align: center;
+    font-weight: 700;
+    @include gradient-text($gradient-purple);
+    width: fit-content;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
+    position: relative;
+
+    @include breakpoint(sm) {
+      margin-top: 123px;
+      flex-direction: row;
+    }
+  }
+
+  .solidus-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -40px;
+    display: none;
+
+    @include breakpoint(sm) {
+      display: block;
+    }
+  }
+
+  &__inner-item {
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 16px;
+    background-image: url("../../img/roadmap-bg-mobile.webp");
+
+    @include breakpoint(sm) {
+      width: 50%;
+      padding: 40px;
+      min-height: 627px;
+
+      &:first-child {
+        background-image: url("../../img/roadmap-item-bg-1.webp");
+      }
+
+      &:nth-child(2) {
+        background-image: url("../../img/roadmap-item-bg-2.webp");
+
+        h3 {
+          margin-left: auto;
+          text-align: right;
+        }
+      }
+    }
+
+    h3 {
+      @include gradient-text($gradient-purple);
+      font-size: 40px;
+      line-height: 40px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      width: fit-content;
+      margin-left: 52px;
+
+      @include breakpoint(sm) {
+        margin-left: 0;
+        font-size: 64px;
+        line-height: 57.6px;
+      }
+    }
+
+    .content {
+      @include breakpoint(sm) {
+        column-count: 2;
+      }
+
+      &__item {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        padding: 12px;
+        border-radius: 6px;
+        position: relative;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        order: 0;
+        margin-bottom: 12px;
+
+        &:before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          padding: 1px;
+          background: linear-gradient(32deg, rgba(117, 104, 151, 0.2), rgb(63 55 84));
+          border-radius: inherit;
+          mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
+          z-index: 2;
+        }
+
+        &:has(.circle) {
+          &:before {
+            animation: rotate-gradient 2s infinite;
+          }
+        }
+
+        @keyframes rotate-gradient {
+          0% {
+            background: linear-gradient(0deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          2.78% {
+            background: linear-gradient(10deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          5.56% {
+            background: linear-gradient(20deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          8.33% {
+            background: linear-gradient(30deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          11.11% {
+            background: linear-gradient(40deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          13.89% {
+            background: linear-gradient(50deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          16.67% {
+            background: linear-gradient(60deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          19.44% {
+            background: linear-gradient(70deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          22.22% {
+            background: linear-gradient(80deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          25% {
+            background: linear-gradient(90deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          27.78% {
+            background: linear-gradient(100deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          30.56% {
+            background: linear-gradient(110deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          33.33% {
+            background: linear-gradient(120deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          36.11% {
+            background: linear-gradient(130deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          38.89% {
+            background: linear-gradient(140deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          41.67% {
+            background: linear-gradient(150deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          44.44% {
+            background: linear-gradient(160deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          47.22% {
+            background: linear-gradient(170deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          50% {
+            background: linear-gradient(180deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          52.78% {
+            background: linear-gradient(190deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          55.56% {
+            background: linear-gradient(200deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          58.33% {
+            background: linear-gradient(210deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          61.11% {
+            background: linear-gradient(220deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          63.89% {
+            background: linear-gradient(230deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          66.67% {
+            background: linear-gradient(240deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          69.44% {
+            background: linear-gradient(250deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          72.22% {
+            background: linear-gradient(260deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          75% {
+            background: linear-gradient(270deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          77.78% {
+            background: linear-gradient(280deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          80.56% {
+            background: linear-gradient(290deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          83.33% {
+            background: linear-gradient(300deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          86.11% {
+            background: linear-gradient(310deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          88.89% {
+            background: linear-gradient(320deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          91.67% {
+            background: linear-gradient(330deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          94.44% {
+            background: linear-gradient(340deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          97.22% {
+            background: linear-gradient(350deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+          100% {
+            background: linear-gradient(360deg, #CAB8F9 32.17%, #875FF2 37.85%, #6231E6 41.74%, #381D89 45.86%, #020416 50%);
+          }
+        }
+
+        span {
+          min-width: 22px;
+          width: 22px;
+          height: 22px;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          &.check {
+            background-size: 62px;
+            background-image: url("data:image/svg+xml,%0A%3Csvg width='58' height='58' viewBox='0 0 58 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_373_41431)'%3E%3Cpath d='M35.8779 18H22.1221C21.0337 18 19.9684 18.44 19.2042 19.2042C18.44 19.9684 18 21.0337 18 22.1221V35.8779C18 36.9663 18.44 38.0316 19.2042 38.7958C19.9684 39.56 21.0337 40 22.1221 40H35.8779C36.9663 40 38.0316 39.56 38.7958 38.7958C39.56 38.0316 40 36.9663 40 35.8779V22.1221C40 21.0337 39.56 19.9684 38.7958 19.2042C38.0316 18.44 36.9663 18 35.8779 18ZM35.6232 24.2989L28.7453 33.9326C28.5137 34.2568 28.1432 34.4653 27.7495 34.5116C27.7032 34.5116 27.68 34.5116 27.6337 34.5116C27.2632 34.5116 26.9158 34.3726 26.6611 34.1179L22.5389 29.9726C22.1916 29.6253 22.0758 29.1158 22.1916 28.6526C22.3305 28.1895 22.6779 27.8189 23.1642 27.68C23.6274 27.5411 24.1368 27.68 24.4842 28.0274L27.4716 31.0147L33.4 22.7011C33.6779 22.3074 34.1642 22.0758 34.6505 22.1221C35.1368 22.1684 35.5768 22.4695 35.7621 22.9095C35.9474 23.3726 35.9011 23.9053 35.6232 24.2989Z' fill='%23998DF8'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_373_41431' x='0.439024' y='0.439024' width='57.122' height='57.122' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation='8.78049'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.572549 0 0 0 0 0.435294 0 0 0 0 0.952941 0 0 0 1 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_373_41431'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_373_41431' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+          }
+
+          &.circle {
+            background-size: 27px;
+            background-image: url("../../img/circle.webp");
+            animation: infinite-rotate 2s linear infinite;
+          }
+
+          @keyframes infinite-rotate {
+            0% {
+              transform: rotate(130deg);
+            }
+            100% {
+              transform: rotate(-230deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

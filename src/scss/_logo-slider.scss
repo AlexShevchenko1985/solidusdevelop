@@ -1,0 +1,79 @@
+@use "variables" as *;
+@use "general/utils" as *;
+
+.logo-slider {
+  padding: 40px 0;
+
+  p {
+    font-family: Darker Grotesque;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: center;
+    color: $white;
+  }
+
+  .content {
+    position: relative;
+    margin-top: 24px;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 150px;
+      background: linear-gradient(to right, #000, rgba(0, 0, 0, 0));
+      z-index: 1;
+      z-index: 2;
+    }
+
+    &:before {
+      left: 0;
+      background: linear-gradient(to right, #000, rgba(0, 0, 0, 0));
+    }
+
+    &:after {
+      right: 0;
+      background: linear-gradient(to left, #000, rgba(0, 0, 0, 0));
+    }
+
+    .swiper-wrapper {
+      position: relative;
+      z-index: 1;
+
+      .swiper-slide {
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+          transition: all 0.3s ease;
+        }
+
+        &:hover {
+          &:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+            -webkit-mask-image: var(--mask-image);
+            -webkit-mask-size: cover;
+            -webkit-mask-repeat: no-repeat;
+            mask-image: var(--mask-image);
+            mask-size: cover;
+            mask-repeat: no-repeat;
+            opacity: 1;
+            transition: all 0.3s ease;
+          }
+
+          img {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+  }
+
+}

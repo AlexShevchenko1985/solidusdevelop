@@ -196,3 +196,79 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+const logos = new Swiper(".logo-slider .content", {
+  slidesPerView: "auto",
+  spaceBetween: 16,
+  loop: true,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  speed: 3000,
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    1024: {
+      slidesPerView: 6,
+    },
+    1440: {
+      slidesPerView: 7,
+    },
+  },
+});
+
+const sliderElement = document.querySelector(".logo-slider .content");
+if(sliderElement){
+  sliderElement.addEventListener("mouseenter", () => logos.autoplay.stop());
+  sliderElement.addEventListener("mouseleave", () => logos.autoplay.start());
+
+  const currencies = new Swiper(".labs-section__inner", {
+    slidesPerView: "auto",
+    spaceBetween: 16,
+    loop: true,
+    speed: 1000,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 4,
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next-widget',
+      prevEl: '.swiper-button-prev-widget',
+    },
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  setTimeout( () => {
+    const currencyWidgets = document.querySelector('.labs-section__inner .swiper-wrapper');
+    if (currencyWidgets){
+      currencyWidgets.innerHTML = currencyWidgets.innerHTML.replace(/RANK/g, 'Rank');
+      currencyWidgets.innerHTML = currencyWidgets.innerHTML.replace(/VOLUME/g, 'Volume');
+      currencyWidgets.innerHTML = currencyWidgets.innerHTML.replace(/MARKET CAP/g, 'Market cap');
+    }
+  }, 1000 )
+
+
+})
