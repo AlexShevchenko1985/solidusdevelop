@@ -7,9 +7,15 @@
         <section id="section7" class="banner-section">
             <?php if (!empty($video)): ?>
                 <div class="video-bg">
-                    <video playsinline autoplay muted loop poster="">
-                        <source src="<?php echo $video['url']; ?>" type="video/webm">
-                    </video>
+                    <?php if ('image' === $video['type']): ?>
+                        <div class="media">
+                            <?php echo wp_get_attachment_image($video['ID'], 'hd-size'); ?>
+                        </div>
+                    <?php else: ?>
+                        <video playsinline autoplay muted loop poster="">
+                            <source src="<?php echo $video['url']; ?>" type="video/webm">
+                        </video>
+                    <?php endif; ?>
                 </div>
             <?php endif; ?>
 

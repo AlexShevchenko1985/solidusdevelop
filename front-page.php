@@ -1,8 +1,54 @@
 <?php
 get_header();
+
+$numbers_section = get_field('numbers_section');
+$card_section = get_field('card_section');
+$chosen_by = get_field('chosen_by');
+$roadmap = get_field('roadmap');
+$ai_tech = get_field('ai_tech');
+$aitech_labs = get_field('aitech_labs');
+$coin_section = get_field('coin_section');
+
 ?>
 
 <div class="home-wrapper">
+
+    <?php
+    /**
+     * Logo slider
+     */
+    get_template_part('template-parts/home/logo-slider', null, $chosen_by);
+    ?>
+
+    <?php
+    /**
+     * Product block
+     */
+    get_template_part('template-parts/home/powerful-product');
+    ?>
+
+    <?php
+    /**
+     * Data Center block
+     */
+    get_template_part('template-parts/home/data-center');
+    ?>
+
+    <?php
+    /**
+     * card section
+     *
+     */
+    get_template_part('template-parts/home/card', null, $card_section);
+    ?>
+
+    <?php
+    /**
+     * numbers section
+     *
+     */
+    get_template_part('template-parts/home/numbers', null, $numbers_section);
+    ?>
 
     <?php
     /**
@@ -20,239 +66,46 @@ get_header();
 
     <?php
     /**
+     * roadmap tech section
+     */
+    get_template_part('template-parts/home/roadmap', null, $roadmap);
+    ?>
+
+    <?php
+    /**
+     * ai tech section
+     */
+    get_template_part('template-parts/home/ai-tech', null, $ai_tech);
+    ?>
+
+    <?php
+    /**
+     * labs section
+     */
+    get_template_part('template-parts/home/labs', null, $aitech_labs);
+    ?>
+
+    <?php
+    /**
+     * coin section
+     */
+    get_template_part('template-parts/home/coin', null, $coin_section);
+    ?>
+
+    <?php
+    /**
+     * blog section
+     */
+    get_template_part('template-parts/home/blog');
+    ?>
+
+    <?php
+    /**
      * Form block
      */
     get_template_part('template-parts/home/form');
     ?>
 
-    <section class="powerful-products">
-        <div class="container">
-            <h2>Powerful <span>Products</span></h2>
-            <div class="powerful-products-holder">
-	            <div class="item">
-	                <div class="icon">
-                        <img src="<?php echo get_template_directory_uri() ?>/src/img/solution-icon1.svg" alt="Icon">
-                    </div>
-                    <div class="bg-block">
-                        <div class="media">
-                            <img src="<?php echo get_template_directory_uri() ?>/src/img/sol-mask1.webp" alt="Icon">
-                        </div>
-                        <div class="content">
-                            <div class="label"><span>AI Marketplace</span></div>
-                            <h3>Revolutionize Efficiency with Our Advanced AI Marketplace</h3>
-                            <p>Our advanced AI marketplace, where cutting-edge tools redefine efficiency across business operations and
-                               personal tasks. Discover predictive analytics, intelligent automation, and intuitive personal assistants designed
-                               to streamline workflows and enhance productivity.</p>
-                            <p>Join us to explore innovative solutions that elevate user
-                               experiences with intuitive interfaces and robust functionalities, driving operational excellence and innovation
-                               across diverse domains.</p>
-                            <div class="btn-holder">
-                                <a href="" class="primary-btn"><span>Explore The Product</span></a>
-                            </div>
-                        </div>
-                    </div>
-	            </div>
-	            <div class="item">
-                    <div class="icon">
-                        <img src="<?php echo get_template_directory_uri() ?>/src/img/solution-icon2.svg" alt="Icon">
-                    </div>
-                    <div class="bg-block">
-                        <div class="media">
-                            <video playsinline muted loop >
-                                <source src="<?php echo get_template_directory_uri() ?>/src/video/hero-video.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="content">
-                            <div class="label"><span>Compute Marketplace</span></div>
-                            <h3>Powerful AI Solutions and On-Demand Computing
-                                for Every Need</h3>
-                            <ul>
-                                <li>Foundational AI Models: Open-source models such
-                                    as Large Language Models and image generators.</li>
-                                <li>AI Agents: Subscription-based or pay-per-use
-                                    intelligent assistants for automating various tasks.</li>
-                                <li>Standalone AI Solutions: Comprehensive
-                                    applications addressing specific challenges.</li>
-                            </ul>
-                            <p>Access high-performance Compute for any task,
-                               from smooth cloud gaming to complex AI projects.
-                               Rent exactly what you need, for as long as you need
-                               it, on our secure, user-friendly platform.
-                               No upfront costs, just powerful processing
-                               power at competitive rates.</p>
-                            <div class="btn-holder">
-                                <a href="" class="primary-btn"><span>Explore The Product</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="data-center">
-        <div class="container">
-            <div class="heading">
-                <h2>Data <span>Center</span></h2>
-                <p>Tier 3 Compliant Datacenter (Sign off 2025)</p>
-                <div class="btn-list">
-                    <div class="tab-btn">Key features</div>
-                    <div class="tab-btn">Stats</div>
-                </div>
-            </div>
-            <div class="tab-body">
-                <div class="columns-holder">
-                    <div class="col">
-                        <div class="item-block">
-                            <h4>Compute Power</h4>
-                            <div class="content-holder">
-                                <div class="content-item">
-                                    <div class="title">Initially</div>
-                                    <div class="descr">624 teraFLOPS</div>
-                                </div>
-                                <div class="content-item">
-                                    <div class="title">2025 Target</div>
-                                    <div class="descr">6240 teraFLOPS</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-block">
-                            <h4>High-Speed Storage</h4>
-                            <div class="content-holder">
-                                <div class="content-item">
-                                    <div class="title">Initially</div>
-                                    <div class="descr">40 TB with InfiniBand</div>
-                                </div>
-                                <div class="content-item">
-                                    <div class="title">2025 Target</div>
-                                    <div class="descr">400 TB with InfiniBand</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col double-col">
-                        <div class="item-block">
-                            <h4>Networking Speed</h4>
-                            <div class="content-holder">
-                                <div class="content-item">
-                                    <div class="title">Ultra-low Latency</div>
-                                    <div class="descr">100 Gbps connectivity</div>
-                                </div>
-                                <div class="content-item">
-                                    <div class="title">Government-grade options:</div>
-                                    <div class="descr">Dark Fiber availability</div>
-                                </div>
-                                <div class="content-item">
-                                    <div class="title">ISP Redundancy:</div>
-                                    <div class="descr">Multiple providers with aerial backup</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="item-block">
-                            <h4>Military-Grade Security</h4>
-                            <div class="content-holder">
-                                <div class="content-item">
-                                    <ul>
-                                        <li>ISO 27001 certification</li>
-                                        <li>NextGen cybersecurity</li>
-                                        <li>Failover and disaster recovery</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-block">
-                            <h4>Sustainability</h4>
-                            <div class="content-holder">
-                                <div class="content-item">
-                                    <div class="title">2025 planned</div>
-                                    <div class="descr">Renewable energy and water cooling</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video-holder">
-                    <video playsinline muted loop autoplay>
-                        <source src="<?php echo get_template_directory_uri() ?>/src/video/data-center-video.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="advantages-list">
-                    <div class="title">Benefits / Use cases</div>
-                    <ul>
-                        <li>AI & Machine Learning</li>
-                        <li>Big Data Analysis</li>
-                        <li>Scientific Simulations</li>
-                        <li>Financial Services</li>
-                        <li>Rendering & Gaming</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="tab-body table-layout">
-                <div class="heading">
-                    <div class="title"><span>99.99%</span> Uptime</div>
-                    <div class="subtitle">Located in Eastern Europe</div>
-                </div>
-                <div class="columns-holder">
-                    <div class="column">
-                        <div class="table-row">
-                            <div class="table-col">
-                                <div class="table-title">Initially</div>
-                            </div>
-                            <div class="table-col">
-                                 <div class="table-title">2025 Target</div>
-                            </div>
-                        </div>
-                        <div class="table-row">
-                            <div class="table-col">
-                                <div class="table-title">CPUs/GPUs:</div>
-                                <div class="descr">10 x Intel Xeon E5 x 14 Core – 128 GB RAM + A100s & H100s</div>
-                            </div>
-                            <div class="table-col">
-                                 <div class="table-title">CPUs/GPUs:</div>
-                                 <div class="descr">50 x Supermicro HPC CPU + GPU NVIDIA B200</div>
-                            </div>
-                        </div>
-                        <div class="table-row">
-                            <div class="table-col">
-                                <div class="table-title">Compute Capacity</div>
-                                <div class="descr">624 teraFLOPS</div>
-                            </div>
-                            <div class="table-col">
-                                 <div class="table-title">Compute Capacity:</div>
-                                 <div class="descr">6240 teraFLOPS</div>
-                            </div>
-                        </div>
-                        <div class="table-row">
-                            <div class="table-col">
-                                <div class="table-title">Storage</div>
-                                <div class="descr">40 TB</div>
-                            </div>
-                            <div class="table-col">
-                                 <div class="table-title">Storage</div>
-                                 <div class="descr">400 TB</div>
-                            </div>
-                        </div>
-                        <div class="table-row">
-                            <div class="table-col">
-                                <div class="table-title">Bandwidth</div>
-                                <div class="descr">10 x 10 Gbps Ports</div>
-                            </div>
-                            <div class="table-col">
-                                 <div class="table-title">Bandwidth</div>
-                                 <div class="descr">10 x 10 Gbps Ports</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="image">
-                             <img src="<?php echo get_template_directory_uri() ?>/src/img/stats-img.webp" alt="Icon">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 </div>
 
 <?php

@@ -3,6 +3,30 @@
 
 .page-template-page-avachat {
 
+  .site-footer {
+    .footer-upper {
+
+      &:after {
+        filter: hue-rotate(220deg);
+      }
+
+      .contact-block {
+        .contact-form-wrap form .wpcf7-submit {
+          background: $green-accent;
+          color: $button-bg;
+        }
+
+        .socials__item {
+          filter: hue-rotate(220deg);
+
+          &:hover {
+            filter: hue-rotate(220deg) brightness(2);
+          }
+        }
+      }
+    }
+  }
+
   .round-btn {
     display: block;
     font-family: Darker Grotesque;
@@ -103,8 +127,21 @@
         overflow: hidden;
         display: flex;
         justify-content: center;
+        position: relative;
 
-        img {
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+          pointer-events: none;
+          box-shadow: inset 0px 0px 100px 70px rgba(0, 0, 0, 1);
+        }
+
+        video {
           min-width: 800px
         }
       }
@@ -118,6 +155,7 @@
         flex-direction: column;
         max-width: 100vw;
         margin-top: -6rem;
+        z-index: 2;
 
         @include breakpoint(sm) {
           margin: -9.375rem auto 0;

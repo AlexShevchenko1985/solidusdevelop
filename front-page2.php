@@ -20,12 +20,7 @@ get_header();
     get_template_part('template-parts/home/team');
     ?>
 
-    <?php
-    /**
-     * Logo slider
-     */
-    get_template_part('template-parts/home/logo-slider', null, $chosen_by);
-    ?>
+
 
 	<section class="partners-section">
         <div class="container">
@@ -387,54 +382,18 @@ get_header();
         </div>
     </section>
 
-    <?php
-    /**
-     * blog section
-     */
-    get_template_part('template-parts/home/blog');
-    ?>
 
-    <?php
-    /**
-     * numbers section
-     */
-    get_template_part('template-parts/home/numbers', null, $numbers_section);
-    ?>
 
-    <?php
-    /**
-     * numbers section
-     */
-    get_template_part('template-parts/home/card', null, $card_section);
-    ?>
 
-    <?php
-    /**
-     * roadmap tech section
-     */
-    get_template_part('template-parts/home/roadmap', null, $roadmap);
-    ?>
 
-    <?php
-    /**
-     * ai tech section
-     */
-    get_template_part('template-parts/home/ai-tech', null, $ai_tech);
-    ?>
 
-    <?php
-    /**
-     * labs section
-     */
-    get_template_part('template-parts/home/labs', null, $aitech_labs);
-    ?>
 
-    <?php
-    /**
-     * coin section
-     */
-    get_template_part('template-parts/home/coin', null, $coin_section);
-    ?>
+
+
+
+
+
+
 </div>
 
 <?php

@@ -4,9 +4,7 @@
         $subtitle = get_sub_field('subtitle');
         $tabs     = get_sub_field('tabs');
         $video    = get_sub_field('video');
-        echo '<pre>';
-        print_r($video);
-        echo '</pre>';
+
         ?>
         <section id="section6" class="two-column-tabs">
             <div class="container">

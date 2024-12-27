@@ -14,9 +14,12 @@ include_once "App/Base/AbstractPostType.php";
 include_once "App/Base/AbstractTaxonomy.php";
 include_once "App/PostType/Member.php";
 include_once "App/Taxonomy/Position.php";
+include_once "App/PostType/DataCenter.php";
 
 new Member();
 new Position();
+new DataCenter();
+
 
 
 include_once "inc/acf_options_page.php";

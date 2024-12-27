@@ -43,6 +43,7 @@ $query = new WP_Query([
 
             echo '</div>';
 
+            wp_reset_postdata();
         }
         ?>
 

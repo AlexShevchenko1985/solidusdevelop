@@ -23,7 +23,10 @@ get_header();
             </div>
             <div class="hero__info">
                 <div class="girl">
-                    <img src="<?php echo get_template_directory_uri() . '/build/img/girl-bg.webp' ?>" alt="AVAchat">
+                    <video playsinline autoplay muted loop poster="<?php echo get_template_directory_uri() . '/build/img/girl-bg.webp' ?>">
+                        <source src="<?php echo get_template_directory_uri() . '/build/video/AVACHAT Video Compressed.webm' ?>" type="video/webm">
+                        <source src="<?php echo get_template_directory_uri() . '/build/video/AVACHAT Video Compressed.mp4' ?>" type="video/mp4">
+                    </video>
                 </div>
                 
                 <div class="hero__info-items">

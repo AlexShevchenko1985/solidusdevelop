@@ -6,7 +6,9 @@
  * @var array $args
  *
  */
-
+if(empty($args)){
+    return;
+}
 ?>
 
 <section class="home-card">

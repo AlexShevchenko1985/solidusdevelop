@@ -172,7 +172,7 @@
     line-height: 18px;
 
     a, p {
-        text-decoration: none!important;
+        text-decoration: none;
         font-size: 16px;
         font-weight: 400;
         line-height: 18px;
@@ -357,6 +357,14 @@
         .footer-menu-privacy {
             display: flex;
             gap: 16px;
+
+            a {
+                text-decoration: underline;
+                color: $light-purple-06;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 16px;
+            }
         }
     }
 }

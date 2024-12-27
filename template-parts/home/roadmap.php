@@ -54,7 +54,7 @@
                 <?php endif; ?>
             </div>
 
-            <img src="<?= get_template_directory_uri() . '/build/img/solidus.svg' ?>" alt="Solidus" class="solidus-logo">
+            <img src="<?= get_template_directory_uri() . '/build/img/solidus-logo2.svg' ?>" alt="Solidus" class="solidus-logo">
         </div>
     </div>
 </section>
