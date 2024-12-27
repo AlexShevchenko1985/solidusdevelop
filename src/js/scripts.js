@@ -1,19 +1,37 @@
-import {scrollToAnchor} from "./functions.js";
-
 document.addEventListener("DOMContentLoaded", () => {
-    scrollToAnchor();
 
-    document.querySelector('.menu-trigger').addEventListener("click", toggleMenu);
+    const video = document.getElementById('video');
 
-    function toggleMenu() {
-        document.querySelector('.burger').classList.toggle("open");
-        document.querySelector('.site-header').classList.toggle("nav-active");
-
-        if (document.body.style.overflow === 'hidden') {
-            document.body.style.overflow = 'auto';
-        } else {
-            document.body.style.overflow = 'hidden';
-        }
+    if(!video){
+        return;
     }
+    const playBtn = document.getElementById('play-btn');
 
+    playBtn.addEventListener('click', () => {
+        if (video.paused) {
+            video.play();
+            playBtn.style.display = 'none';
+        } else {
+            video.pause();
+            playBtn.style.display = 'block';
+        }
+    });
+
+    video.addEventListener('click', () => {
+        if (video.paused) {
+            video.play();
+            playBtn.style.display = 'none';
+        } else {
+            video.pause();
+            playBtn.style.display = 'block';
+        }
+    });
+
+    video.addEventListener('play', () => {
+        playBtn.style.display = 'none';
+    });
+
+    video.addEventListener('pause', () => {
+        playBtn.style.display = 'block';
+    });
 });

@@ -193,6 +193,8 @@ function aitech_scripts() {
     if (is_page_template('page-avachat.php')) {
         wp_enqueue_script( 'avachat-functions', get_template_directory_uri() . '/src/js/avachat-functions.js', array('swiper'), _S_VERSION, true );
     }
+    wp_enqueue_script( 'video-functions', get_template_directory_uri() . '/src/js/scripts.js', array('swiper'), _S_VERSION, true );
+
 }
 add_action( 'wp_enqueue_scripts', 'aitech_scripts' );
 
