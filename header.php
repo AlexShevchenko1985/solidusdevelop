@@ -25,7 +25,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'aitech' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="Header" class="site-header">
 		<div class="container">
 			<div class="header-holder">
 				<div class="logo">
@@ -135,23 +135,43 @@
                 <div class="label">
                     <img src="<?php echo get_template_directory_uri() ?>/src/img/certik-logo.svg" alt="Icon">
                 </div>
-                <a href="javascript:void(0);" class="mobile-menu-btn menu-close">
+                <a href="javascript:void(0);" class="mobile-menu-btn">
                     <img class="menu-burger" src="<?php echo get_template_directory_uri() ?>/src/img/mobile-burger.svg" alt="Icon">
                     <img class="menu-cross" src="<?php echo get_template_directory_uri() ?>/src/img/menu-close.svg" alt="Icon">
                 </a>
-
-                <nav class="mobile-navigation mobile-only">
-                    <div class="mobile-navigation__inner">
-                        <?php
-                        wp_nav_menu(
-                            array(
-                                'theme_location' => 'menu-1',
-                                'menu_id'        => 'primary-menu',
-                            )
-                        );
-                        ?>
-                    </div>
-                </nav>
 			</div>
 		</div>
+		<div class="mobile-sidenav">
+            <div class="mobile-menu-holder">
+                <ul>
+                    <li class="has-submenu">
+                        <a href="javascript:void(0);">Products</a>
+                        <div class="hidden-block">
+                            <ul>
+                                <li>
+                                    <a href="">AI Marketplace</a>
+                                    <a href="">AVACHAT</a>
+                                    <a href="">GPU Marketplace</a>
+                                    <a href="">AITECH Debit Card</a>
+                                    <a href="">VPN Subscriptions</a>
+                                    <a href="">Telegram Bot</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+	                    <a href="">Blog</a>
+	                </li>
+	                <li>
+                        <a href="">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobile-label">
+                <img src="<?php echo get_template_directory_uri() ?>/src/img/certik-logo.svg" alt="Icon">
+            </div>
+        </div>
 	</header>

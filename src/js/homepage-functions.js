@@ -324,3 +324,53 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Mobile Sidenav
+document.addEventListener('DOMContentLoaded', function () {
+  const headerBlock = document.getElementById('Header');
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+
+  if (!headerBlock) {
+    return;
+  }
+  mobileMenuBtn.addEventListener('click', function () {
+    headerBlock.classList.toggle('show-menu');
+  });
+
+})
+
+// Mobile Menu
+
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuLinks = document.querySelectorAll('.mobile-sidenav ul > li > a');
+
+  if (!mobileMenuLinks.length) return;
+
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      const parentLi = this.parentElement;
+
+      if (parentLi.classList.contains('has-submenu')) {
+        event.preventDefault();
+
+        if (parentLi.classList.contains('active')) {
+          parentLi.classList.remove('active');
+        } else {
+          document.querySelectorAll('.mobile-sidenav ul > li').forEach(li => {
+            li.classList.remove('active');
+          });
+
+          parentLi.classList.add('active');
+        }
+      } else {
+
+        document.querySelectorAll('.mobile-sidenav ul > li').forEach(li => {
+          li.classList.remove('active');
+        });
+
+        parentLi.classList.add('active');
+        window.location.href = this.href;
+      }
+    });
+  });
+});
