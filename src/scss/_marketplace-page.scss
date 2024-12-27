@@ -388,27 +388,30 @@ body {
 }
 
 .video-block {
-  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 70.98%, #000000 100%);
-  background-image: url("/wp-content/themes/aitech/src/img/tablet_1.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 80px 0 113px;
   margin-top: 40px;
-  background-size: 140%;
   @include breakpoint(sm) {
-    padding: 220px 0 284px;
     margin-top: 0;
-    background-size: auto;
   }
   .container {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 70.98%, #000000 100%);
+    background-image: url("/wp-content/themes/aitech/src/img/tablet_1.webp");
+    background-repeat: no-repeat;
+    background-position: center 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 15vw 0 12vw;
+    background-size: 135%;
+    @include breakpoint(sm) {
+      padding: 220px 0 284px;
+      background-size: auto;
+    }
     .video-holder {
       position: relative;
-      padding: 0 15px;
+      padding: 5vw 10vw 0;
       @include breakpoint(sm) {
         padding: 0;
+        margin: 0;
       }
       video {
         width: 100%;
