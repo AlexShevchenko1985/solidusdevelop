@@ -1408,6 +1408,15 @@ body {
     @include breakpoint(sm) {
       height: calc(100% + 80px);
     }
+    .media {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
     video {
       width: 100%;
       height: 100%;
@@ -1417,7 +1426,7 @@ body {
   .container {
     height: 100%;
     .heading-holder {
-      min-height: 377px;
+      min-height: 440px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1427,6 +1436,7 @@ body {
       z-index: 1;
       @include breakpoint(sm) {
         min-height: 680px;
+        padding-top: 90px;
       }
       h2 {
         font-size: 24px;
