@@ -269,6 +269,58 @@ document.addEventListener('DOMContentLoaded', () => {
       currencyWidgets.innerHTML = currencyWidgets.innerHTML.replace(/MARKET CAP/g, 'Market cap');
     }
   }, 1000 )
-
-
 })
+
+// Mega Menu
+document.addEventListener("DOMContentLoaded", function () {
+  const mainMenuBlock = document.querySelector('.site-header .menu');
+  const menuItems = document.querySelectorAll('.site-header .menu > li > a');
+
+  if (!mainMenuBlock || menuItems.length === 0) {
+    return;
+  }
+
+  const activateMenuItem = (liElement) => {
+
+    document.querySelectorAll('.site-header .menu > li').forEach((li) => {
+      li.classList.remove('active');
+    });
+
+    liElement.classList.add('active');
+  };
+
+
+  menuItems.forEach((item) => {
+    item.addEventListener('click', function (event) {
+
+      const parentLi = item.parentElement;
+      const submenuBlock = parentLi.querySelector('.submenu-block');
+
+
+      if (submenuBlock && true !== parentLi.classList.contains('active')) {
+        event.preventDefault();
+        activateMenuItem(parentLi);
+        mainMenuBlock.classList.add('menu-active');
+      } else {
+        document.querySelectorAll('.site-header .menu > li').forEach((li) => {
+          li.classList.remove('active');
+          mainMenuBlock.classList.remove('menu-active');
+        });
+        return true;
+      }
+    });
+  });
+
+
+  document.addEventListener('click', function (event) {
+    const isClickInsideMenu = mainMenuBlock.contains(event.target);
+
+    if (!isClickInsideMenu) {
+
+      document.querySelectorAll('.site-header .menu > li').forEach((li) => {
+        li.classList.remove('active');
+        mainMenuBlock.classList.remove('menu-active');
+      });
+    }
+  });
+});
