@@ -21,7 +21,7 @@
 
     .item {
       position: relative;
-      width: calc(100% - 80px);
+      width: calc(100% - 16px);
       margin-left: 16px;
 
       @include breakpoint(sm) {
@@ -60,14 +60,16 @@
       }
 
       p {
-        color: $white;
+        color: $light-purple;
         max-width: 440px;
         padding-left: 16px;
         position: relative;
         z-index: 2;
+        font-size: 12px;
 
         @include breakpoint(sm) {
           padding-left: 40px;
+          font-size: 16px;
         }
       }
 
@@ -79,16 +81,33 @@
         -webkit-text-fill-color: rgba(0, 0, 0, 0);
         position: relative;
         border: none;
-        width: fit-content;
+        width: calc(100% - 16px);
         text-align: center;
         z-index: 2;
+        transition: all .3s;
+
+        &[href=""] {
+          cursor: no-drop;
+          opacity: .4;
+        }
 
         backdrop-filter: blur(10px); // Background blur
-        background-color: rgba(255, 255, 255, 0.2); // Semi-transparent background for visibility
+        background-color: rgba(255, 255, 255, 0.2);
+
+        &:hover {
+          color: $white;
+          background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+          -webkit-text-fill-color: $white;
+
+          &:before {
+            display: none;
+          }
+        }
 
         @include breakpoint(sm) {
           margin-top: 32px;
           margin-left: 40px;
+          width: fit-content;
         }
 
         &:before {

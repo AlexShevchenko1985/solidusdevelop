@@ -24,8 +24,8 @@ get_header();
             <div class="hero__info">
                 <div class="girl">
                     <video playsinline autoplay muted loop poster="<?php echo get_template_directory_uri() . '/build/img/girl-bg.webp' ?>">
-                        <source src="<?php echo get_template_directory_uri() . '/build/video/AVACHAT Video Compressed.webm' ?>" type="video/webm">
-                        <source src="<?php echo get_template_directory_uri() . '/build/video/AVACHAT Video Compressed.mp4' ?>" type="video/mp4">
+                        <source src="<?php echo get_template_directory_uri() . '/build/video/AVACHAT Video v2.webm' ?>" type="video/webm">
+<!--                        <source src="--><?php //echo get_template_directory_uri() . '/build/video/AVACHAT Video Compressed.mp4' ?><!--" type="video/mp4">-->
                     </video>
                 </div>
                 
@@ -73,8 +73,14 @@ get_header();
         foreach ($faq_chunks as $index => $chunk) {
             $carousel_class = ($index % 2 === 0) ? 'faq-carousel-left' : 'faq-carousel-right';
 
-            echo '<div class="swiper faq-carousel ' . $carousel_class . '">';
-            echo '<div class="swiper-wrapper">';
+            echo '<div class=" faq-carousel ' . $carousel_class . '">';
+            echo '<div class="faq-carousel__body">';
+
+            foreach ($chunk as $item) {
+                echo '<div class="swiper-slide faq__item">';
+                echo '<a href="' . esc_url($item['link']) . '">' . esc_html($item['question']) . '<span class="arrow"></span></a>';
+                echo '</div>';
+            }
 
             foreach ($chunk as $item) {
                 echo '<div class="swiper-slide faq__item">';

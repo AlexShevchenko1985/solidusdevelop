@@ -195,69 +195,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-const logos = new Swiper(".logo-slider .content", {
+const currencies = new Swiper(".labs-section__inner", {
   slidesPerView: "auto",
   spaceBetween: 16,
   loop: true,
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-  },
-  speed: 3000,
+  speed: 1000,
   breakpoints: {
     320: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
     768: {
-      slidesPerView: 4,
+      slidesPerView: 2,
     },
     1024: {
-      slidesPerView: 6,
-    },
-    1440: {
-      slidesPerView: 7,
-    },
+      slidesPerView: 4,
+    }
+  },
+  navigation: {
+    nextEl: '.swiper-button-next-widget',
+    prevEl: '.swiper-button-prev-widget',
+  },
+  autoplay: false,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
   },
 });
-
-const sliderElement = document.querySelector(".logo-slider .content");
-if(sliderElement){
-  sliderElement.addEventListener("mouseenter", () => logos.autoplay.stop());
-  sliderElement.addEventListener("mouseleave", () => logos.autoplay.start());
-
-  const currencies = new Swiper(".labs-section__inner", {
-    slidesPerView: "auto",
-    spaceBetween: 16,
-    loop: true,
-    speed: 1000,
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 4,
-      }
-    },
-    navigation: {
-      nextEl: '.swiper-button-next-widget',
-      prevEl: '.swiper-button-prev-widget',
-    },
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
-  });
-
-}
 
 document.addEventListener('DOMContentLoaded', () => {
 

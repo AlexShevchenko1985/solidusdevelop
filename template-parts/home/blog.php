@@ -44,6 +44,9 @@ $query = new WP_Query([
             echo '</div>';
 
             wp_reset_postdata();
+            ?>
+            <a href="/blog" class="btn">View all</a>
+            <?php
         }
         ?>
 

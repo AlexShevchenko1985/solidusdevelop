@@ -124,6 +124,7 @@
       line-height: 18px;
       color: $light-purple-06;
       text-transform: uppercase;
+      margin-bottom: 4px;
 
       @include breakpoint(sm) {
         font-size: 24px;

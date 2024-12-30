@@ -72,13 +72,13 @@
 
       &__info {
         position: absolute;
-        bottom: 32px;
-        left: 24px;
+        bottom: 16px;
+        left: 16px;
         max-width: calc(100% - 32px);
 
         @include breakpoint(sm) {
-          bottom: 16px;
-          left: 16px;
+          bottom: 32px;
+          left: 24px;
         }
 
         h2 {
@@ -110,6 +110,43 @@
           }
         }
       }
+    }
+  }
+
+  .btn {
+    margin: 40px auto 0;
+    background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    position: relative;
+    border: none;
+    width: 100%;
+    text-align: center;
+    transition: all .3s;
+
+    &:hover {
+      color: $white;
+      background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+      -webkit-text-fill-color: $white;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    @include breakpoint(sm) {
+      width: fit-content;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 2px;
+      background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);
+      border-radius: inherit;
+      mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
+      z-index: 2;
     }
   }
 }

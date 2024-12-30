@@ -197,11 +197,11 @@ if (is_page_template('page-computer-marketplace.php')) :
                     <div class="col">
                         <div>
                             <h5>Resources</h5>
-                            <a href="" class="">Blog</a>
+                            <a href="/blog" class="">Blog</a>
                         </div>
                         <div>
                             <h5>Email</h5>
-                            <a href="" class="">admin@aitech.io</a>
+                            <a href="mailto:admin@aitech.io" class="email">admin@aitech.io</a>
                         </div>
                         <div>
                             <h5>Address</h5>

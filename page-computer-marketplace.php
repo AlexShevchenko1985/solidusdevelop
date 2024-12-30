@@ -139,6 +139,7 @@ $section_11 = get_field('section_11') ?? [];
                     <img src="<?php echo get_template_directory_uri() . '/build/img/user-protection.svg' ?>" alt="">
                 </div>
                 <div class="content-wrap">
+                    <h3><?php echo esc_html( $section_3['item_4']['title'] ) ?></h3>
                     <p><?php echo esc_html( $section_3['item_4']['content'] ) ?></p>
                 </div>
                 <div class="img-wrap">
@@ -195,6 +196,7 @@ $section_11 = get_field('section_11') ?? [];
             <div class="items">
 
                 <div class="item active">
+                    <div class="arrow"></div>
                     <div class="corner-element">
                         <span>1</span>
                     </div>
@@ -214,6 +216,7 @@ $section_11 = get_field('section_11') ?? [];
                 </div>
 
                 <div class="item">
+                    <div class="arrow"></div>
                     <div class="corner-element">
                         <span>2</span>
                     </div>
@@ -233,6 +236,7 @@ $section_11 = get_field('section_11') ?? [];
                 </div>
 
                 <div class="item">
+                    <div class="arrow"></div>
                     <div class="item__inner">
                         <div class="logo">
                             <img src="<?php echo get_template_directory_uri() . '/build/img/buy-deploy.svg' ?>" alt="">
@@ -340,7 +344,7 @@ $section_11 = get_field('section_11') ?? [];
                 </video>
 
                 <h4><?php echo nl2br($section_8['title_3']) ?></h4>
-                <p><?php echo esc_html($section_8['content_3']) ?></p>
+                <p><?php echo nl2br($section_8['content_3']) ?></p>
             </div>
         </div>
     </div>

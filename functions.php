@@ -15,6 +15,7 @@ include_once "App/Base/AbstractTaxonomy.php";
 include_once "App/PostType/Member.php";
 include_once "App/Taxonomy/Position.php";
 include_once "App/PostType/DataCenter.php";
+include_once "App/MenuAitech.php";
 
 new Member();
 new Position();

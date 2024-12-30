@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const isMobileView = window.innerWidth < 800;
 
-	document.querySelector('.menu-trigger').addEventListener("click", toggleMenu);
+
 
 	function toggleMenu() {
 		document.querySelector('.burger').classList.toggle("open");
@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		const navItem = document.createElement('a');
 		navItem.classList.add('side-navigation__item');
 		navItem.href = `#${section.id}`;
-		sideNav.appendChild(navItem);
 	});
 
 	const navItems = document.querySelectorAll('.side-navigation__item');

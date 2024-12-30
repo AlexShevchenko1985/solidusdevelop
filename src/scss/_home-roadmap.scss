@@ -56,6 +56,11 @@
 
       &:first-child {
         background-image: url("../../img/roadmap-item-bg-1.webp");
+
+        .content {
+          column-fill: auto;
+          max-height: 450px;
+        }
       }
 
       &:nth-child(2) {
@@ -70,8 +75,8 @@
 
     h3 {
       @include gradient-text($gradient-purple);
-      font-size: 40px;
-      line-height: 40px;
+      font-size: 48px;
+      line-height: 48px;
       font-weight: 700;
       margin-bottom: 40px;
       width: fit-content;
@@ -85,6 +90,7 @@
     }
 
     .content {
+
       @include breakpoint(sm) {
         column-count: 2;
       }
@@ -102,6 +108,8 @@
         order: 0;
         margin-bottom: 12px;
         min-height: 55px;
+        break-inside: avoid;
+        box-decoration-break: clone;
 
         &:before {
           content: "";
@@ -115,8 +123,10 @@
         }
 
         &:has(.circle) {
+          background: radial-gradient(101.54% 1294.85% at 8.9% 31.25%, #190B30 0%, #01020A 100%);
+
           &:before {
-            animation: rotate-gradient 2s infinite;
+            animation: rotate-gradient 4s infinite;
           }
         }
 

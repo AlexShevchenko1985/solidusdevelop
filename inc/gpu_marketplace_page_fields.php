@@ -745,6 +745,26 @@ Performance</span> and Savings',
                         'layout' => 'block',
                         'sub_fields' => array(
                             array(
+                                'key' => 'field_6772951a13c9d',
+                                'label' => 'Title',
+                                'name' => 'title',
+                                'aria-label' => '',
+                                'type' => 'text',
+                                'instructions' => '',
+                                'required' => 0,
+                                'conditional_logic' => 0,
+                                'wrapper' => array(
+                                    'width' => '',
+                                    'class' => '',
+                                    'id' => '',
+                                ),
+                                'default_value' => 'Global coverage',
+                                'maxlength' => '',
+                                'placeholder' => '',
+                                'prepend' => '',
+                                'append' => '',
+                            ),
+                            array(
                                 'key' => 'field_674968796cf1a',
                                 'label' => 'Content',
                                 'name' => 'content',
@@ -2450,6 +2470,5 @@ Get started today and unleash your potential!',
         'description' => '',
         'show_in_rest' => 0,
     ) );
-
 } );
 

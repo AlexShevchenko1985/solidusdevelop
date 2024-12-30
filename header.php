@@ -36,102 +36,119 @@
                     </a>
                 </div>
 
+                <?php
+               $menu = MenuAitech::getMainMenu();
+                ?>
                 <nav id="site-navigation" class="main-navigation desktop-only">
                     <ul class="menu">
-                        <li class="active">
-                            <a href="">Home</a>
-                        </li>
-                        <li class="has-submenu">
-                            <a href="javascript:void(0);">Products</a>
-                            <div class="submenu-block">
-                                <div class="submenu-block-holder">
-                                    <div class="content-holder">
-                                        <div class="text-block">
-                                            <div class="heading">Products</div>
-                                            <p>Solidus built an 8,000 sq ft eco-friendly HPC Data Centre in Europe. $AITECH, the first deflationary AI utility token.</p>
+                        <?php foreach ($menu as $level_1): ?>
+                            <?php if (!empty($level_1)): ?>
+
+                                <?php if ($level_1['children']): ?>
+
+                                    <li class="has-submenu">
+
+                                        <a href="javascript:void(0);"><?php echo $level_1['title']; ?></a>
+
+                                        <div class="submenu-block">
+                                            <div class="submenu-block-holder">
+                                                <div class="content-holder">
+                                                    <div class="text-block">
+                                                        <div class="heading"><?php echo $level_1['title']; ?></div>
+                                                        <p>Solidus built an 8,000 sq ft eco-friendly HPC Data Centre in Europe. $AITECH, the first deflationary AI utility token.</p>
+                                                    </div>
+
+                                                    <div class="links-holder">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="">
+                                                                    <div class="image">
+                                                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon1.svg" alt="Icon">
+                                                                    </div>
+                                                                    <div class="content">
+                                                                        <div class="title">AI Marketplace</div>
+                                                                        <p>Serverless Function</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <div class="image">
+                                                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon2.svg" alt="Icon">
+                                                                    </div>
+                                                                    <div class="content">
+                                                                        <div class="title">GPU Marketplace</div>
+                                                                        <p>Serverless Function</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <div class="image">
+                                                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon3.svg" alt="Icon">
+                                                                    </div>
+                                                                    <div class="content">
+                                                                        <div class="title">AVACHAT</div>
+                                                                        <p>Serverless Function</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <div class="image">
+                                                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon4.svg" alt="Icon">
+                                                                    </div>
+                                                                    <div class="content">
+                                                                        <div class="title">AITECH Debit Card</div>
+                                                                        <p>Serverless Function</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <div class="image">
+                                                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon5.svg" alt="Icon">
+                                                                    </div>
+                                                                    <div class="content">
+                                                                        <div class="title">VPN Subscriptions</div>
+                                                                        <p>Serverless Function</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <div class="image">
+                                                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon6.svg" alt="Icon">
+                                                                    </div>
+                                                                    <div class="content">
+                                                                        <div class="title">Telegram Bot</div>
+                                                                        <p>Serverless Function</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="links-holder">
-                                            <ul>
-                                                <li>
-                                                    <a href="">
-                                                        <div class="image">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon1.svg" alt="Icon">
-                                                        </div>
-                                                        <div class="content">
-                                                            <div class="title">AI Marketplace</div>
-                                                            <p>Serverless Function</p>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <div class="image">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon2.svg" alt="Icon">
-                                                        </div>
-                                                        <div class="content">
-                                                            <div class="title">GPU Marketplace</div>
-                                                            <p>Serverless Function</p>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <div class="image">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon3.svg" alt="Icon">
-                                                        </div>
-                                                        <div class="content">
-                                                            <div class="title">AVACHAT</div>
-                                                            <p>Serverless Function</p>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <div class="image">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon4.svg" alt="Icon">
-                                                        </div>
-                                                        <div class="content">
-                                                            <div class="title">AITECH Debit Card</div>
-                                                            <p>Serverless Function</p>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <div class="image">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon5.svg" alt="Icon">
-                                                        </div>
-                                                        <div class="content">
-                                                            <div class="title">VPN Subscriptions</div>
-                                                            <p>Serverless Function</p>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <div class="image">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon6.svg" alt="Icon">
-                                                        </div>
-                                                        <div class="content">
-                                                            <div class="title">Telegram Bot</div>
-                                                            <p>Serverless Function</p>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="">Blog</a>
-                        </li>
-                        <li>
-                            <a href="">Contact</a>
-                        </li>
+
+                                    </li>
+
+                                <?php else: ?>
+                                    <li class="active">
+                                        <a class="<?php echo MenuAitech::getMenuClass($level_1['url']); ?>" href="<?php echo MenuAitech::checkMenuLink($level_1['url']); ?>" target="<?php echo $level_1['target']; ?>" title="<?php echo $level_1['title']; ?>">
+                                            <?php echo $level_1['title']; ?>
+                                        </a>
+                                    </li>
+                                <?php endif; ?>
+
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+
+
                     </ul>
                 </nav>
+
                 <div class="label">
                     <img src="<?php echo get_template_directory_uri() ?>/src/img/certik-logo.svg" alt="Icon">
                 </div>
