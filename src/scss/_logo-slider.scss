@@ -3,7 +3,11 @@
 @use "general/keyframes" as *;
 
 .logo-slider {
-  padding: 200px 0 40px;
+  position: relative;
+  z-index: 1;
+  @include breakpoint(sm) {
+    padding: 130px 0 40px;
+  }
 
   p {
     font-family: Darker Grotesque;

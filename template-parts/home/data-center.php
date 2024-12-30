@@ -27,6 +27,7 @@
                     <?php endif; ?>
 
                 </div>
+            </div>
 
                 <?php if (!empty($tabs)): ?>
                     <?php foreach ($tabs as $tab):
@@ -37,25 +38,27 @@
                         ?>
 
                         <div class="tab-body">
-                            <div class="columns-holder">
+                            <div class="container">
+	                            <div class="columns-holder">
 
-                                <?php if (!empty($card_block['col_1'])): ?>
-                                    <div class="col">
-                                        <?php get_template_part('template-parts/data-column', '', ['data' => $card_block['col_1']]); ?>
-                                    </div>
-                                <?php endif; ?>
+	                                <?php if (!empty($card_block['col_1'])): ?>
+	                                    <div class="col">
+	                                        <?php get_template_part('template-parts/data-column', '', ['data' => $card_block['col_1']]); ?>
+	                                    </div>
+	                                <?php endif; ?>
 
-                                <?php if (!empty($card_block['col_2'])): ?>
-                                    <div class="col double-col">
-                                        <?php get_template_part('template-parts/data-column', '', ['data' => $card_block['col_2']]); ?>
-                                    </div>
-                                <?php endif; ?>
+	                                <?php if (!empty($card_block['col_2'])): ?>
+	                                    <div class="col double-col">
+	                                        <?php get_template_part('template-parts/data-column', '', ['data' => $card_block['col_2']]); ?>
+	                                    </div>
+	                                <?php endif; ?>
 
-                                <?php if (!empty($card_block['col_3'])): ?>
-                                    <div class="col">
-                                        <?php get_template_part('template-parts/data-column', '', ['data' => $card_block['col_3']]); ?>
-                                    </div>
-                                <?php endif; ?>
+	                                <?php if (!empty($card_block['col_3'])): ?>
+	                                    <div class="col">
+	                                        <?php get_template_part('template-parts/data-column', '', ['data' => $card_block['col_3']]); ?>
+	                                    </div>
+	                                <?php endif; ?>
+	                            </div>
                             </div>
 
                             <?php if (!empty($card_block['video'])): ?>
@@ -68,15 +71,17 @@
 
                             <?php if (!empty($card_block['benefits'])): ?>
                                 <div class="advantages-list">
-                                    <div class="title"><?php echo __('Benefits / Use cases', 'aitech'); ?></div>
-                                    <ul>
-                                        <?php
-                                        foreach ($card_block['benefits'] as $benefit):  ?>
-                                            <?php if (!empty($benefit['item'])): ?>
-                                                <li><?php echo $benefit['item']; ?></li>
-                                            <?php endif; ?>
-                                        <?php endforeach; ?>
-                                    </ul>
+                                    <div class="container">
+	                                    <div class="title"><?php echo __('Benefits / Use cases', 'aitech'); ?></div>
+	                                    <ul>
+	                                        <?php
+	                                        foreach ($card_block['benefits'] as $benefit):  ?>
+	                                            <?php if (!empty($benefit['item'])): ?>
+	                                                <li><?php echo $benefit['item']; ?></li>
+	                                            <?php endif; ?>
+	                                        <?php endforeach; ?>
+	                                    </ul>
+                                    </div>
                                 </div>
                             <?php endif; ?>
 
@@ -88,6 +93,7 @@
                         ?>
 
                         <div class="tab-body table-layout">
+                            <div class="container">
 
                             <div class="heading">
                                 <?php if (!empty($table_block['title'])): ?>
@@ -134,12 +140,12 @@
                                 <?php endif; ?>
 
                             </div>
+                            </div>
                         </div>
                     <?php endif; ?>
 
                     <?php endforeach; ?>
                 <?php endif; ?>
-            </div>
         </section>
     <?php endwhile; ?>
 <?php endif; ?>
