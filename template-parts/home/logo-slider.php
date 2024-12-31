@@ -11,10 +11,13 @@
 
 <section class="hero-home">
 	<div class="media">
-		<video playsinline autoplay muted loop >
-            <source src="" type="video/mp4">
-        </video>
-        <img src="<?php echo get_template_directory_uri() ?>/src/img/hero-img1.webp" alt="Image">
+        <?php if (1): ?>
+            <img src="<?php echo get_template_directory_uri() ?>/src/img/hero-img1.webp" alt="Image">
+        <?php else: ?>
+            <video playsinline autoplay muted loop >
+                <source src="" type="video/mp4">
+            </video>
+        <?php endif; ?>
 	</div>
 	<div class="container">
 		<div class="label"><span>Powering Sustainable AI</span></div>
@@ -37,6 +40,7 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="logo-slider">
         <?php if ( !empty($args['title']) ) : ?>
         <p><?= esc_html($args['title']) ?></p>

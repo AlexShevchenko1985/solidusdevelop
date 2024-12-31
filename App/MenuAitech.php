@@ -30,52 +30,6 @@ class MenuAitech
         return $menu_tree;
     }
 
-    public static function getHeaderSecondaryMenu(): string
-    {
-       $menu =  wp_nav_menu(
-            [
-                'theme_location'  => 'header_secondary',
-                'container'       => 'div',
-                'container_class' => 'secondary-menu',
-            ]
-        );
-
-       if(null === $menu){
-           return 'asasa';
-       }
-
-       return $menu;
-    }
-
-    public static function getHeaderRelatedPost($id)
-    {
-        $header_related_post_id = get_field('header_related_post', $id);
-        if(!empty($header_related_post_id)){
-            return $header_related_post_id;
-        }
-
-        $args = [
-            'post_type' => 'news_article',
-            'posts_per_page' => 1,
-            'tax_query' => [
-                [
-                    'taxonomy' => 'news',
-                    'field'    => 'slug',
-                    'terms'    => ['press-releases', 'blog'],
-                ],
-            ],
-            'orderby' => 'date',
-            'order' => 'DESC',
-        ];
-
-        $query = new WP_Query($args);
-        if (empty($query->posts)) {
-            return null;
-        }
-
-        return $query->posts[0];
-    }
-
     public static function checkMenuLink(string $link): string
     {
         if('#' === $link){
@@ -98,6 +52,20 @@ class MenuAitech
             return false;
         }
         return true;
+    }
+
+    public static function isCurrentPage(string $link): string
+    {
+
+        $current_url = home_url($_SERVER['REQUEST_URI']);
+        $normalized_link = trim(parse_url($link, PHP_URL_PATH), '/');
+        $normalized_current_url = trim(parse_url($current_url, PHP_URL_PATH), '/');
+
+        if ($normalized_link === $normalized_current_url) {
+            return 'active';
+        }
+
+        return '';
     }
 
 }

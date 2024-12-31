@@ -32,3 +32,23 @@ ul {
 .grecaptcha-badge {
   display: none !important;
 }
+
+.page-template-page-computer-marketplace {
+  #section1 {
+    margin-top: 10px;
+
+    @include breakpoint(sm) {
+      margin-top: 200px;
+    }
+  }
+}
+
+.page-template-page-avachat{
+  .hero {
+    margin-top: 10px;
+
+    @include breakpoint(sm) {
+      margin-top: 200px;
+    }
+  }
+}

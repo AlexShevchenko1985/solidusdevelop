@@ -290,7 +290,7 @@ $section_11 = get_field('section_11') ?? [];
             <img src="<?php echo esc_url( $section_7['image_1'] ) ?>" alt="">
         </div>
         <div class="content-wrap">
-            <img src="<?php echo get_template_directory_uri() . '/build/img/solidus.svg' ?>" alt="Solidus">
+            <img src="<?php echo get_template_directory_uri() . '/build/img/solidus-logo2.svg' ?>" alt="Solidus">
             <div class="content-item active" data-src="<?php echo esc_url( $section_7['image_1'] ) ?>">
                 <div class="border-area"></div>
                 <div class="corner"></div>

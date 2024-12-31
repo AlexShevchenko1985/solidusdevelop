@@ -72,6 +72,7 @@ function aitech_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'aitech' ),
+            'mobile_menu' => esc_html__( 'Mobile menu', 'aitech' ),
             'footer_menu_1' => __( 'Footer Menu Company', 'aitech' ),
             'footer_menu_2' => __( 'Footer Menu Resource', 'aitech' ),
             'footer_menu_product' => __( 'Footer Menu Product', 'aitech' ),
@@ -246,3 +247,5 @@ function custom_excerpt_length($length) {
     return 20;
 }
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
+show_admin_bar(false);

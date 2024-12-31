@@ -29,125 +29,83 @@
 		<div class="container">
 			<div class="header-holder">
 				<div class="logo">
-                    <a href="">
+
                         <?php
                         the_custom_logo();
                         ?>
-                    </a>
+
                 </div>
 
                 <?php
                $menu = MenuAitech::getMainMenu();
                 ?>
-                <nav id="site-navigation" class="main-navigation desktop-only">
-                    <ul class="menu">
-                        <?php foreach ($menu as $level_1): ?>
-                            <?php if (!empty($level_1)): ?>
+                <?php if (!empty($menu)): ?>
+                    <nav id="site-navigation" class="main-navigation desktop-only">
+                        <ul class="menu">
+                            <?php foreach ($menu as $level_1): ?>
+                                <?php if (!empty($level_1)): ?>
 
-                                <?php if ($level_1['children']): ?>
+                                    <?php if ($level_1['children']):  ?>
 
-                                    <li class="has-submenu">
+                                        <li class="has-submenu">
 
-                                        <a href="javascript:void(0);"><?php echo $level_1['title']; ?></a>
+                                            <a href="javascript:void(0);"><?php echo $level_1['title']; ?></a>
 
-                                        <div class="submenu-block">
-                                            <div class="submenu-block-holder">
-                                                <div class="content-holder">
-                                                    <div class="text-block">
-                                                        <div class="heading"><?php echo $level_1['title']; ?></div>
-                                                        <p>Solidus built an 8,000 sq ft eco-friendly HPC Data Centre in Europe. $AITECH, the first deflationary AI utility token.</p>
-                                                    </div>
+                                            <div class="submenu-block">
+                                                <div class="submenu-block-holder">
+                                                    <div class="content-holder">
+                                                        <div class="text-block">
+                                                            <div class="heading"><?php echo $level_1['title']; ?></div>
+                                                            <?php if (!empty($level_1['post_content'])): ?>
+                                                                <p><?php echo $level_1['post_content']; ?></p>
+                                                            <?php endif; ?>
+                                                        </div>
 
-                                                    <div class="links-holder">
-                                                        <ul>
-                                                            <li>
-                                                                <a href="">
-                                                                    <div class="image">
-                                                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon1.svg" alt="Icon">
-                                                                    </div>
-                                                                    <div class="content">
-                                                                        <div class="title">AI Marketplace</div>
-                                                                        <p>Serverless Function</p>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="">
-                                                                    <div class="image">
-                                                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon2.svg" alt="Icon">
-                                                                    </div>
-                                                                    <div class="content">
-                                                                        <div class="title">GPU Marketplace</div>
-                                                                        <p>Serverless Function</p>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="">
-                                                                    <div class="image">
-                                                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon3.svg" alt="Icon">
-                                                                    </div>
-                                                                    <div class="content">
-                                                                        <div class="title">AVACHAT</div>
-                                                                        <p>Serverless Function</p>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="">
-                                                                    <div class="image">
-                                                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon4.svg" alt="Icon">
-                                                                    </div>
-                                                                    <div class="content">
-                                                                        <div class="title">AITECH Debit Card</div>
-                                                                        <p>Serverless Function</p>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="">
-                                                                    <div class="image">
-                                                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon5.svg" alt="Icon">
-                                                                    </div>
-                                                                    <div class="content">
-                                                                        <div class="title">VPN Subscriptions</div>
-                                                                        <p>Serverless Function</p>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="">
-                                                                    <div class="image">
-                                                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/menu-icon6.svg" alt="Icon">
-                                                                    </div>
-                                                                    <div class="content">
-                                                                        <div class="title">Telegram Bot</div>
-                                                                        <p>Serverless Function</p>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
+                                                        <div class="links-holder">
+                                                            <ul>
+                                                                <?php foreach ($level_1['children'] as $level_2):
+                                                                    $subtitle = get_field('subtitle', $level_2['ID']);
+                                                                    $logo = get_field('logo', $level_2['ID']);
+                                                                    ?>
+                                                                    <li>
+                                                                        <a class="<?php echo MenuAitech::getMenuClass($level_2['url']); ?>" href="<?php echo MenuAitech::checkMenuLink($level_2['url']); ?>" target="<?php echo $level_2['target']; ?>" title="<?php echo $level_2['title']; ?>">
+                                                                            <div class="image">
+                                                                                <?php echo wp_get_attachment_image($logo);?>
+                                                                            </div>
+                                                                            <div class="content">
+                                                                                <div class="title"><?php echo $level_2['title']; ?></div>
+                                                                                <?php if (!empty($subtitle)): ?>
+                                                                                    <p><?php echo $subtitle ?></p>
+                                                                                <?php endif; ?>
+
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                <?php endforeach; ?>
+
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                    </li>
+                                        </li>
 
-                                <?php else: ?>
-                                    <li class="active">
-                                        <a class="<?php echo MenuAitech::getMenuClass($level_1['url']); ?>" href="<?php echo MenuAitech::checkMenuLink($level_1['url']); ?>" target="<?php echo $level_1['target']; ?>" title="<?php echo $level_1['title']; ?>">
-                                            <?php echo $level_1['title']; ?>
-                                        </a>
-                                    </li>
+                                    <?php else: ?>
+                                        <li class="<?php echo MenuAitech::isCurrentPage($level_1['url'])?>">
+                                            <a class="<?php echo MenuAitech::getMenuClass($level_1['url']); ?>" href="<?php echo MenuAitech::checkMenuLink($level_1['url']); ?>" target="<?php echo $level_1['target']; ?>">
+                                                <?php echo $level_1['title']; ?>
+                                            </a>
+                                        </li>
+                                    <?php endif; ?>
+
                                 <?php endif; ?>
-
-                            <?php endif; ?>
-                        <?php endforeach; ?>
+                            <?php endforeach; ?>
 
 
-                    </ul>
-                </nav>
+                        </ul>
+                    </nav>
+                <?php endif; ?>
 
                 <div class="label">
                     <img src="<?php echo get_template_directory_uri() ?>/src/img/certik-logo.svg" alt="Icon">
@@ -158,37 +116,11 @@
                 </a>
 			</div>
 		</div>
-		<div class="mobile-sidenav">
-            <div class="mobile-menu-holder">
-                <ul>
-                    <li class="has-submenu">
-                        <a href="javascript:void(0);">Products</a>
-                        <div class="hidden-block">
-                            <ul>
-                                <li>
-                                    <a href="">AI Marketplace</a>
-                                    <a href="">AVACHAT</a>
-                                    <a href="">GPU Marketplace</a>
-                                    <a href="">AITECH Debit Card</a>
-                                    <a href="">VPN Subscriptions</a>
-                                    <a href="">Telegram Bot</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-	                    <a href="">Blog</a>
-	                </li>
-	                <li>
-                        <a href="">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="mobile-label">
-                <img src="<?php echo get_template_directory_uri() ?>/src/img/certik-logo.svg" alt="Icon">
-            </div>
-        </div>
+
+        <?php
+        /**
+         * Mobile menu block
+         */
+        get_template_part('template-parts/mobile-menu');
+        ?>
 	</header>
