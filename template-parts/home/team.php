@@ -69,9 +69,7 @@
                                                     <div class="cta-holder">
                                             <span class="cta">
                                                 <?php if (!empty($linkedin)): ?>
-                                                    <a href="<?php echo $linkedin; ?>" target="_blank">
-                                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/linkdin-btn.svg" alt="Icon">
-                                                    </a>
+                                                    <a href="<?php echo $linkedin; ?>" target="_blank"></a>
                                                 <?php endif; ?>
                                             </span>
                                             <span class="cta toggle-btn">
@@ -167,10 +165,7 @@
                                                         <div class="cta-holder">
                                             <span class="cta">
                                                 <?php if (!empty($linkedin)): ?>
-                                                    <a href="<?php echo $linkedin; ?>" target="_blank">
-                                                        <img src="<?php echo get_template_directory_uri() ?>/src/img/linkdin-btn.svg"
-                                                             alt="Icon">
-                                                    </a>
+                                                    <a href="<?php echo $linkedin; ?>" target="_blank"></a>
                                                 <?php endif; ?>
                                             </span>
                                                             <span class="cta toggle-btn">

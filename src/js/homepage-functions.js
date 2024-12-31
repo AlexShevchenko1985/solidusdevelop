@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function startAnimation() {
-    animationInterval = setInterval(toggleAnimation, 5000);
+    animationInterval = setInterval(toggleAnimation, 2500);
   }
 
   function stopAnimation() {

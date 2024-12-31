@@ -113,6 +113,7 @@ html {
           cursor: pointer;
           position: relative;
           margin: 0 16px;
+          transition: all .3s;
           @include breakpoint(sm) {
             font-family: 'Roboto Flex', sans-serif;
             font-weight: 600;
@@ -164,6 +165,14 @@ html {
             }
           }
         }
+        &:hover {
+          .tab-btn {
+            opacity: .4;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
       }
     }
     .tab-body {
@@ -203,6 +212,36 @@ html {
             display: flex;
             flex-direction: column;
             cursor: pointer;
+            &:before {
+              content: "";
+              width: calc(100% + 2px);
+              height: calc(100% + 2px);
+              position: absolute;
+              inset-block-start: -1px;
+              inset-inline-start: -1px;
+              background: linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+              radial-gradient(69.68% 64.72% at 94.24% 7.98%, #AB8FF6 0%, #1F1254 100%);
+              z-index: -1;
+              transition: all .4s ease-in-out;
+              border-radius: 15px;
+              opacity: 0;
+              visibility: hidden;
+            }
+            &:after {
+              content: "";
+              width: calc(100% + 2px);
+              height: calc(100% + 2px);
+              position: absolute;
+              inset-block-start: -1px;
+              inset-inline-start: -1px;
+              background: linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
+              radial-gradient(69.68% 64.72% at 94.24% 7.98%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+              z-index: -1;
+              transition: all .4s ease-in-out;
+              border-radius: 15px;
+              opacity: 1;
+              visibility: visible;
+            }
             @include breakpoint(sm) {
               max-width: 100%;
             }
@@ -211,8 +250,7 @@ html {
               display: flex;
               flex-direction: column;
               border-radius: 15px;
-              background: linear-gradient(0deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-              radial-gradient(69.68% 64.72% at 94.24% 7.98%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+              background: $bg-color;
               position: relative;
               transition: all .3s;
               height: 100%;
@@ -222,7 +260,7 @@ html {
               &:after {
                 content: "";
                 background: radial-gradient(87.93% 73.93% at 47.87% 14.81%, #190B30 0%, #01020A 100%);
-                background: #410BB4;
+                background: rgba(65, 11, 180, 1);
                 background: linear-gradient(180deg, rgba(1, 2, 10, 0) 13.25%, #01020A 94.21%);
                 position: absolute;
                 width: calc(100% - 2px);
@@ -308,11 +346,9 @@ html {
                   column-gap: 8px;
                   row-gap: 8px;
                   .cta {
-                    border: 1px solid rgba(117, 104, 151, 0.3);
                     border-radius: 3px;
-                    background: radial-gradient(80% 87.5% at 12.5% 77.5%, rgba(25, 11, 48, 0.2) 0%, rgba(1, 2, 10, 0.2) 100%);
-                    width: 32px;
-                    height: 32px;
+                    width: 40px;
+                    height: 40px;
                     a {
                       line-height: 0;
                       display: flex;
@@ -320,13 +356,44 @@ html {
                       align-items: center;
                       width: 100%;
                       height: 100%;
+                      position: relative;
+                      background-image: url("/wp-content/themes/aitech/src/img/linkedin-btn.svg");
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      transition: all .4s ease-in-out;
+                      &:after {
+                        content: "";
+                        background-image: url("/wp-content/themes/aitech/src/img/linkedin-hover.svg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: 100%;
+                        height: 100%;
+                        inset-block-start: -1px;
+                        inset-inline-start: 0;
+                        position: absolute;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all .4s ease-in-out;
+                      }
+                      &:hover {
+                        &:after {
+                          opacity: 1;
+                          visibility: visible;
+                        }
+                      }
                     }
                     &.toggle-btn {
                       a {
                         background-image: url("/wp-content/themes/aitech/src/img/plus-btn.svg");
-                        background-size: 130%;
                         background-repeat: no-repeat;
                         background-position: center;
+                        transition: all .4s ease-in-out;
+                        &:after {
+                          background-image: url("/wp-content/themes/aitech/src/img/plus-btn-hover.svg");
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          inset-block-start: 0;
+                        }
                       }
                     }
                   }
@@ -359,6 +426,16 @@ html {
                     }
                   }
                 }
+              }
+            }
+            &:hover {
+              &:before {
+                opacity: 1;
+                visibility: visible;
+              }
+              &:after {
+                opacity: 0;
+                visibility: hidden;
               }
             }
           }
@@ -578,6 +655,7 @@ html {
           cursor: pointer;
           position: relative;
           margin: 0 16px;
+          transition: all .3s ease-in-out;
           @include breakpoint(sm) {
             font-family: 'Roboto Flex', sans-serif;
             font-weight: 600;
@@ -626,6 +704,14 @@ html {
             &:before,
             &:after {
               display: block;
+            }
+          }
+        }
+        &:hover {
+          .tab-btn {
+            opacity: .4;
+            &:hover {
+              opacity: 1;
             }
           }
         }
@@ -689,6 +775,7 @@ html {
                 z-index: 1;
                 padding: 0 15px;
               }
+
               &:after {
                 content: "";
                 background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
@@ -701,7 +788,7 @@ html {
                 mask-repeat: no-repeat;
                 mask-position: left;
                 border-radius: 15px;
-                transition: all .3s;
+                transition: all .4s ease-in-out;
               }
               img {
                 position: relative;
@@ -792,8 +879,9 @@ html {
                     background:
                       linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
                       radial-gradient(62.5% 75.18% at 91.61% 100%, #AB8FF6 0%, #1F1254 100%);
-                    &:after {
-                      background: radial-gradient(62.66% 56.61% at 86.81% 83.88%, #361769 0%, #01020A 100%);
+                    &:before {
+                      opacity: 1;
+                      visibility: visible;
                     }
                   }
                 }
@@ -1235,6 +1323,7 @@ html {
       overflow: hidden;
       border-radius: 15px;
       padding: 80px 16px 40px;
+      mask-size: cover;
       @include breakpoint(sm) {
         min-height: 750px;
         mask-image: url("/wp-content/themes/aitech/src/img/form-mask.webp");
@@ -1470,7 +1559,7 @@ html {
                 font-family: 'Darker Grotesque', sans-serif;
                 font-weight: 600;
                 text-align: left;
-                font-size: 14px;
+                font-size: 18px;
                 line-height: 18px;
                 color: $light-purple;
                 position: relative;
@@ -1490,26 +1579,24 @@ html {
                 input,
                 textarea {
                   width: 100%;
-                  padding: 12px;
+                  padding: 16px;
                   border: 1px solid rgba(117, 104, 151, 0.3);
-                  font-size: 10px;
+                  font-size: 12px;
                   color: rgba(225, 227, 254, .3);
                   background: rgba(1, 2, 10, 0.3);
                   border-radius: 6px;
                   transition: all .3s ease-in-out;
-                  margin-top: 2px;
+                  margin-top: 8px;
                   resize: none;
                   @include breakpoint(sm) {
                     font-size: 12px;
                     padding: 16px;
-                    margin-top: 4px;
                   }
                   &::placeholder {
-                    font-size: 10px;
-                    color: rgba(255, 255, 255, 0.5);
-                    @include breakpoint(sm) {
-                      font-size: 12px;
-                    }
+                    font-size: 12px;
+                    color: rgba(225, 227, 254, .3);
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
                   }
                   &:focus,
                   &:focus-within,
@@ -1526,10 +1613,7 @@ html {
                   }
                 }
                 textarea {
-                  height: 72px;
-                  @include breakpoint(sm) {
-                    height: 96px;
-                  }
+                  height: 96px;
                 }
                 .wpcf7-not-valid-tip {
                   position: absolute;
@@ -1557,6 +1641,7 @@ html {
         mask-repeat: no-repeat;
         mask-position: center top;
         background: radial-gradient(36.34% 66.67% at 40.08% 58.67%, #190B30 0%, #01020A 100%);
+        mask-size: cover;
         @include breakpoint(sm) {
           mask-image: url("/wp-content/themes/aitech/src/img/form-mask.webp");
         }
@@ -1807,13 +1892,14 @@ input:-webkit-autofill {
           p {
             font-size: 12px;
             line-height: 16px;
-            color: $light-purple;
+            color: rgba(225, 227, 254, .8);
             margin-bottom: 24px;
             @include breakpoint(sm) {
               font-size: 16px;
               line-height: 24px;
               margin-bottom: 40px;
               max-width: 468px;
+              color: $light-purple;
             }
             &:last-of-type {
               margin-bottom: 0;
@@ -2073,6 +2159,7 @@ input:-webkit-autofill {
         cursor: pointer;
         position: relative;
         margin: 0 16px;
+        transition: all .3s;
         @include breakpoint(sm) {
           font-family: 'Roboto Flex', sans-serif;
           font-weight: 600;
@@ -2092,6 +2179,7 @@ input:-webkit-autofill {
           top: 0;
           inset-inline-start: -14px;
           display: none;
+          transition: all .3s;
           @include breakpoint(sm) {
             width: 24px;
             inset-inline-start: -21px;
@@ -2109,6 +2197,7 @@ input:-webkit-autofill {
           inset-inline-end: -14px;
           transform: scaleX(-1);
           display: none;
+          transition: all .3s;
           @include breakpoint(sm) {
             width: 24px;
             inset-inline-end: -21px;
@@ -2121,6 +2210,14 @@ input:-webkit-autofill {
           &:before,
           &:after {
             display: block;
+          }
+        }
+      }
+      &:hover {
+        .tab-btn {
+          opacity: .4;
+          &:hover {
+            opacity: 1;
           }
         }
       }
