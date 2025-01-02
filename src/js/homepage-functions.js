@@ -312,23 +312,31 @@ document.addEventListener('DOMContentLoaded', function() {
   mobileMenuLinks.forEach(link => {
     link.addEventListener('click', function(event) {
       const parentLi = this.parentElement;
+      const hiddenBlock = parentLi.querySelector('.hidden-block');
 
       if (parentLi.classList.contains('has-submenu')) {
         event.preventDefault();
 
         if (parentLi.classList.contains('active')) {
+
           parentLi.classList.remove('active');
+          collapseBlock(hiddenBlock);
         } else {
           document.querySelectorAll('.mobile-sidenav ul > li').forEach(li => {
             li.classList.remove('active');
+            const otherHiddenBlock = li.querySelector('.hidden-block');
+            if (otherHiddenBlock) collapseBlock(otherHiddenBlock);
           });
 
           parentLi.classList.add('active');
+          expandBlock(hiddenBlock);
         }
       } else {
 
         document.querySelectorAll('.mobile-sidenav ul > li').forEach(li => {
           li.classList.remove('active');
+          const otherHiddenBlock = li.querySelector('.hidden-block');
+          if (otherHiddenBlock) collapseBlock(otherHiddenBlock);
         });
 
         parentLi.classList.add('active');
@@ -336,4 +344,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  function expandBlock(block) {
+    if (!block) return;
+    block.style.height = `${block.scrollHeight}px`;
+  }
+
+  function collapseBlock(block) {
+    if (!block) return;
+    block.style.height = '0';
+  }
 });

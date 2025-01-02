@@ -10,7 +10,8 @@
             <div class="container">
                 <div class="mask-holder">
                     <div class="icon">
-                        <img src="<?php echo get_template_directory_uri() ?>/src/img/mail-icon.svg" alt="Icon">
+                        <img src="<?php echo get_template_directory_uri() ?>/src/img/mail-icon.svg" class="desktop-img" alt="Icon">
+                        <img src="<?php echo get_template_directory_uri() ?>/src/img/mobile-email-icon.svg" class="mobile-img" alt="Icon">
                     </div>
                     <div class="form-section-holder">
                         <div class="form-holder">
