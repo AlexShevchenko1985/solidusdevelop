@@ -31,9 +31,14 @@
                     <?php endif; ?>
                 </div>
 
-                <?php if ( !empty( $args['value_'.$i] ) ) : ?>
+                <?php if ( !empty( $args['value_'.$i] ) ) :
+                    $step = !empty($args['step_'.$i])? $args['step_'.$i] : 1;
+                    ?>
                     <div class="value">
-                        <?= esc_html($args['value_'.$i]) ?>
+                        <span class="number-counter number" data-step="<?php echo $step; ?>" data-number="<?php echo esc_html($args['value_'.$i]); ?>"><?php echo esc_html($args['value_'.$i]); ?></span>
+                        <?php if (!empty($args['sign_'.$i])): ?>
+                            <span class="number"><?php echo $args['sign_'.$i]; ?></span>
+                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
             </div>

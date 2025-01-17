@@ -14,9 +14,12 @@
 
                         ?>
                         <div class="item">
-                            <div class="icon">
-                                <img src="<?php echo get_template_directory_uri() ?>/src/img/solution-icon1.svg" alt="Icon">
-                            </div>
+                            <?php if (!empty($card['icon'])): ?>
+                                <div class="icon">
+                                    <?php echo wp_get_attachment_image($card['icon']); ?>
+                                </div>
+                            <?php endif; ?>
+
                             <div class="bg-block">
 
                                 <?php if (!empty($card['media'])):

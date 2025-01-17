@@ -53,7 +53,7 @@
                                                     $post_content = apply_filters('the_content', $founder->post_content);
                                                     ?>
                                                     <div class="back-side">
-                                                        <?php echo truncate_html($post_content, 1200); ?>
+                                                        <?php echo $post_content; ?>
                                                     </div>
                                                 <?php endif; ?>
                                                 <div class="content">
@@ -148,7 +148,7 @@
                                                         $post_content = apply_filters('the_content', $team_item->post_content);
                                                         ?>
                                                         <div class="back-side">
-                                                            <?php echo truncate_html($post_content, 600); ?>
+                                                            <?php echo $post_content; ?>
                                                         </div>
                                                     <?php endif; ?>
                                                     <div class="content">

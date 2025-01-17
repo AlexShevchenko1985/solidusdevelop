@@ -188,3 +188,52 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+/**
+ * Counter start
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  let countElements = document.querySelectorAll(".number-counter");
+
+  const startCounter = (item) => {
+    let startnumber = 0;
+    const step = parseInt(item.dataset.step) || 1;
+
+    function counterup() {
+
+      if (startnumber + step >= item.dataset.number) {
+        startnumber = item.dataset.number;
+        item.innerHTML = startnumber;
+        clearInterval(stop);
+      } else {
+        startnumber += step;
+        item.innerHTML = startnumber;
+      }
+    }
+
+
+    let stop = setInterval(counterup, 70);
+  };
+
+  let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  let observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  countElements.forEach(item => {
+    observer.observe(item);
+  });
+});
+/**
+ * Counter End
+ */
+
