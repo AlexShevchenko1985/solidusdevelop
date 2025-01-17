@@ -22,7 +22,7 @@ $query = new WP_Query([
                 $post_id = get_the_ID();
                 $title = get_the_title();
                 $author_name = get_the_author_meta('display_name', get_post_field('post_author', $post_id));
-                $featured_image = get_the_post_thumbnail_url($post_id, 'medium');
+                $featured_image = get_the_post_thumbnail_url($post_id, 'full');
 
                 ?>
 

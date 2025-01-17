@@ -23,6 +23,7 @@
 
                 <div class="tabs-holder">
                     <div class="content-column">
+                        <?php $i1 = 1; ?>
                         <?php foreach ($tabs as $tab):
                             $title = !empty($tab['title'])? $tab['title'] : '';
                             $text  = !empty($tab['text'])? $tab['text'] : '';
@@ -35,6 +36,10 @@
                                             <source src="<?php echo $video; ?>" type="video/webm">
                                         </video>
                                     </div>
+                                <?php else : ?>
+                                    <div class="mobile-only">
+                                        <img src="<?php echo $i1 == 1 ? get_template_directory_uri() . '/build/img/green-coin.webp' : get_template_directory_uri() . '/build/img/green-coin-2.webp' ?>" alt="Coin">
+                                    </div>
                                 <?php endif; ?>
 
                                 <div class="content">
@@ -46,9 +51,11 @@
                                     <?php endif; ?>
                                 </div>
                             </div>
+                            <?php $i1++; ?>
                         <?php endforeach; ?>
                     </div>
 
+                    <?php $i2 = 1; ?>
                     <?php foreach ($tabs as $video_item): ?>
                         <?php if (!empty($video)): ?>
                             <div class="video-column">
@@ -56,7 +63,12 @@
                                     <source src="<?php echo $video; ?>" type="video/webm">
                                 </video>
                             </div>
+                        <?php else : ?>
+                            <div class="video-column">
+                                <img src="<?php echo $i2 == 1 ? get_template_directory_uri() . '/build/img/green-coin.webp' : get_template_directory_uri() . '/build/img/green-coin-2.webp' ?>" alt="Coin">
+                            </div>
                         <?php endif; ?>
+                        <?php $i2++; ?>
                     <?php endforeach; ?>
 
                 </div>

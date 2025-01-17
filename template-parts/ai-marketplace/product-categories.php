@@ -19,6 +19,7 @@
                                 $video = !empty($card['video'])? $card['video'] : '';
                                 $title = !empty($card['title'])? $card['title'] : '';
                                 $text  = !empty($card['text'])? $card['text'] : '';
+                                $mp4  = !empty($card['mp4_video'])? $card['mp4_video'] : '';
                                 ?>
                                 <div class="swiper-slide">
                                     <div class="icon">
@@ -30,6 +31,9 @@
                                                 <div class="media-block">
                                                     <video playsinline muted loop >
                                                         <source src="<?php echo $video['url']; ?>" type="video/mp4">
+                                                        <?php if ( !empty( $mp4 ) ) : ?>
+                                                        <source src="<?php echo $mp4; ?>" type="video/mp4">
+                                                        <?php endif; ?>
                                                     </video>
                                                 </div>
                                             </div>

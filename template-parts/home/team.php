@@ -62,7 +62,7 @@
                                                             <h4><span><?php echo $founder->post_title; ?></span></h4>
                                                         <?php endif; ?>
                                                         <?php if (!empty($position)): ?>
-                                                            <div class="position"><?php echo $position; ?></div>
+                                                            <div class="position"><?php echo ucfirst_lowercase($position); ?></div>
                                                         <?php endif; ?>
 
                                                     </div>
@@ -158,16 +158,16 @@
                                                                 </h4>
                                                             <?php endif; ?>
                                                             <?php if (!empty($position)): ?>
-                                                                <div class="position"><?php echo $position; ?></div>
+                                                                <div class="position"><?php echo ucfirst_lowercase($position); ?></div>
                                                             <?php endif; ?>
 
                                                         </div>
                                                         <div class="cta-holder">
-                                            <span class="cta">
-                                                <?php if (!empty($linkedin)): ?>
-                                                    <a href="<?php echo $linkedin; ?>" target="_blank"></a>
-                                                <?php endif; ?>
-                                            </span>
+                                                <span class="cta">
+                                                    <?php if (!empty($linkedin)): ?>
+                                                        <a href="<?php echo $linkedin; ?>" target="_blank"></a>
+                                                    <?php endif; ?>
+                                                </span>
                                                             <span class="cta toggle-btn">
                                                 <a href="javascript:void(0);"></a>
                                             </span>

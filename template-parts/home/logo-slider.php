@@ -11,13 +11,11 @@
 
 <section class="hero-home">
 	<div class="media">
-        <?php if (1): ?>
-            <img src="<?php echo get_template_directory_uri() ?>/src/img/hero-img1.webp" alt="Image">
-        <?php else: ?>
-            <video playsinline autoplay muted loop >
-                <source src="" type="video/mp4">
-            </video>
-        <?php endif; ?>
+
+        <video playsinline autoplay muted loop poster="<?php echo get_template_directory_uri() ?>/src/img/hero-img1.webp">
+            <source src="<?php echo get_template_directory_uri() . '/build/video/Solidus-Hero-2X.webm' ?>" type="video/webm">
+            <source src="<?php echo get_template_directory_uri() . '/build/video/Solidus-Hero-2X.mp4' ?>" type="video/mp4">
+        </video>
 	</div>
 	<div class="container">
 		<div class="label"><span>Powering Sustainable AI</span></div>
@@ -70,5 +68,3 @@
         </div>
     </div>
 </section>
-
-

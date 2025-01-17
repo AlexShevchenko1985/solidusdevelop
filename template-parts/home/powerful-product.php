@@ -25,7 +25,7 @@
 
                                     <?php if ('image' === $media['type']): ?>
                                     <div class="media">
-                                        <?php echo wp_get_attachment_image($media['ID'], 'large'); ?>
+                                        <?php echo wp_get_attachment_image($media['ID'], 'full'); ?>
                                     </div>
                                     <?php else: ?>
                                     <div class="media">
@@ -74,4 +74,3 @@
         </section>
     <?php endwhile; ?>
 <?php endif; ?>
-

@@ -245,7 +245,7 @@
                         },
                         {
                             "key": "field_6752faa738946",
-                            "label": "Video",
+                            "label": "WEBM Video",
                             "name": "video",
                             "aria-label": "",
                             "type": "file",
@@ -258,6 +258,28 @@
                                 "id": ""
                             },
                             "return_format": "array",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "parent_repeater": "field_6752fa7038944"
+                        },
+                        {
+                            "key": "field_678523690e160",
+                            "label": "MP4 Video",
+                            "name": "mp4_video",
+                            "aria-label": "",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
                             "library": "all",
                             "min_size": "",
                             "max_size": "",
@@ -1142,5 +1164,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1733774787
+    "modified": 1736778966
 }

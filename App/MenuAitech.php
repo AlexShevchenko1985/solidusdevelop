@@ -5,7 +5,10 @@ class MenuAitech
 {
     public static function getMainMenu($menu_locations = 'menu-1'): array
     {
-        $locations = !empty(get_nav_menu_locations()) ? get_nav_menu_locations()[$menu_locations] : null;
+        if(isset(get_nav_menu_locations()[$menu_locations])){
+            $locations = !empty(get_nav_menu_locations()) ? get_nav_menu_locations()[$menu_locations] : 'menu-1';
+        }
+
         $header_menu = wp_get_nav_menu_items($locations);
 
         if (empty($header_menu)) {

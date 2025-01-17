@@ -31,7 +31,7 @@ include_once "inc/socials_fiels.php";
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.1' );
+	define( '_S_VERSION', '1.0.2' );
 }
 
 /**
@@ -249,3 +249,59 @@ function custom_excerpt_length($length) {
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
 show_admin_bar(false);
+
+
+/**
+ * START Turn on display information about the server (Server Signature, PHP Version)
+ */
+// Remove the X-Powered-By header
+add_action('init', function() {
+    header_remove('X-Powered-By');
+});
+
+// Remove the WordPress Generator Meta Tag (WordPress Version)
+remove_action('wp_head', 'wp_generator');
+
+// Remove other headers if possible
+add_filter('wp_headers', function($headers) {
+    unset($headers['X-Powered-By']); // Removes PHP header
+    unset($headers['Server']);      // Removes the server header (if available)
+    return $headers;
+});
+
+// Add protective headers
+add_action('send_headers', function() {
+    header('X-Content-Type-Options: nosniff'); // Protection against interpretation of MIME types
+    header('X-Frame-Options: SAMEORIGIN');    // Clickjacking protection
+    header('X-XSS-Protection: 1; mode=block'); // XSS protection
+});
+
+// Disable XML-RPC completely
+add_filter('xmlrpc_enabled', '__return_false');
+
+// Disable XML-RPC methods for authorization
+add_action('init', function() {
+    add_filter('xmlrpc_methods', function($methods) {
+        unset($methods['pingback.ping']);
+        return $methods;
+    });
+});
+
+// Disable FILE_EDIT
+add_action('admin_init', function() {
+    if (!defined('DISALLOW_FILE_EDIT')) {
+        define('DISALLOW_FILE_EDIT', true);
+    }
+});
+
+// Completely block access to the REST API for unauthorized users
+add_filter('rest_authentication_errors', function($result) {
+    if (!is_user_logged_in()) {
+        return new WP_Error('rest_forbidden', __('Access to the REST API is restricted to authorized users.'), ['status' => 401]);
+    }
+    return $result;
+});
+
+/**
+ * END
+ */

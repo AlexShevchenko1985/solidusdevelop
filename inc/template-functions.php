@@ -2,36 +2,48 @@
 # Example of image sizes:
 add_image_size('hd-size', 1920, 1080, ['center', 'center']);
 
-function truncate_html($html, $length) {
-    $dom = new DOMDocument();
+if(!function_exists('truncate_html')){
+    function truncate_html($html, $length) {
+        $dom = new DOMDocument();
 
 
-    libxml_use_internal_errors(true);
+        libxml_use_internal_errors(true);
 
 
-    $dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
+        $dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 
 
-    libxml_clear_errors();
+        libxml_clear_errors();
 
-    $output = '';
-    $totalLength = 0;
+        $output = '';
+        $totalLength = 0;
 
-    foreach ($dom->getElementsByTagName('p') as $p) {
-        $text = $p->textContent;
-        $textLength = mb_strlen($text);
+        foreach ($dom->getElementsByTagName('p') as $p) {
+            $text = $p->textContent;
+            $textLength = mb_strlen($text);
 
 
-        if ($totalLength + $textLength > $length) {
-            $remaining = $length - $totalLength;
-            $output .= '<p>' . mb_substr($text, 0, $remaining) . '...</p>';
-            break;
+            if ($totalLength + $textLength > $length) {
+                $remaining = $length - $totalLength;
+                $output .= '<p>' . mb_substr($text, 0, $remaining) . '...</p>';
+                break;
+            }
+
+
+            $output .= '<p>' . $text . '</p>';
+            $totalLength += $textLength;
         }
 
-
-        $output .= '<p>' . $text . '</p>';
-        $totalLength += $textLength;
+        return $output;
     }
+}
 
-    return $output;
+function ucfirst_lowercase($string) {
+
+    $lowercaseString = mb_strtolower($string, 'UTF-8');
+
+    $capitalizedString = mb_strtoupper(mb_substr($lowercaseString, 0, 1, 'UTF-8'), 'UTF-8')
+        . mb_substr($lowercaseString, 1, null, 'UTF-8');
+
+    return $capitalizedString;
 }
