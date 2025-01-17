@@ -22,12 +22,14 @@
                 <?php endif; ?>
 
                 <?php if ( !empty($args['section_1']['button_text']) ) : ?>
-                <a href="<?= $args['section_1']['button_link'] ?>" class="btn"><?= esc_html($args['section_1']['button_text']) ?></a>
+                <a href="<?= $args['section_1']['button_link'] ?>" class="primary-btn"><span><?= esc_html($args['section_1']['button_text']) ?></span></a>
                 <?php endif; ?>
 
-                <?php if ( !empty($args['section_1']['img']) ) : ?>
-                <img class="item-img"  src="<?= esc_url($args['section_1']['img']) ?>" alt="GPU virtualization">
-                <?php endif; ?>
+                <div class="bg-holder">
+                    <?php if ( !empty($args['section_1']['img']) ) : ?>
+                    <img class="item-img"  src="<?= esc_url($args['section_1']['img']) ?>" alt="GPU virtualization">
+                    <?php endif; ?>
+                </div>
             </div>
             <div class="item">
 
@@ -40,12 +42,14 @@
                 <?php endif; ?>
 
                 <?php if ( !empty($args['section_2']['button_text']) ) : ?>
-                    <a href="<?= $args['section_2']['button_link'] ?>" class="btn"><?= esc_html($args['section_2']['button_text']) ?></a>
+                    <a href="<?= $args['section_2']['button_link'] ?>" class="primary-btn"><span><?= esc_html($args['section_2']['button_text']) ?></span></a>
                 <?php endif; ?>
 
-                <?php if ( !empty($args['section_2']['img']) ) : ?>
-                    <img class="item-img"  src="<?= esc_url($args['section_2']['img']) ?>" alt="GPU virtualization">
-                <?php endif; ?>
+                <div class="bg-holder">
+                    <?php if ( !empty($args['section_2']['img']) ) : ?>
+                        <img class="item-img"  src="<?= esc_url($args['section_2']['img']) ?>" alt="GPU virtualization">
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>

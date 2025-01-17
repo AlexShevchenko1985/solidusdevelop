@@ -47,7 +47,7 @@
       }
 
       @include breakpoint(md) {
-        padding: 24px 40px;
+        padding: 26px 40px 26px;
         min-height: 480px;
         background-size: 100% 100%;
         z-index: 2;
@@ -66,6 +66,9 @@
         max-width: 505px;
         z-index: 3;
         position: relative;
+        @include breakpoint(md) {
+          font-size: 12px;
+        }
       }
 
       p {
@@ -75,21 +78,33 @@
 
     &:first-child {
       .card-wrap {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url("../../img/home-card-mobile-bg-1.webp");
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url(/wp-content/themes/aitech/src/img/home-card-mobile-bg-1.webp);
       }
 
       @include breakpoint(md) {
         .card-wrap {
-          background-image: url("../../img/home-card-bg-1.webp");
+          background-image: url(/wp-content/themes/aitech/src/img/home-card-bg-1.webp);
         }
 
         .corner-element {
-          top: 105px;
+          top: 8px;
 
           img {
             position: absolute;
-            top: 78px;
+            top: 18px;
+            left: 7px;
           }
+        }
+
+        h3 {
+          margin-left: 80px;
+        }
+        .card-subtitle {
+          margin-left: 80px;
+        }
+
+        .card-content {
+          max-width: 362px;
         }
       }
     }
@@ -100,12 +115,22 @@
       }
 
       .card-wrap {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url("../../img/home-card-mobile-bg-2.webp");
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url(/wp-content/themes/aitech/src/img/home-card-mobile-bg-2.webp);
       }
 
       @include breakpoint(md) {
         .card-wrap {
-          background-image: url("../../img/home-card-bg-2.webp");
+          background-image: url(/wp-content/themes/aitech/src/img/home-card-bg-2.webp);
+        }
+        h3 {
+          margin-left: 80px;
+          max-width: 270px;
+        }
+        .card-subtitle {
+          margin-left: 80px;
+        }
+        .card-content {
+          max-width: 287px;
         }
       }
     }
@@ -125,7 +150,17 @@
       }
 
       .card-wrap {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url("../../img/home-card-mobile-bg-3.webp");
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url(/wp-content/themes/aitech/src/img/home-card-mobile-bg-3.webp);
+
+        @include breakpoint(md) {
+          padding: 24px 40px 24px;
+        }
+      }
+
+      .card-content {
+        @include breakpoint(md) {
+          margin-left: 78px;
+        }
       }
 
       .d-flex {
@@ -156,7 +191,7 @@
         }
 
         .card-wrap {
-          background-image: url("../../img/home-card-bg-3.webp");
+          background-image: url(/wp-content/themes/aitech/src/img/home-card-bg-3.webp);
         }
 
         .corner-element {
@@ -176,12 +211,21 @@
       }
 
       .card-wrap {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url("../../img/home-card-mobile-bg-4.webp");
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url(/wp-content/themes/aitech/src/img/home-card-mobile-bg-4.webp);
       }
 
       @include breakpoint(md) {
         .card-wrap {
-          background-image: url("../../img/home-card-bg-4.webp");
+          background-image: url(/wp-content/themes/aitech/src/img/home-card-bg-4.webp);
+        }
+        h3 {
+          margin-left: 66px;
+        }
+        .card-subtitle {
+          margin-left: 66px;
+        }
+        .card-content {
+          max-width: 253px;
         }
       }
     }
@@ -196,14 +240,6 @@
             top: 10px;
             left: 7px;
           }
-        }
-
-        h3 {
-          margin-left: 90px;
-        }
-
-        .card-content {
-          margin-left: 10px;
         }
       }
     }
@@ -242,7 +278,7 @@
     }
 
     h3 {
-      font-family: Darker Grotesque;
+      font-family: 'Darker Grotesque', sans-serif;
       font-size: 24px;
       line-height: 24px;
       font-weight: 700;
@@ -263,7 +299,7 @@
     }
 
     .card-subtitle {
-      font-family: Roboto Flex;
+      font-family: 'Roboto', sans-serif;
       font-size: 12px;
       font-weight: 400;
       line-height: 16px;
@@ -277,7 +313,7 @@
     .card-content {
       margin-top: 32px;
       margin-left: 0;
-      font-family: Roboto Flex;
+      font-family: 'Roboto', sans-serif;
       font-size: 12px;
       line-height: 16px;
       font-weight: 400;
@@ -290,7 +326,6 @@
       @include breakpoint(md) {
         font-size: 16px;
         line-height: 24px;
-        margin-left: 90px;
       }
     }
 

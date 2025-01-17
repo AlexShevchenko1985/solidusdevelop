@@ -53,7 +53,9 @@
                                                     $post_content = apply_filters('the_content', $founder->post_content);
                                                     ?>
                                                     <div class="back-side">
-                                                        <?php echo $post_content; ?>
+                                                        <div class="back-side-holder">
+                                                            <?php echo $post_content; ?>
+                                                        </div>
                                                     </div>
                                                 <?php endif; ?>
                                                 <div class="content">
@@ -148,7 +150,9 @@
                                                         $post_content = apply_filters('the_content', $team_item->post_content);
                                                         ?>
                                                         <div class="back-side">
-                                                            <?php echo $post_content; ?>
+                                                            <div class="back-side-holder">
+                                                                <?php echo $post_content; ?>
+                                                            </div>
                                                         </div>
                                                     <?php endif; ?>
                                                     <div class="content">
