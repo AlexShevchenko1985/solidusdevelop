@@ -44,6 +44,7 @@
         @include breakpoint(sm) {
           top: -66px;
           left: -55px;
+          background-size: cover;
         }
       }
 
