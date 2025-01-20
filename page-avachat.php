@@ -100,7 +100,7 @@ get_header();
         <div class="container">
 
             <div class="video-container">
-                <video id="video" poster="<?php echo get_template_directory_uri() . '/build/img/ava-poster.webp' ?>" >
+                <video id="video" poster="<?php echo get_template_directory_uri() . '/build/img/ava-poster.webp' ?>" controls muted autoplay>
                     <source src="<?php echo esc_url($video) ?>" type="video/mp4">
                 </video>
                 <button id="play-btn" class="play-button"></button>

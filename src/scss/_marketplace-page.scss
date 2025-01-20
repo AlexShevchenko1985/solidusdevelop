@@ -2,7 +2,65 @@
 
 body {
   &.page-template-ai-marketplace, &.page-template-ai-marketplace-dev {
+
+    .site-footer {
+      .footer-upper {
+        &:after {
+          filter: hue-rotate(220deg);
+        }
+        .contact-block {
+          .contact-form-wrap form .wpcf7-submit {
+            background: $green-accent;
+            color: $button-bg;
+          }
+          .socials__item {
+            filter: hue-rotate(220deg);
+            &:hover {
+              filter: hue-rotate(220deg) brightness(2);
+            }
+          }
+        }
+      }
+    }
+
     .site-header {
+      .mobile-sidenav {
+        filter: hue-rotate(220deg);
+      }
+
+      .header-holder {
+        &:after {
+          filter: hue-rotate(220deg);
+        }
+
+        .label {
+          filter: hue-rotate(220deg);
+        }
+
+        .main-navigation {
+          .menu {
+
+            li {
+              &.active {
+                a {
+                  &:after {
+                    filter: hue-rotate(220deg);
+                  }
+                }
+              }
+
+              &.has-submenu {
+                .submenu-block {
+                  .submenu-block-holder {
+                    filter: hue-rotate(220deg);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
       .side-navigation-wrap {
         right: 5px;
         @include breakpoint(sm) {
@@ -59,6 +117,7 @@ body {
   overflow: hidden;
 
   video {
+    margin-top: 20px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -66,7 +125,7 @@ body {
     inset-block-start: 0;
     display: none;
     @include breakpoint(sm) {
-      width: calc(100vw - 25%);
+      width: calc(100vw - 15%);
       inset-inline-start: 50%;
       transform: translateX(-50%);
       object-fit: contain;
@@ -90,7 +149,7 @@ body {
       text-align: center;
       row-gap: 32px;
       @include breakpoint(sm) {
-        padding-top: 10vh;
+        padding-top: 11vh;
         padding-bottom: 25vh;
         width: 59.5%;
         justify-content: space-between;
@@ -329,7 +388,7 @@ body {
               z-index: 1;
               width: calc(100% - 2px);
               height: calc(100% - 2px);
-              margin-top: 1px;
+              margin-top: 0.5px;
               margin-inline-start: 1px;
               border-radius: 15px;
               mask-image: url("/wp-content/themes/aitech/src/img/slide1-mask.webp");
@@ -651,7 +710,7 @@ body {
               z-index: 1;
               width: calc(100% - 2px);
               height: calc(100% - 2px);
-              margin-top: 1px;
+              margin-top: -2px;
               margin-inline-start: 1px;
               border-radius: 15px;
               mask-image: url("/wp-content/themes/aitech/src/img/tab-slide-mask.webp");
@@ -1392,7 +1451,7 @@ body {
           height: 100%;
         }
       }
-      video {
+      video, img {
         width: 100%;
         height: auto;
       }

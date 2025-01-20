@@ -407,6 +407,7 @@
               visibility: hidden;
               height: 0;
               overflow: hidden;
+              transition: all .3s;
               ul {
                 margin-top: 12px;
                 li {
@@ -445,10 +446,8 @@
                 }
               }
               .hidden-block {
-                transition: opacity .5s, visibility .5s;
                 opacity: 1;
                 visibility: visible;
-                height: auto;
               }
             }
           }

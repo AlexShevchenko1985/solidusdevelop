@@ -49,7 +49,7 @@ $section_11 = get_field('section_11') ?? [];
         <h2 class="no-br-mobile"><?php echo nl2br($section_2['title']) ?></h2>
 
         <div class="video-container">
-            <video id="video" poster="<?php echo esc_url($section_2['video_poster']) ?>" >
+            <video id="video" poster="<?php echo esc_url($section_2['video_poster']) ?>" controls muted autoplay>
                 <source src="<?php echo esc_url($section_2['video']) ?>" type="video/mp4">
             </video>
             <button id="play-btn" class="play-button"></button>

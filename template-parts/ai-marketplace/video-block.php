@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="video-holder video-container">
                     <?php if (!empty($video)): ?>
-                        <video id="video" poster="<?php echo $poster; ?>" >
+                        <video id="video" poster="<?php echo $poster; ?>" controls muted autoplay>
                             <source src="<?php echo $video['url']; ?>" type="video/mp4">
                         </video>
                         <button id="play-btn" class="play-button"></button>

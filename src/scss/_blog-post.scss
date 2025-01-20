@@ -104,10 +104,11 @@
     margin-bottom: 32px;
     border-radius: 1rem;
     position: relative;
-    clip-path: polygon(0 0, calc(100% - 70px) 0, calc(100% - 39px) 7px, 99% 39px, 100% 70px, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - 70px) 0, calc(100% - 48px) 7px, 99% 47px, 100% 70px, 100% 100%, 0 100%);
     width: -webkit-fill-available;
     order: 1;
     height: fit-content;
+    overflow: hidden;
 
     @include breakpoint(sm) {
       margin-bottom: 56px;

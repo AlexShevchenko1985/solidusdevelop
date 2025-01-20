@@ -22,6 +22,46 @@
       }
     }
   }
+
+  .site-header {
+    .mobile-sidenav {
+      filter: hue-rotate(220deg);
+    }
+
+    .header-holder {
+      &:after {
+        filter: hue-rotate(220deg);
+      }
+
+      .label {
+        filter: hue-rotate(220deg);
+      }
+
+      .main-navigation {
+        .menu {
+
+          li {
+            &.active {
+              a {
+                &:after {
+                  filter: hue-rotate(220deg);
+                }
+              }
+            }
+
+            &.has-submenu {
+              .submenu-block {
+                .submenu-block-holder {
+                  filter: hue-rotate(220deg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .round-btn {
     display: block;
     font-family: Darker Grotesque;

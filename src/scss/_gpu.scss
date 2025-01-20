@@ -1073,6 +1073,67 @@
     }
 }
 
+.page-template-page-computer-marketplace {
+    .site-footer {
+        .footer-upper {
+            &:after {
+                filter: hue-rotate(317deg);
+            }
+            .contact-block {
+                .contact-form-wrap form .wpcf7-submit {
+                    background: $color-accent;
+                    color: $button-bg;
+                }
+                .socials__item {
+                    filter: hue-rotate(317deg);
+                    &:hover {
+                        filter: hue-rotate(317deg) brightness(2);
+                    }
+                }
+            }
+        }
+    }
+
+    .site-header {
+        .mobile-sidenav {
+            filter: hue-rotate(317deg);
+        }
+
+        .header-holder {
+            &:after {
+                filter: hue-rotate(317deg);
+            }
+
+            .label {
+                filter: hue-rotate(317deg);
+            }
+
+            .main-navigation {
+                .menu {
+
+                    li {
+                        &.active {
+                            a {
+                                &:after {
+                                    filter: hue-rotate(317deg);
+                                }
+                            }
+                        }
+
+                        &.has-submenu {
+                            .submenu-block {
+                                .submenu-block-holder {
+                                    filter: hue-rotate(317deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @include breakpoint(sm) {
     .hero-section {
         height: calc(100vh - 113px);
@@ -1977,7 +2038,7 @@
         video {
             z-index: 1;
             width: 100%;
-            margin-bottom: -12rem;
+            margin-bottom: -6rem;
             margin-top: -12rem;
         }
     }

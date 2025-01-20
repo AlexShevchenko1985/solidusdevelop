@@ -36,11 +36,12 @@
       position: relative;
       overflow: hidden;
       clip-path: polygon(0 0, calc(100% - 44px) 0, calc(100% - 34px) 4px, 99% 34px, 100% 43px, 100% 100%, 0 100%);
-      min-height: 243px;
+      height: 243px;
+      overflow: hidden;
       border-radius: 16px;
 
       @include breakpoint(sm) {
-        min-height: 324px;
+        height: 324px;
       }
 
       &:before {
