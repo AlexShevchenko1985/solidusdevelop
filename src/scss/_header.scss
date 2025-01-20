@@ -7,13 +7,70 @@
     top: 0;
     left: 0;
     z-index: 99;
+    transition: all 1s;
     background: $button-bg;
-    transition: all .5s;
   @include breakpoint(sm) {
-    background: linear-gradient(180deg, #020307 0%, rgba(2, 3, 7, 0) 100%);
+    background: transparent;
   }
+
+  &:before {
+    @include breakpoint(sm) {
+      content: "";
+      background: rgba(1, 2, 10, 0.6);
+      backdrop-filter: blur(10.100000381469727px);
+      height: 100%;
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      width: 16px;
+    }
+    @media only screen and (min-width: 1480px) {
+      width: calc(50% - 714px);
+    }
+  }
+  &:after {
+    @include breakpoint(sm) {
+      content: "";
+      background: rgba(1, 2, 10, 0.6);
+      backdrop-filter: blur(10.100000381469727px);
+      height: 100%;
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-end: 0;
+      width: 16px;
+    }
+    @media only screen and (min-width: 1480px) {
+      width: calc(50% - 714px);
+    }
+  }
+
   .container {
     max-width: 1460px;
+    position: relative;
+    &:after {
+      content: "";
+      background-image: url("/wp-content/themes/aitech/src/img/header-liner-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      inset-inline-start: 50%;
+      transform: translateX(-50%);
+      inset-block-end: 0;
+      @include breakpoint(xs) {
+        background-size: cover;
+      }
+      @include breakpoint(sm) {
+        background-image: url("/wp-content/themes/aitech/src/img/header-liner.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+        height: 33px;
+        inset-block-end: 0;
+      }
+    }
   }
   .header-holder {
       position: relative;
@@ -23,30 +80,13 @@
       min-height: 65px;
       @include breakpoint(sm) {
         min-height: 123px;
+        background: rgba(1, 2, 10, 0.6);
+        backdrop-filter: blur(10.100000381469727px);
+        mask-image: url(/wp-content/themes/aitech/src/img/header-mask.webp);
+        mask-repeat: no-repeat;
+        mask-position: center bottom;
       }
-      &:after {
-        content: "";
-        background-image: url("/wp-content/themes/aitech/src/img/header-liner-mobile.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100%;
-        width: 100%;
-        height: 1px;
-        position: absolute;
-        inset-inline-start: 50%;
-        transform: translateX(-50%);
-        inset-block-end: 0;
-        @include breakpoint(xs) {
-          background-size: cover;
-        }
-        @include breakpoint(sm) {
-          background-image: url("/wp-content/themes/aitech/src/img/header-liner.svg");
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: cover;
-          height: 32px;
-        }
-      }
+
 
       .logo {
         @include breakpoint(sm) {
@@ -71,7 +111,7 @@
       }
       .main-navigation {
         display: none;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         @include breakpoint(sm) {
           display: block;
         }

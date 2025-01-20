@@ -29,11 +29,7 @@
 			</div>
 			<div class="mask-block">
 				<div class="content-holder">
-					<p>Solidus has built an eco-friendly High-Performance Computing (HPC) Data Centre spanning 8,000 sq ft in Europe. $AITECH, the world’s first deflationary AI infrastructure utility token, facilitates access to the Launchpad, Artificial Intelligence & GPU Marketplace. $AITECH powers the Solidus AI Tech ecosystem.</p>
-					<div class="btn-holder">
-						<a target="_self" href="" class="primary-btn"><span>Get Started</span></a>
-						<a target="_self" href="" class="arrow-btn"><span>Learn More</span></a>
-					</div>
+					<p>Solidus operates an 8,000 sq. ft. eco-friendly HPC Data Centre in Europe. $AITECH, the first deflationary AI infrastructure token, powers the Solidus AI Tech ecosystem, enabling access to the Launchpad, AI, and GPU Marketplace.</p>
 				</div>
 			</div>
 		</div>
