@@ -113,7 +113,6 @@ html {
           cursor: pointer;
           position: relative;
           margin: 0 16px;
-          transition: all .3s;
           @include breakpoint(sm) {
             font-family: 'Roboto Flex', sans-serif;
             font-weight: 600;
@@ -674,7 +673,6 @@ html {
           cursor: pointer;
           position: relative;
           margin: 0 16px;
-          transition: all .3s ease-in-out;
           @include breakpoint(sm) {
             font-family: 'Roboto Flex', sans-serif;
             font-weight: 600;
@@ -2196,7 +2194,6 @@ input:-webkit-autofill {
         cursor: pointer;
         position: relative;
         margin: 0 16px;
-        transition: all .3s;
         @include breakpoint(sm) {
           font-family: 'Roboto Flex', sans-serif;
           font-weight: 600;

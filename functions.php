@@ -294,14 +294,6 @@ add_action('admin_init', function() {
     }
 });
 
-// Completely block access to the REST API for unauthorized users
-add_filter('rest_authentication_errors', function($result) {
-    if (!is_user_logged_in()) {
-        return new WP_Error('rest_forbidden', __('Access to the REST API is restricted to authorized users.'), ['status' => 401]);
-    }
-    return $result;
-});
-
 /**
  * END
  */
