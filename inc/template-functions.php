@@ -47,3 +47,26 @@ function ucfirst_lowercase($string) {
 
     return $capitalizedString;
 }
+
+function node_get_current_browser()
+{
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+    if (strpos($user_agent, 'Chrome') !== false) {
+        $browser = 'chrome';
+    } elseif (strpos($user_agent, 'Firefox') !== false) {
+        $browser = 'firefox';
+    } elseif (strpos($user_agent, 'Safari') !== false && strpos($user_agent, 'Chrome') === false) {
+        $browser = 'safari';
+    } elseif (strpos($user_agent, 'Edge') !== false) {
+        $browser = 'edge';
+    } elseif (strpos($user_agent, 'Opera') !== false || strpos($user_agent, 'OPR') !== false) {
+        $browser = 'opera';
+    } elseif (strpos($user_agent, 'MSIE') !== false || strpos($user_agent, 'Trident') !== false) {
+        $browser = 'explorer';
+    } else {
+        $browser = 'unknown';
+    }
+
+    return $browser;
+}

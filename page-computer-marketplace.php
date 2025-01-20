@@ -48,8 +48,15 @@ $section_11 = get_field('section_11') ?? [];
     <div class="container">
         <h2 class="no-br-mobile"><?php echo nl2br($section_2['title']) ?></h2>
 
+        <?php
+        if('safari' === node_get_current_browser()){
+            $video_controls = (!wp_is_mobile())? 'muted autoplay' : 'muted';
+        }else{
+            $video_controls = (!wp_is_mobile())? 'controls muted autoplay' : 'controls muted';
+        }
+        ?>
         <div class="video-container">
-            <video id="video" poster="<?php echo esc_url($section_2['video_poster']) ?>" controls muted autoplay>
+            <video id="video" poster="<?php echo esc_url($section_2['video_poster']) ?>" <?php echo $video_controls; ?>>
                 <source src="<?php echo esc_url($section_2['video']) ?>" type="video/mp4">
             </video>
             <button id="play-btn" class="play-button"></button>

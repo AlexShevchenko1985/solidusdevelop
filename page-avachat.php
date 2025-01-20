@@ -96,11 +96,19 @@ get_header();
         ?>
     </section>
 
+    <?php
+    if('safari' === node_get_current_browser()){
+        $video_controls = (!wp_is_mobile())? 'muted autoplay' : 'muted';
+    }else{
+        $video_controls = (!wp_is_mobile())? 'controls muted autoplay' : 'controls muted';
+    }
+    ?>
+
     <section id="section2" class="section-bring">
         <div class="container">
 
             <div class="video-container">
-                <video id="video" poster="<?php echo get_template_directory_uri() . '/build/img/ava-poster.webp' ?>" controls muted autoplay>
+                <video id="video" poster="<?php echo get_template_directory_uri() . '/build/img/ava-poster.webp' ?>" <?php echo $video_controls; ?>>
                     <source src="<?php echo esc_url($video) ?>" type="video/mp4">
                 </video>
                 <button id="play-btn" class="play-button"></button>

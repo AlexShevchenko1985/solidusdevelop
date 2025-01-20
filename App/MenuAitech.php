@@ -61,8 +61,8 @@ class MenuAitech
     {
 
         $current_url = home_url($_SERVER['REQUEST_URI']);
-        $normalized_link = trim(parse_url($link, PHP_URL_PATH), '/');
-        $normalized_current_url = trim(parse_url($current_url, PHP_URL_PATH), '/');
+        $normalized_current_url = trim($current_url, '/');
+        $normalized_link = trim($link, '/');
 
         if ($normalized_link === $normalized_current_url) {
             return 'active';
