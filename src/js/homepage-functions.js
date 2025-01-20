@@ -302,6 +302,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
 })
 
+// Header scroll animation
+
+document.addEventListener('DOMContentLoaded', function () {
+  const headerSection = document.getElementById('Header');
+
+  if (!headerSection) {
+    return;
+  }
+
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', function () {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      headerSection.style.top = '-100%';
+    } else {
+      headerSection.style.top = '0';
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+
+})
+
+
 // Mobile Menu
 
 document.addEventListener('DOMContentLoaded', function() {
