@@ -1,0 +1,448 @@
+@use "variables" as *;
+@use "general/utils" as *;
+
+.page-template-aitech-labs {
+  color: $white;
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    filter: grayscale(1) brightness(1.5);
+  }
+
+  .site-footer {
+    filter: grayscale(1);
+
+    .footer-upper .contact-block .contact-form-wrap form {
+      .wpcf7-email {
+        background: #FFFFFF1A;
+      }
+
+      .wpcf7-submit {
+        color: $bg-color;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 100%);
+      }
+    }
+  }
+
+  .btn {
+    &.btn-white {
+      color: $bg-color;
+      background: $white;
+      border: 2px $white solid;
+
+      &:hover {
+        color: $white;
+        background: $bg-color;
+      }
+
+    }
+  }
+
+  .label {
+    font-family: Darker Grotesque;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 7px 16px 12px;
+    width: fit-content;
+    position: relative;
+    border-radius: 50px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50px;
+      padding: 1px;
+      background: linear-gradient(263.74deg, #FFFFFF -97.76%, #2D2D2D 107.96%);
+      mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+      mask-composite: exclude;
+    }
+  }
+
+
+  // Sections
+
+  .aitech-labs-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(sm) {
+      display: block;
+    }
+
+    .media {
+      order: 2;
+      margin-top: -50px;
+
+      video {
+        width: 100%;
+        height: auto;
+      }
+
+      @include breakpoint(sm) {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        margin-top: 0;
+      }
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 30px;
+      flex-direction: column;
+      order: 1;
+
+      @include breakpoint(sm) {
+        flex-direction: row;
+        padding-top: 116px;
+      }
+
+      .heading {
+        text-align: center;
+
+        @include breakpoint(sm) {
+          max-width: 446px;
+          text-align: left;
+        }
+
+        .label {
+          margin: 0 auto;
+
+          @include breakpoint(sm) {
+            margin: 0;
+          }
+        }
+
+        h1 {
+          line-height: 32px;
+          font-size: 32px;
+
+          @include breakpoint(sm) {
+            line-height: 60px;
+            font-size: 60px;
+          }
+
+          span {
+            color: $grey-1;
+            font-size: 40px;
+            line-height: 36px;
+            font-weight: 500;
+
+          }
+        }
+
+        .btn {
+          margin: 20px auto;
+
+          @include breakpoint(sm) {
+            margin: 30px 0 0;
+          }
+        }
+      }
+
+      .description {
+        text-align: center;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        max-width: 369px;
+        font-family: Roboto Flex;
+        justify-content: space-between;
+
+        @include breakpoint(sm) {
+          background-image: url("../../img/labs-hero-bg.webp");
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          padding: 44px 40px 12px;
+          text-align: left;
+        }
+
+        a {
+          display: block;
+          color: $grey-1;
+          padding: 15px 24px;
+          width: fit-content;
+          margin: 0 auto;
+          font-size: 16px;
+          line-height: 18px;
+
+          @include breakpoint(sm) {
+            margin: 0 0 0 auto;
+          }
+        }
+      }
+    }
+  }
+
+  .labs-section {
+    color: $white;
+    padding: 40px 0;
+
+    @include breakpoint(sm) {
+      padding: 80px 0;
+    }
+
+    .label {
+      box-shadow: 0px 0px 30px 4px #FFFFFF33;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-weight: 400;
+      background: linear-gradient(88.95deg, #E3E3E3 1.09%, #6D6E71 103.97%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: rgba(0, 0, 0, 0);
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    &__inner {
+      .coinmarketcap-currency-widget {
+
+        & > div {
+          background-image: url("../../img/labs-bg-grey.webp");
+          background-size: 100% 100%;
+
+          & > div {
+            &:nth-child(2)  {
+              & > div {
+
+                &:first-child {
+
+                  &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background-image: url("data:image/svg+xml,%0A%3Csvg width='1' height='50' viewBox='0 0 1 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='-0.5' x2='50' y2='-0.5' transform='matrix(4.37114e-08 -1 -1 -4.37114e-08 0 50)' stroke='white' stroke-opacity='0.2'/%3E%3C/svg%3E%0A");
+                    height: 100%;
+                    width: 1px;
+                    background-size: 100% 100%;
+                  }
+                }
+
+                &:nth-child(2) {
+
+                  &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background-image: url("data:image/svg+xml,%0A%3Csvg width='1' height='50' viewBox='0 0 1 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='-0.5' x2='50' y2='-0.5' transform='matrix(4.37114e-08 -1 -1 -4.37114e-08 0 50)' stroke='white' stroke-opacity='0.2'/%3E%3C/svg%3E%0A");
+                    height: 100%;
+                    width: 1px;
+                    background-size: 100% 100%;
+                  }
+                }
+
+              }
+            }
+          }
+        }
+      }
+
+      .swiper-controls {
+        .swiper-button-prev-widget {
+          transform: rotate(0deg);
+        }
+
+        .swiper-button-next-widget {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .aitech-labs-coin {
+    color: $white;
+    padding: 40px 0;
+
+    @include breakpoint(sm) {
+      padding: 80px 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+
+      @include breakpoint(sm) {
+        flex-direction: row;
+      }
+
+      .content-wrap {
+        position: relative;
+        width: 100%;
+        order: 2;
+        padding-left: 16px;
+
+        @include breakpoint(sm) {
+          order: 1;
+          padding-left: 10px;
+        }
+
+        &:before {
+          content: '';
+          width: 54px;
+          height: 150%;
+          position: absolute;
+          background-image: url("data:image/svg+xml,%0A%3Csvg width='101' height='566' viewBox='0 0 101 566' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.00015 0.999996L90.5091 90.2616C96.5295 96.2654 99.9131 104.418 99.913 112.92L99.9129 141' stroke='url(%23paint0_linear_1740_1531)'/%3E%3Cpath d='M99.9131 141V565' stroke='url(%23paint1_linear_1740_1531)' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1740_1531' x1='1.00017' y1='1' x2='1.00017' y2='141' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0.4'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_1740_1531' x1='100.413' y1='141' x2='100.413' y2='565' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white' stop-opacity='0.4'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+          position: absolute;
+          top: -60px;
+          background-size: contain;
+          left: -38px;
+          background-repeat: no-repeat;
+
+          @include breakpoint(sm) {
+            background-size: inherit;
+            width: 100px;
+            height: 400px;
+            top: -120px;
+            left: -118px;
+          }
+        }
+
+        h2 {
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 32px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          position: relative;
+          margin-bottom: 20px;
+
+          @include breakpoint(sm) {
+            font-size: 96px;
+            line-height: 86.4px;
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            background: $white;
+            border-radius: 2px;
+            height: 100%;
+            width: 4px;
+            background-repeat: no-repeat;
+            left: -16.5px;
+            top: 0;
+
+            @include breakpoint(sm) {
+              left: -30px;
+            }
+          }
+
+          @include breakpoint(sm) {
+            font-size: 64px;
+            line-height: 57.6px;
+            margin-bottom: 40px;
+            margin-left: 0;
+          }
+
+          span {
+            font-weight: 700;
+            @include gradient-text($gradient-grey);
+          }
+        }
+
+        .content {
+          max-width: 550px;
+
+          p {
+            font-size: 12px;
+            line-height: 16px;
+
+            @include breakpoint(sm) {
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+
+      .img-wrap {
+        order: 1;
+        width: 75%;
+
+        @include breakpoint(sm) {
+          order: 2;
+        }
+
+        video {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .section-unleash {
+    padding: 40px 0;
+
+    @include breakpoint(sm) {
+      padding: 80px 0;
+    }
+
+    h2 {
+      span {
+        font-weight: 700;
+        @include gradient-text($gradient-grey);
+      }
+    }
+
+    .img-wrap {
+      margin-top: 20px;
+      margin-bottom: -84px;
+
+      @include breakpoint(sm) {
+        margin-top: 48px;
+        margin-bottom: -84px;
+      }
+    }
+
+    .content-wrap {
+
+      .content-item {
+        border: 1px $grey solid;
+        background: radial-gradient(33.37% 88.46% at 89.96% 6.51%, rgba(114, 114, 114, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+        backdrop-filter: blur(32px);
+        border-radius: 12px;
+
+        @include breakpoint(sm) {
+          border: none;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+
+          &:nth-child(2) {
+            background-image: url("../../img/incubation-bg1.webp");
+          }
+
+          &:nth-child(3) {
+            background-image: url("../../img/incubation-bg2.webp");
+          }
+        }
+      }
+    }
+  }
+
+
+}

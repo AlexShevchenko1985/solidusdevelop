@@ -197,6 +197,12 @@ function aitech_scripts() {
     }
     wp_enqueue_script( 'video-functions', get_template_directory_uri() . '/src/js/scripts.js', array('swiper'), _S_VERSION, true );
 
+    if (is_page_template('templates/aitech-labs.php')) {
+        wp_enqueue_script('aitech-labs-functions', get_template_directory_uri() . '/src/js/aitech-labs-functions.js', array('swiper'), _S_VERSION, true);
+    }
+
+    wp_enqueue_script('avoid-functions', get_template_directory_uri() . '/src/js/avoid.js', [], _S_VERSION, true);
+
 }
 add_action( 'wp_enqueue_scripts', 'aitech_scripts' );
 

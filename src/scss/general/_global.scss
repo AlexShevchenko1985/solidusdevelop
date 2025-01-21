@@ -52,3 +52,25 @@ ul {
     }
   }
 }
+
+
+
+
+.ajeeb {
+  z-index: 10;
+  margin-right: 15px;
+  width: 140px;
+  height: 44px;
+
+  &::part(ctk-clickable) {
+    left: auto !important;
+    right: 281px !important;
+  }
+}
+
+@media (max-width: 1280px){
+  .button-span {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}

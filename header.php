@@ -107,8 +107,10 @@
                     </nav>
                 <?php endif; ?>
 
-                <div class="label">
-                    <img src="<?php echo get_template_directory_uri() ?>/src/img/certik-logo.svg" alt="Icon">
+                <div class="ajeeb">
+                    <div class="certik-emblem" data-id="bbfe9657">
+                        <a href="https://skynet.certik.com/projects/solidus-ai-tech?utm_source=SkyEmblem&utm_campaign=solidus-ai-tech&utm_medium=link">View project at certik.com</a>
+                    </div>
                 </div>
                 <a href="javascript:void(0);" class="mobile-menu-btn">
                     <img class="menu-burger" src="<?php echo get_template_directory_uri() ?>/src/img/mobile-burger.svg" alt="Icon">
