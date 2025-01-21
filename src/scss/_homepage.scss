@@ -164,14 +164,6 @@ html {
             }
           }
         }
-        &:hover {
-          .tab-btn {
-            opacity: .4;
-            &:hover {
-              opacity: 1;
-            }
-          }
-        }
       }
     }
     .tab-body {
@@ -306,6 +298,7 @@ html {
                 .back-side-holder {
                   height: 100%;
                   overflow-y: auto;
+                  padding-inline-end: 20px;
                 }
 
                 ::-webkit-scrollbar {
@@ -721,14 +714,6 @@ html {
             &:before,
             &:after {
               display: block;
-            }
-          }
-        }
-        &:hover {
-          .tab-btn {
-            opacity: .4;
-            &:hover {
-              opacity: 1;
             }
           }
         }
@@ -2244,14 +2229,6 @@ input:-webkit-autofill {
           &:before,
           &:after {
             display: block;
-          }
-        }
-      }
-      &:hover {
-        .tab-btn {
-          opacity: .4;
-          &:hover {
-            opacity: 1;
           }
         }
       }
