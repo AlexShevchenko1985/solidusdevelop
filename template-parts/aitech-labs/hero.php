@@ -17,20 +17,26 @@
     </div>
     <div class="container">
         <div class="heading">
-            <div class="label">
-                AITECH Labs
-            </div>
-            <h1>
-                <span>Welcome to AITECH Labs:</span>
-                Your Gateway to Web3 Innovation
-            </h1>
-            <a href="" class="btn btn-white">
-                Apply Now
-            </a>
+            <?php if (!empty ($args['label'])) : ?>
+                <div class="label"><?= esc_html($args['label']) ?></div>
+            <?php endif; ?>
+
+            <?php if (!empty ($args['title'])) : ?>
+            <h1><?= nl2br($args['title']) ?></h1>
+            <?php endif; ?>
+
+            <?php if (!empty ($args['button'])) : ?>
+            <a href="<?= esc_url($args['button']['url']) ?>" target="<?= $args['button']['target'] ?>" class="btn btn-white"><?= esc_html($args['button']['title']) ?></a>
+            <?php endif; ?>
         </div>
         <div class="description">
-            Dive into the future with AITECH Labs, where your Web3 dreams get the wings they need to soar. We're not just another VC firm; we're your partners in innovation, incubation, and acceleration.
-            <a href="" class="description__btn">Learn More</a>
+            <?php if (!empty ($args['description'])) : ?>
+                <?= nl2br($args['description']) ?>
+            <?php endif; ?>
+
+            <?php if (!empty ($args['description_link'])) : ?>
+                <a href="<?= esc_url($args['description_link']['url']) ?>" target="<?= $args['description_link']['target'] ?>" class="description__btn"><?= esc_html($args['description_link']['title']) ?></a>
+            <?php endif; ?>
         </div>
     </div>
 </section>

@@ -24,19 +24,25 @@
 
                                 <?php if (!empty($card['media'])):
                                     $media = $card['media'];
+                                    $mobile_image = $card['mobile_image'];
                                     ?>
 
-                                    <?php if ('image' === $media['type']): ?>
+
+                                    <?php if (!empty($mobile_image)): ?>
                                     <div class="media">
-                                        <?php echo wp_get_attachment_image($media['ID'], 'full'); ?>
+                                        <?php echo wp_get_attachment_image($mobile_image, 'large'); ?>
                                     </div>
-                                    <?php else: ?>
+                                <?php endif; ?>
+
+                                    <?php if (!empty($media['url'])): ?>
                                     <div class="media">
-                                        <video playsinline muted loop >
-                                            <source src="<?php echo !empty($media['url'])? $media['url'] : ''; ?>" type="video/mp4">
+                                        <video playsinline muted loop>
+                                            <source src="<?php echo !empty($media['url']) ? $media['url'] : ''; ?>"
+                                                    type="video/mp4">
                                         </video>
                                     </div>
-                                    <?php endif; ?>
+
+                                <?php endif; ?>
 
                                 <?php endif; ?>
 

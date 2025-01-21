@@ -3,6 +3,7 @@
         $title = get_sub_field('title');
         $video = get_sub_field('video');
         $button = get_sub_field('link');
+        $video_mp4 = get_sub_field('video_mp4');
         ?>
         <section id="section7" class="banner-section">
             <?php if (!empty($video)): ?>
@@ -12,8 +13,11 @@
                             <?php echo wp_get_attachment_image($video['ID'], 'hd-size'); ?>
                         </div>
                     <?php else: ?>
-                        <video playsinline autoplay muted loop poster="">
+                        <video playsinline="" autoplay="" muted="" loop="" poster="">
                             <source src="<?php echo $video['url']; ?>" type="video/webm">
+                            <?php if (!empty($video_mp4)): ?>
+                                <source src="<?php echo $video_mp4; ?>" type="video/mp4">
+                            <?php endif; ?>
                         </video>
                     <?php endif; ?>
                 </div>

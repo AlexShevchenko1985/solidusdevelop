@@ -20,7 +20,7 @@
                     <div class="video">
                         <div class="head-video">
                             <video playsinline autoplay muted loop >
-                                <source src="<?php echo get_template_directory_uri() ?>/src/video/sphere-1x.webm" type="video/webm">
+                                <source src="<?php echo get_template_directory_uri() ?>/src/video/Sphere-1x_HEVC.mp4" type="video/mp4">
                             </video>
                             <?php if (!empty($main_title)): ?>
                                 <div class="ball"><span><?php echo $main_title; ?></span></div>
@@ -28,7 +28,7 @@
                         </div>
                         <div class="body-video">
                             <video playsinline autoplay muted loop >
-                                <source src="<?php echo get_template_directory_uri() ?>/src/video/body-1x.webm" type="video/webm">
+                                <source src="<?php echo get_template_directory_uri() ?>/src/video/Body_1x_HEVC.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>

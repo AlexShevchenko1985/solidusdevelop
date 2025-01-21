@@ -29,8 +29,8 @@
                                         <?php if (!empty($video)): ?>
                                             <div class="bg">
                                                 <div class="media-block">
-                                                    <video playsinline muted loop >
-                                                        <source src="<?php echo $video['url']; ?>" type="video/mp4">
+                                                    <video playsinline="" muted="" loop="" >
+                                                        <source src="<?php echo $video['url']; ?>" type="video/webm">
                                                         <?php if ( !empty( $mp4 ) ) : ?>
                                                         <source src="<?php echo $mp4; ?>" type="video/mp4">
                                                         <?php endif; ?>

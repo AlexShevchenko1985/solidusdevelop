@@ -1849,6 +1849,18 @@ input:-webkit-autofill {
             margin-left: 1px;
             object-fit: cover;
           }
+          video {
+            display: none;
+            @include breakpoint(sm) {
+              display: block;
+            }
+          }
+          img {
+            display: block;
+            @include breakpoint(sm) {
+              display: none;
+            }
+          }
         }
         .content {
           padding: 160px 24px 24px;

@@ -1120,6 +1120,27 @@
                     "allow_in_bindings": 0
                 },
                 {
+                    "key": "field_678ff28d76597",
+                    "label": "Video mp4",
+                    "name": "video_mp4",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0
+                },
+                {
                     "key": "field_6756f2485be4f",
                     "label": "Link",
                     "name": "link",
@@ -1164,5 +1185,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1736778966
+    "modified": 1737487003
 }
