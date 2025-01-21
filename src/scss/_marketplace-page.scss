@@ -1346,11 +1346,21 @@ body {
         &:last-of-type {
           margin-bottom: 0;
         }
+        .mobile-only {
+          width: 100%;
+          position: relative;
+          display: block;
+          @include breakpoint(sm) {
+            display: none;
+          }
+        }
         .content {
           position: relative;
           padding-inline-start: 32px;
+          margin-top: 60px;
           @include breakpoint(sm) {
             padding-inline-start: 37px;
+            margin-top: 0;
           }
           &:after {
             content: "";
