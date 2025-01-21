@@ -2615,7 +2615,12 @@ input:-webkit-autofill {
     video {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
+      min-height: 487px;
+      @include breakpoint(sm) {
+        min-height: auto;
+        object-fit: contain;
+      }
     }
     img {
       width: 100%;

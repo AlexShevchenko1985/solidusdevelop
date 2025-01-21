@@ -6,27 +6,32 @@
   position: relative;
   z-index: 1;
   order: 3;
+  margin-top: -60px;
   @include breakpoint(sm) {
     padding: 130px 0 40px;
+    margin-top: 0;
   }
 
   p {
     font-family: Darker Grotesque;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
-    line-height: 18px;
+    line-height: 16px;
     text-align: center;
     color: $white;
+    max-width: 151px;
+    margin: 0 auto;
+    @include breakpoint(sm) {
+      font-size: 18px;
+      line-height: 18px;
+      max-width: 100%;
+    }
   }
 
   .content {
     position: relative;
-    margin-top: 24px;
+    margin-top: 16px;
     overflow: hidden;
-
-    @include breakpoint(sm) {
-      margin-top: 48px;
-    }
 
     &:before,
     &:after {
