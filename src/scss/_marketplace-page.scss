@@ -4,11 +4,21 @@ body {
   &.page-template-ai-marketplace, &.page-template-ai-marketplace-dev {
 
     .site-footer {
+      a,
+      p {
+        color: $green-footer-accent;
+      }
       .footer-upper {
         &:after {
           filter: hue-rotate(220deg);
         }
         .contact-block {
+          .contact-form-wrap {
+            color: $green-footer-accent;
+          }
+          .audit {
+            color: $green-footer-accent;
+          }
           .contact-form-wrap form .wpcf7-submit {
             background: $green-accent;
             color: $button-bg;
@@ -20,12 +30,33 @@ body {
             }
           }
         }
+        .navigation-wrap {
+          h5 {
+            background: transparent;
+            -webkit-background-clip: initial;
+            -webkit-text-fill-color: $green-footer-accent;
+            color: $green-footer-accent;
+          }
+        }
+      }
+      .footer-lower {
+        .footer-menu-privacy {
+          a {
+            color: $green-footer-accent;
+          }
+        }
       }
     }
 
     .site-header {
       .mobile-sidenav {
         filter: hue-rotate(220deg);
+      }
+
+      .container {
+        &:after {
+          filter: hue-rotate(220deg);
+        }
       }
 
       .header-holder {

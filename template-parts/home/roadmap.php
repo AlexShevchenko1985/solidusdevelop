@@ -37,7 +37,7 @@
                 <?php endif; ?>
             </div>
 
-            <div class="home-roadmap__inner-item">
+            <div class="home-roadmap__inner-item preloader">
                 <?php if ( !empty($args['section_2']['title']) ) : ?>
                     <h3><?= esc_html($args['section_2']['title']) ?></h3>
                 <?php endif; ?>
@@ -52,6 +52,9 @@
                         <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
+                <div class="loader-block">
+                    <span>TBA</span>
+                </div>
             </div>
 
             <img src="<?= get_template_directory_uri() . '/build/img/solidus-logo2.svg' ?>" alt="Solidus" class="solidus-logo">

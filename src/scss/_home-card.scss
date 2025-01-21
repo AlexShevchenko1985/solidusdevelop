@@ -115,12 +115,12 @@
       }
 
       .card-wrap {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url(/wp-content/themes/aitech/src/img/home-card-mobile-bg-2.webp);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url(/wp-content/themes/aitech/src/img/home-card-mobile-bg-2.svg);
       }
 
       @include breakpoint(md) {
         .card-wrap {
-          background-image: url(/wp-content/themes/aitech/src/img/home-card-bg-2.png);
+          background-image: url(/wp-content/themes/aitech/src/img/home-card-bg-2.svg);
         }
         h3 {
           margin-left: 80px;
