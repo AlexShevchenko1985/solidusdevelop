@@ -143,9 +143,13 @@ body {
 }
 
 .hero-inner-section {
-  height: 100vh;
   position: relative;
   overflow: hidden;
+  padding-bottom: 54px;
+  @include breakpoint(sm) {
+    height: 100vh;
+    padding-bottom: 0;
+  }
 
   video {
     margin-top: 20px;

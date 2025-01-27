@@ -27,22 +27,23 @@
                                     $mobile_image = $card['mobile_image'];
                                     ?>
 
+                                    <?php if (wp_is_mobile()): ?>
+                                        <?php if (!empty($mobile_image)): ?>
+                                            <div class="media">
+                                                <?php echo wp_get_attachment_image($mobile_image, 'large'); ?>
+                                            </div>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
 
-                                    <?php if (!empty($mobile_image)): ?>
-                                    <div class="media">
-                                        <?php echo wp_get_attachment_image($mobile_image, 'large'); ?>
-                                    </div>
-                                <?php endif; ?>
 
                                     <?php if (!empty($media['url'])): ?>
-                                    <div class="media">
-                                        <video playsinline muted loop>
-                                            <source src="<?php echo !empty($media['url']) ? $media['url'] : ''; ?>"
-                                                    type="video/mp4">
-                                        </video>
-                                    </div>
-
-                                <?php endif; ?>
+                                        <div class="media">
+                                            <video playsinline muted loop>
+                                                <source src="<?php echo !empty($media['url']) ? $media['url'] : ''; ?>"
+                                                        type="video/mp4">
+                                            </video>
+                                        </div>
+                                    <?php endif; ?>
 
                                 <?php endif; ?>
 

@@ -20,17 +20,19 @@
             $title = get_sub_field('title');
             $content = get_sub_field('content');
             $button = get_sub_field('link');
+            $video_webm = get_sub_field('video_webm');
             ?>
-
 
             <?php if (!empty($video)): ?>
                 <div class="media">
-                    <video playsinline autoplay muted loop>
+                    <video playsinline="" autoplay="" muted="" loop="">
                         <source src="<?php echo $video ?>" type="video/mp4">
+                        <?php if (!empty($video_webm)): ?>
+                            <source src="<?php echo $video_webm; ?>" type="video/webm">
+                        <?php endif; ?>
                     </video>
                 </div>
             <?php endif; ?>
-
 
 
             <div class="container">

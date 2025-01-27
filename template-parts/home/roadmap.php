@@ -6,7 +6,7 @@
  * @var array $args
  *
  */
-
+$tba_block = !empty($args['section_2']['tba_block'])? 'preloader' :'';
 ?>
 
 <section class="home-roadmap">
@@ -37,7 +37,7 @@
                 <?php endif; ?>
             </div>
 
-            <div class="home-roadmap__inner-item preloader">
+            <div class="home-roadmap__inner-item <?php echo $tba_block; ?>">
                 <?php if ( !empty($args['section_2']['title']) ) : ?>
                     <h3><?= esc_html($args['section_2']['title']) ?></h3>
                 <?php endif; ?>
