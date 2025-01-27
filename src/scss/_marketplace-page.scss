@@ -15,6 +15,12 @@ body {
         .contact-block {
           .contact-form-wrap {
             color: $green-footer-accent;
+
+            form {
+              .wpcf7-email {
+                border: 1px $green-accent solid;
+              }
+            }
           }
           .audit {
             color: $green-footer-accent;
@@ -34,8 +40,8 @@ body {
           h5 {
             background: transparent;
             -webkit-background-clip: initial;
-            -webkit-text-fill-color: $green-footer-accent;
-            color: $green-footer-accent;
+            -webkit-text-fill-color: $green-accent;
+            color: $green-accent;
           }
         }
       }
@@ -1448,9 +1454,9 @@ body {
           color: $green-accent;
           transition: all .3s;
           margin: 0 0 24px;
-          @include breakpoint(sm) {
-            color: rgba(255, 255, 255, .4);
-          }
+          //@include breakpoint(sm) {
+          //  color: rgba(255, 255, 255, .4);
+          //}
         }
         p {
           margin: 0;
@@ -1458,9 +1464,9 @@ body {
           line-height: 20px;
           color: $white;
           transition: all .3s;
-          @include breakpoint(sm) {
-            color: rgba(255, 255, 255, .4);
-          }
+          //@include breakpoint(sm) {
+          //  color: rgba(255, 255, 255, .4);
+          //}
         }
         &.active {
           .content {

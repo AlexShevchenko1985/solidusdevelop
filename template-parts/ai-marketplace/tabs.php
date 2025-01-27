@@ -28,19 +28,11 @@
                             $title = !empty($tab['title'])? $tab['title'] : '';
                             $text  = !empty($tab['text'])? $tab['text'] : '';
                             ?>
-                            <div class="tab-item">
+                            <div class="tab-item active">
 
-                                <?php if (!empty($video)): ?>
-                                    <div class="mobile-only">
-                                        <video playsinline autoplay muted loop poster="">
-                                            <source src="<?php echo $video; ?>" type="video/webm">
-                                        </video>
-                                    </div>
-                                <?php else : ?>
-                                    <div class="mobile-only">
-                                        <img src="<?php echo $i1 == 1 ? get_template_directory_uri() . '/build/img/green-coin.webp' : get_template_directory_uri() . '/build/img/green-coin-2.webp' ?>" alt="Coin">
-                                    </div>
-                                <?php endif; ?>
+                                <div class="mobile-only">
+                                    <img src="<?php echo $i1 == 1 ? get_template_directory_uri() . '/build/img/green-coin-1.webp' : get_template_directory_uri() . '/build/img/green-coin-2.webp' ?>" alt="Coin">
+                                </div>
 
                                 <div class="content">
                                     <?php if (!empty($title)): ?>
@@ -60,12 +52,12 @@
                         <?php if (!empty($video)): ?>
                             <div class="video-column">
                                 <video playsinline autoplay muted loop poster="">
-                                    <source src="<?php echo $video; ?>" type="video/webm">
+                                    <source src="<?php echo $video; ?>" type="video/mp4">
                                 </video>
                             </div>
                         <?php else : ?>
                             <div class="video-column">
-                                <img src="<?php echo $i2 == 1 ? get_template_directory_uri() . '/build/img/green-coin.webp' : get_template_directory_uri() . '/build/img/green-coin-2.webp' ?>" alt="Coin">
+                                <img src="<?php echo $i2 == 1 ? get_template_directory_uri() . '/build/img/green-coin-1.webp' : get_template_directory_uri() . '/build/img/green-coin-2.webp' ?>" alt="Coin">
                             </div>
                         <?php endif; ?>
                         <?php $i2++; ?>

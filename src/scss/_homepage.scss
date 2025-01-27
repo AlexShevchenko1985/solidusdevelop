@@ -2400,31 +2400,22 @@ input:-webkit-autofill {
       @include breakpoint(sm) {
         display: flex;
       }
-      &:after {
-        content: "";
-        background: linear-gradient(180deg, #01020A 0%, rgba(1, 2, 10, 0) 12.23%),
-        linear-gradient(360deg, #01020A 3.13%, rgba(1, 2, 10, 0) 17.78%),
-        linear-gradient(90deg, #01020A 7.5%, rgba(1, 2, 10, 0) 33.99%),
-        linear-gradient(270deg, #01020A 7.19%, rgba(1, 2, 10, 0) 40.83%);
+
+      img {
         width: 100%;
-        height: 100%;
-        position: absolute;
-        inset-inline-start: 0;
-        inset-block-start: 0;
-      }
-      video {
-        width: 100%;
-        margin: 0 auto;
+        margin: -200px auto -100px;
       }
       .advantages-list {
         position: relative;
-        z-index: 1;
+        z-index: 2;
       }
     }
     .advantages-list {
       display: none;
       @include breakpoint(sm) {
         display: block;
+        position: relative;
+        z-index: 2;
       }
       .title {
         background: linear-gradient(83.4deg, #CAB8F9 2.39%, #875FF2 36.45%, #6231E6 77.24%, #381D89 109.32%);

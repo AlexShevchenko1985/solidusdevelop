@@ -1,6 +1,8 @@
 @use "variables" as *;
 @use "general/utils" as *;
 
+
+
 .hero-section {
     position: relative;
     height: 100dvh;
@@ -1082,6 +1084,12 @@
             .contact-block {
               .contact-form-wrap {
                 color: $green-footer-accent;
+
+                  form {
+                      .wpcf7-email {
+                          border: 1px $color-accent solid;
+                      }
+                  }
               }
               .audit {
                 color: $green-footer-accent;
@@ -1101,8 +1109,8 @@
             h5 {
               background: transparent;
               -webkit-background-clip: initial;
-              -webkit-text-fill-color: $green-footer-accent;
-              color: $green-footer-accent;
+              -webkit-text-fill-color: $color-accent;
+              color: $color-accent;
             }
           }
         }

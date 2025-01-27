@@ -14,6 +14,7 @@ get_header();
         <div class="container">
             <div class="hero__content">
                 <a href="<?php echo esc_url($hero['avachat_button_link']) ?>" class="round-btn">AVACHAT</a>
+                <img src="<?php echo get_template_directory_uri() . '/build/img/sambanova-logo1.svg' ?>" alt="SambaNova">
                 <h1><?php echo esc_html($hero['title']) ?></h1>
                 <p><?php echo esc_html($hero['subtitle']) ?></p>
                 <div class="btn-wrap">
@@ -64,10 +65,24 @@ get_header();
         </div>
     </section>
 
+    <section class="iframe-section">
+        <div class="container">
+            <div class="iframe-wrap">
+                <iframe
+                        src="https://avachat-tg.ai.aitech.io/"
+                        width="100%"
+                        height="700px"
+                        style="border: none;"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
     <section class="faq">
         <?php
         if ( !empty($faq_items) ) :
-        $items_per_carousel = 4;
+        $items_per_carousel = 5;
         $faq_chunks = array_chunk($faq_items, $items_per_carousel);
 
         foreach ($faq_chunks as $index => $chunk) {

@@ -136,15 +136,15 @@ document.addEventListener('DOMContentLoaded', () => {
   tabsItem[0].classList.add('active');
   tabsContentImage[0].classList.add('active');
 
-  tabsItem.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-      tabsItem.forEach(btn => btn.classList.remove('active'));
-      tabsContentImage.forEach(content => content.classList.remove('active'));
-
-      tab.classList.add('active');
-      tabsContentImage[index].classList.add('active');
-    });
-  });
+  // tabsItem.forEach((tab, index) => {
+  //   tab.addEventListener('click', () => {
+  //     tabsItem.forEach(btn => btn.classList.remove('active'));
+  //     tabsContentImage.forEach(content => content.classList.remove('active'));
+  //
+  //     tab.classList.add('active');
+  //     tabsContentImage[index].classList.add('active');
+  //   });
+  // });
 });
 
 document.addEventListener('DOMContentLoaded', () => {

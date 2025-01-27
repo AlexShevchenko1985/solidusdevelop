@@ -29,7 +29,7 @@ $contact_form_shortcode = get_field('footer_contact_form_shortcode', 'option');
             <div class="footer-upper">
                 <div class="contact-block">
                     <div class="contact-form-wrap">
-                        Sign up to receive news and updates <br> about Solidus Ai Tech Limited
+                        Sign up to receive news and updates <br> about Solidus Ai Tech
                         <?= do_shortcode($contact_form_shortcode) ?>
                     </div>
                     <div class="socials">
@@ -133,18 +133,34 @@ $contact_form_shortcode = get_field('footer_contact_form_shortcode', 'option');
 
                 <div class="navigation-wrap">
                     <div class="col">
-                        <h5>Products</h5>
-                        <?php
-                        wp_nav_menu( array(
-                            'theme_location' => 'footer_menu_product',
-                            'menu_class'     => 'footer-menu-product',
-                        ) );
-                        ?>
+                        <div>
+                            <h5>Products</h5>
+                            <?php
+                            wp_nav_menu( array(
+                                'theme_location' => 'footer_menu_product',
+                                'menu_class'     => 'footer-menu-product',
+                            ) );
+                            ?>
+                        </div>
+                        <div>
+                            <h5>Ecosystem</h5>
+                            <?php
+                            wp_nav_menu( array(
+                                'theme_location' => 'footer_menu_ecosystem',
+                                'menu_class'     => 'footer-menu-ecosystem',
+                            ) );
+                            ?>
+                        </div>
                     </div>
                     <div class="col">
                         <div>
                             <h5>Resources</h5>
-                            <a href="/blog" class="">Blog</a>
+                            <?php
+                            wp_nav_menu( array(
+                                'theme_location' => 'footer_menu_resource',
+                                'menu_class'     => 'footer-menu-resource',
+                            ) );
+                            ?>
                         </div>
                         <div>
                             <h5>Email</h5>

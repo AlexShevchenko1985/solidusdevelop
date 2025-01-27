@@ -11,17 +11,38 @@
   }
 
   .site-footer {
-    filter: grayscale(1);
 
-    .footer-upper .contact-block .contact-form-wrap form {
-      .wpcf7-email {
-        background: #FFFFFF1A;
+    .footer-upper {
+      &:after {
+        filter: grayscale(1);
       }
 
-      .wpcf7-submit {
-        color: $bg-color;
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 100%);
+      .contact-block {
+        .socials {
+          filter: grayscale(1);
+        }
+
+        .contact-form-wrap form {
+          .wpcf7-email {
+            background: #FFFFFF1A;
+            border: 1px $grey-1 solid;
+          }
+
+          .wpcf7-submit {
+            color: $bg-color;
+            background: $white;
+            display: block;
+            position: absolute;
+          }
+        }
       }
+      .navigation-wrap {
+        filter: grayscale(1);
+      }
+    }
+
+    .footer-lower {
+      filter: grayscale(1);
     }
   }
 
@@ -176,7 +197,7 @@
           background-image: url("../../img/labs-hero-bg.webp");
           background-repeat: no-repeat;
           background-size: 100% 100%;
-          padding: 44px 40px 12px;
+          padding: 44px 40px;
           text-align: left;
         }
 
@@ -465,6 +486,106 @@
     }
   }
 
+  .section-grant {
+    padding: 40px 0;
+
+    @include breakpoint(sm) {
+      padding: 80px 0;
+    }
+
+    .container {
+      max-width: 1176px;
+    }
+
+    &__inner {
+      width: 100%;
+      border-radius: 16px;
+      position: relative;
+      padding: 1px;
+      background-image: radial-gradient(99.98% 38.28% at 3.02% 112.87%, rgba(253, 253, 253, 0.05) 0%, rgba(85, 85, 85, 0) 100%);
+      background-size: 300px;
+      background-position: bottom left;
+      background-repeat: no-repeat;
+      background-color: $button-bg;
+      overflow: hidden;
+
+      &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 1px;
+        background: linear-gradient(0deg, rgba(28, 28, 28, 0.3), rgba(28, 28, 28, 0.3)), radial-gradient(46.98% 58.28% at 3.02% 91.87%, rgba(253, 253, 253, 0.4) 0%, rgba(85, 85, 85, 0.4) 100%);
+        border-radius: inherit;
+        mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
+        z-index: 2;
+      }
+
+      .img-wrap {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        height: fit-content;
+
+        @include breakpoint(xs) {
+          top: 0;
+          bottom: unset;
+          height: 100%;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 20%;
+          background: linear-gradient(180deg, #01020A, rgba(28, 28, 28, 0));
+
+          @include breakpoint(xs) {
+            width: 20%;
+            height: 100%;
+            background: linear-gradient(90deg, #01020A, rgba(28, 28, 28, 0));
+          }
+        }
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .content {
+        max-width: 535px;
+        padding: 32px 20px 75%;
+        position: relative;
+        z-index: 2;
+
+        @include breakpoint(xs) {
+          padding: 48px 40px 148px;
+        }
+
+        h2 {
+          span {
+            font-weight: 700;
+            @include gradient-text($gradient-grey);
+          }
+        }
+
+        p {
+          margin: 14px 0 24px;
+
+          @include breakpoint(sm) {
+            margin: 32px 0 48px
+          }
+        }
+
+        .btn {
+
+        }
+      }
+    }
+  }
+
   .why-aitech-labs {
     padding: 40px 0;
 
@@ -531,6 +652,10 @@
           font-weight: 600;
           line-height: 24px;
           @include gradient-text($gradient-grey);
+
+          img {
+            filter: grayscale(1);
+          }
         }
 
         &__content {
@@ -866,10 +991,10 @@
                   &:focus-visible {
                     outline: none;
                     color: rgba(225, 227, 254, 1);
-                    border: 1px solid rgba(117, 104, 151, 1);
+                    border: 1px solid $grey-1;
                   }
                   &:hover {
-                    border: 1px solid rgba(117, 104, 151, 1);
+                    border: 1px solid $grey-1;
                   }
                   &.wpcf7-not-valid {
                     border: 1px solid rgba(188, 71, 71, 0.3) !important;

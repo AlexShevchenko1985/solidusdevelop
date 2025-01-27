@@ -76,7 +76,9 @@ function aitech_setup() {
             'footer_menu_1' => __( 'Footer Menu Company', 'aitech' ),
             'footer_menu_2' => __( 'Footer Menu Resource', 'aitech' ),
             'footer_menu_product' => __( 'Footer Menu Product', 'aitech' ),
+            'footer_menu_ecosystem' => __( 'Footer Menu Ecosystem', 'aitech' ),
             'footer_menu_privacy' => __( 'Footer Menu Privacy', 'aitech' ),
+            'footer_menu_resource' => __( 'Footer Menu Resource', 'aitech' ),
 		)
 	);
 
@@ -254,7 +256,7 @@ function custom_excerpt_length($length) {
 }
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
-show_admin_bar(false);
+//show_admin_bar(false);
 
 
 /**

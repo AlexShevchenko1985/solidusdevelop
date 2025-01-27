@@ -138,7 +138,7 @@
               font-size: 16px;
               line-height: 18px;
               font-weight: 400;
-              color: rgba(255, 255, 225, .4);
+              color: $white;
               transition: all .3s;
               &:after {
                 content: "";
@@ -155,7 +155,7 @@
                 transition: all .3s;
               }
               &:hover {
-                color: $white;
+                color: rgba(255, 255, 225, .4);
               }
             }
             &.has-submenu {
@@ -302,7 +302,7 @@
             }
             &.active {
               a {
-                color: $white;
+                color: rgba(255, 255, 225, .4);
                 &:after {
                   opacity: 1;
                   visibility: visible;
@@ -324,7 +324,7 @@
             }
             &.active {
               a {
-                color: $white;
+                color: rgba(255, 255, 225, .4);
                 &:after {
                   opacity: 1;
                   visibility: visible;

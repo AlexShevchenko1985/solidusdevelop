@@ -89,6 +89,7 @@
                                 "id": ""
                             },
                             "layout": "block",
+                            "parent_repeater": "field_676d3f9fff51f",
                             "sub_fields": [
                                 {
                                     "key": "field_676d413bf1dc8",
@@ -179,8 +180,7 @@
                                         }
                                     ]
                                 }
-                            ],
-                            "parent_repeater": "field_676d3f9fff51f"
+                            ]
                         }
                     ]
                 },
@@ -221,6 +221,7 @@
                                 "id": ""
                             },
                             "layout": "",
+                            "parent_repeater": "field_676d42c65a7db",
                             "sub_fields": [
                                 {
                                     "key": "field_676d42c65a7dd",
@@ -333,8 +334,7 @@
                                         }
                                     ]
                                 }
-                            ],
-                            "parent_repeater": "field_676d42c65a7db"
+                            ]
                         }
                     ]
                 },
@@ -375,6 +375,7 @@
                                 "id": ""
                             },
                             "layout": "block",
+                            "parent_repeater": "field_676d42c95a7e1",
                             "sub_fields": [
                                 {
                                     "key": "field_676d42c95a7e3",
@@ -465,17 +466,16 @@
                                         }
                                     ]
                                 }
-                            ],
-                            "parent_repeater": "field_676d42c95a7e1"
+                            ]
                         }
                     ]
                 },
                 {
                     "key": "field_676d47d7c6d3c",
-                    "label": "Video",
-                    "name": "video",
+                    "label": "Image",
+                    "name": "image",
                     "aria-label": "",
-                    "type": "file",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -484,12 +484,16 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "library": "all",
+                    "min_width": "",
+                    "min_height": "",
                     "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
                     "max_size": "",
                     "mime_types": "",
-                    "allow_in_bindings": 1
+                    "preview_size": "medium"
                 },
                 {
                     "key": "field_676d47f6c6d3d",
@@ -764,5 +768,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1735299590
+    "modified": 1737622025
 }

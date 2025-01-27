@@ -61,11 +61,9 @@
 	                            </div>
                             </div>
 
-                            <?php if (!empty($card_block['video'])): ?>
+                            <?php if (!empty($card_block['image'])): ?>
                                 <div class="video-holder">
-                                    <video playsinline muted loop autoplay>
-                                        <source src="<?php echo $card_block['video']['url']; ?>" type="video/mp4">
-                                    </video>
+                                    <img src="<?php echo esc_url($card_block['image']); ?>" alt="Key features">
                                 </div>
                             <?php endif; ?>
 
