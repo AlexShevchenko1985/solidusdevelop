@@ -6,7 +6,7 @@
         $message = get_sub_field('form_message');
         ?>
 
-        <section class="solutions-form">
+        <section class="solutions-form" id="solutions-form">
             <div class="container">
                 <div class="mask-holder">
                     <div class="icon">
