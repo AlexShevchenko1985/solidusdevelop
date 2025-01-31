@@ -20,7 +20,7 @@ if(empty($args)){
                     <img src="<?= get_template_directory_uri() . '/build/img/aitech-debit-card.svg' ?>" alt="AITECH Debit Card">
                 </div>
                 <div class="card-wrap">
-                    <h3><?= esc_html( $args['card_1_content']['title'] ) ?></h3>
+                    <h3><?php echo $args['card_1_content']['title']; ?></h3>
                     <div class="card-subtitle"><?= nl2br( $args['card_1_content']['subtitle'] ) ?></div>
                     <div class="card-content">
                         <?= $args['card_1_content']['content'] ?>
@@ -34,7 +34,7 @@ if(empty($args)){
                     <img src="<?= get_template_directory_uri() . '/build/img/ai-assistant.svg' ?>" alt="AI assistant">
                 </div>
                 <div class="card-wrap">
-                    <h3><?= esc_html( $args['card_2_content']['title'] ) ?></h3>
+                    <h3><?php echo $args['card_2_content']['title']; ?></h3>
 
                     <div class="card-content">
                         <?= $args['card_2_content']['content'] ?>
@@ -48,7 +48,7 @@ if(empty($args)){
                     <img src="<?= get_template_directory_uri() . '/build/img/vpn-subscriptions.svg' ?>" alt="VPN subscriptions">
                 </div>
                 <div class="card-wrap">
-                    <h3><?= esc_html( $args['card_3_content']['title'] ) ?></h3>
+                    <h3><?php echo $args['card_3_content']['title']; ?></h3>
                     <div class="card-subtitle">
                         <?= nl2br($args['card_3_content']['subtitle']) ?>
                     </div>
@@ -81,7 +81,7 @@ if(empty($args)){
                     <img src="<?= get_template_directory_uri() . '/build/img/telegram-bot.svg' ?>" alt="Telegram bot">
                 </div>
                 <div class="card-wrap">
-                    <h3><?= esc_html( $args['card_4_content']['title'] ) ?></h3>
+                    <h3><?php echo $args['card_4_content']['title']; ?></h3>
 
                     <div class="card-content">
                         <?= $args['card_4_content']['content'] ?>

@@ -761,9 +761,8 @@ html {
               mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
               mask-repeat: no-repeat;
               mask-position: left;
-              background:
-                linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+              background: linear-gradient(0deg, rgba(117, 104, 151, 0), rgba(117, 104, 151, 0)),
+              radial-gradient(62.5% 75.18% at 0% 100%, #444444 0%, #222222 100%);
               border-radius: 15px;
               overflow: hidden;
               transition: all .3s;
@@ -776,7 +775,7 @@ html {
                 position: relative;
                 z-index: 1;
                 padding: 0 15px;
-                background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                background: radial-gradient(47.91% 44.76% at 10% 90%, #222222 0%, #000000 100%);
                 mask-repeat: no-repeat;
                 mask-position: left;
                 border-radius: 15px;
@@ -797,6 +796,7 @@ html {
                   transition: all .4s ease-in-out;
                   opacity: 0;
                   visibility: hidden;
+                  filter: grayscale(1);
                 }
               }
 
@@ -814,6 +814,7 @@ html {
                 transition: all .4s ease-in-out;
                 opacity: 0;
                 visibility: hidden;
+                filter: grayscale(1);
 
               }
 
@@ -883,8 +884,8 @@ html {
                 .front,
                 .back {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
-                  background:
-                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)), radial-gradient(62.5% 75.18% at 91.61% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                  background: linear-gradient(0deg, rgba(117, 104, 151, 0), rgba(117, 104, 151, 0)),
+                  radial-gradient(62.5% 75.18% at 100% 100%, #444444 0%, #222222 100%);
                   mask-position: center;
                   &:before {
                     background: linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
@@ -893,7 +894,7 @@ html {
                     mask-position: center;
                   }
                   a {
-                    background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+                    background: radial-gradient(47.91% 44.76% at 100% 100%, #222222 0%, #000000 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
                     mask-position: right;
                     &:after {
@@ -923,9 +924,8 @@ html {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
                   mask-repeat: no-repeat;
                   mask-position: left;
-                  background:
-                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                    radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                  background: linear-gradient(0deg, rgba(117, 104, 151, 0), rgba(117, 104, 151, 0)),
+                  radial-gradient(62.5% 75.18% at 0% 100%, #444444 0%, #222222 100%);
                   &:before {
                     background:
                       linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
@@ -935,7 +935,7 @@ html {
                     mask-position: left;
                   }
                   a {
-                    background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                    background: radial-gradient(47.91% 44.76% at 10% 90%, #222222 0%, #000000 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
                     mask-position: left;
                     &:after {
@@ -960,7 +960,8 @@ html {
                 .back {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
                   background:
-                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)), radial-gradient(62.5% 75.18% at 91.61% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                      linear-gradient(0deg, rgba(117, 104, 151, 0), rgba(117, 104, 151, 0)),
+                      radial-gradient(62.5% 75.18% at 100% 100%, #444444 0%, #222222 100%);
                   mask-position: center;
                   &:before {
                     background: linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
@@ -969,7 +970,7 @@ html {
                     mask-position: center;
                   }
                   a {
-                    background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+                    background: radial-gradient(47.91% 44.76% at 100% 100%, #222222 0%, #000000 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
                     mask-position: right;
                     &:after {
@@ -999,9 +1000,8 @@ html {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
                   mask-repeat: no-repeat;
                   mask-position: left;
-                  background:
-                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                    radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                  background: linear-gradient(0deg, rgba(117, 104, 151, 0), rgba(117, 104, 151, 0)),
+                  radial-gradient(62.5% 75.18% at 0% 100%, #444444 0%, #222222 100%);
                   &:before {
                     background:
                       linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
@@ -1011,7 +1011,7 @@ html {
                     mask-position: left;
                   }
                   a {
-                    background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                    background: radial-gradient(47.91% 44.76% at 10% 90%, #222222 0%, #000000 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
                     mask-position: left;
                     &:after {
@@ -1036,7 +1036,8 @@ html {
                 .back {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
                   background:
-                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)), radial-gradient(62.5% 75.18% at 91.61% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                      linear-gradient(0deg, rgba(117, 104, 151, 0), rgba(117, 104, 151, 0)),
+                      radial-gradient(62.5% 75.18% at 100% 100%, #444444 0%, #222222 100%);
                   mask-position: center;
                   &:before {
                     background: linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
@@ -1045,7 +1046,7 @@ html {
                     mask-position: center;
                   }
                   a {
-                    background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+                    background: radial-gradient(47.91% 44.76% at 100% 100%, #222222 0%, #000000 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
                     mask-position: right;
                     &:after {
@@ -1075,9 +1076,8 @@ html {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
                   mask-repeat: no-repeat;
                   mask-position: left;
-                  background:
-                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                    radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                  background: linear-gradient(0deg, rgba(117, 104, 151, 0), rgba(117, 104, 151, 0)),
+                  radial-gradient(62.5% 75.18% at 0% 100%, #444444 0%, #222222 100%);
                   &:before {
                     background:
                       linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
@@ -1087,7 +1087,7 @@ html {
                     mask-position: left;
                   }
                   a {
-                    background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                    background: radial-gradient(47.91% 44.76% at 10% 90%, #222222 0%, #000000 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
                     mask-position: left;
                     &:after {
@@ -1112,7 +1112,8 @@ html {
                 .back {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
                   background:
-                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)), radial-gradient(62.5% 75.18% at 91.61% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                      linear-gradient(0deg, rgba(117, 104, 151, 0), rgba(117, 104, 151, 0)),
+                      radial-gradient(62.5% 75.18% at 100% 100%, #444444 0%, #222222 100%);
                   mask-position: center;
                   &:before {
                     background: linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
@@ -1121,7 +1122,7 @@ html {
                     mask-position: center;
                   }
                   a {
-                    background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+                    background: radial-gradient(47.91% 44.76% at 100% 100%, #222222 0%, #000000 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
                     mask-position: right;
                     &:after {
@@ -1151,9 +1152,8 @@ html {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
                   mask-repeat: no-repeat;
                   mask-position: left;
-                  background:
-                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                    radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                  background: linear-gradient(0deg, rgba(117, 104, 151, 0), rgba(117, 104, 151, 0)),
+                  radial-gradient(62.5% 75.18% at 0% 100%, #444444 0%, #222222 100%);
                   &:before {
                     background:
                       linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
@@ -1163,7 +1163,7 @@ html {
                     mask-position: left;
                   }
                   a {
-                    background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                    background: radial-gradient(47.91% 44.76% at 10% 90%, #222222 0%, #000000 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
                     mask-position: left;
                     &:after {
@@ -1188,7 +1188,8 @@ html {
                 .back {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
                   background:
-                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)), radial-gradient(62.5% 75.18% at 91.61% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                      linear-gradient(0deg, rgba(117, 104, 151, 0), rgba(117, 104, 151, 0)),
+                      radial-gradient(62.5% 75.18% at 100% 100%, #444444 0%, #222222 100%);
                   mask-position: center;
                   &:before {
                     background: linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
@@ -1197,7 +1198,7 @@ html {
                     mask-position: center;
                   }
                   a {
-                    background: radial-gradient(47.91% 44.76% at 90% 61.79%, #190B30 0%, #01020A 100%);
+                    background: radial-gradient(47.91% 44.76% at 100% 100%, #222222 0%, #000000 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask2.webp");
                     mask-position: right;
                     &:after {
@@ -1227,9 +1228,8 @@ html {
                   mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
                   mask-repeat: no-repeat;
                   mask-position: left;
-                  background:
-                    linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
-                    radial-gradient(62.5% 75.18% at 8.39% 100%, rgba(171, 143, 246, 0.5) 0%, rgba(31, 18, 84, 0.5) 100%);
+                  background: linear-gradient(0deg, rgba(117, 104, 151, 0), rgba(117, 104, 151, 0)),
+                  radial-gradient(62.5% 75.18% at 0% 100%, #444444 0%, #222222 100%);
                   &:before {
                     background:
                       linear-gradient(180deg, rgba(117, 104, 151, 0.3), rgba(117, 104, 151, 0.3)),
@@ -1239,7 +1239,7 @@ html {
                     mask-position: left;
                   }
                   a {
-                    background: radial-gradient(47.91% 44.76% at 10% 90.21%, #190B30 0%, #01020A 100%);
+                    background: radial-gradient(47.91% 44.76% at 10% 90%, #222222 0%, #000000 100%);
                     mask-image: url("/wp-content/themes/aitech/src/img/partner-logo-mask.webp");
                     mask-position: left;
                     &:after {
@@ -2981,4 +2981,415 @@ input:-webkit-autofill {
   }
 }
 
+.frame-area {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+  .frame-area {
+    margin-top: 80px;
+  }
+}
+
+.frame-area iframe {
+  border-radius: 24px;
+  border: 0 !important;
+}
+
+body {
+  &.home {
+    .site-header {
+      filter: grayscale(1) brightness(1.5);
+      .header-holder {
+        .main-navigation {
+          .menu {
+            li {
+              a {
+                color: rgba(255, 255, 255, .4);
+                &:hover {
+                  color: $white;
+                }
+              }
+              &.active {
+                a {
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .site-footer {
+
+      .footer-upper {
+        &:after {
+          background-image: url(/wp-content/themes/aitech/src/img/footer-home-line.svg);
+        }
+
+        .contact-block {
+          .socials {
+            filter: grayscale(1);
+          }
+
+          .audit {
+            color: $white;
+          }
+
+          .contact-form-wrap {
+            color: $white;
+          }
+
+          .contact-form-wrap form {
+            .wpcf7-email {
+              background: rgba(255, 255, 255, .1);
+              border: 1px solid rgba(255, 255, 255, .15);
+              &::placeholder {
+                color: rgba(225, 225, 255, .5);
+              }
+            }
+
+            .wpcf7-submit {
+              color: $home-footer-button;
+              background: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 100%);
+              display: block;
+              position: absolute;
+            }
+          }
+        }
+        .navigation-wrap {
+          filter: grayscale(1);
+        }
+      }
+
+      .footer-lower {
+        p {
+          color: rgba(186, 186, 186, .6);
+        }
+        .footer-menu-privacy {
+          a {
+            color: rgba(186, 186, 186, .6);
+          }
+        }
+      }
+    }
+    .hero-home {
+      .container {
+        filter: grayscale(1);
+      }
+    }
+    .logo-slider {
+      .content__item {
+        &:before {
+          filter: grayscale(1);
+        }
+      }
+    }
+    .powerful-products {
+      h2 {
+        span {
+          filter: grayscale(1);
+        }
+      }
+      .powerful-products-holder {
+        .item {
+          .icon {
+            filter: grayscale(1);
+          }
+          .bg-block {
+            background: radial-gradient(25.36% 46.53% at 11.92% 20.13%, #777777 0%, #222222 100%);
+            &:before {
+              filter: grayscale(1);
+            }
+            &:after {
+              filter: grayscale(1);
+            }
+
+            .media {
+              filter: grayscale(1);
+              @include breakpoint(sm) {
+                filter: none;
+              }
+              &:after {
+                filter: grayscale(1);
+              }
+            }
+            .content {
+              filter: grayscale(1);
+            }
+          }
+        }
+      }
+    }
+
+    .data-center {
+      .heading {
+        h2 {
+          span {
+            filter: grayscale(1);
+          }
+        }
+        p {
+          color: $white;
+        }
+        .btn-list {
+          filter: grayscale(1);
+        }
+      }
+      .tab-body {
+        .columns-holder {
+          .item-block {
+            h4,
+            .content-holder {
+              filter: grayscale(1);
+            }
+            &:before {
+              background: linear-gradient(118.81deg, #444444 6.71%, #222222 53.74%);
+            }
+            &:after {
+              background: linear-gradient(298.81deg, #000000 22.16%, #222222 100%);
+            }
+          }
+        }
+        .advantages-list {
+          filter: grayscale(1);
+        }
+        &.table-layout {
+          .heading {
+            filter: grayscale(1);
+          }
+          .columns-holder {
+            .column {
+              filter: grayscale(1);
+            }
+          }
+        }
+        .video-holder {
+          filter: grayscale(1);
+        }
+      }
+    }
+
+    .home-card__inner-item {
+      filter: grayscale(1);
+    }
+
+    .home-numbers {
+      h2 {
+        span {
+          filter: grayscale(1);
+        }
+      }
+      &__item {
+        filter: grayscale(1);
+        @include breakpoint(sm) {
+          filter: none;
+        }
+        div {
+          filter: grayscale(1);
+        }
+        &:first-child {
+          @include breakpoint(sm) {
+            background-image: url(/wp-content/themes/aitech/src/img/card_bg-desk1.svg);
+          }
+        }
+        &:nth-child(2) {
+          @include breakpoint(sm) {
+            background-image: url(/wp-content/themes/aitech/src/img/card_bg-desk2.svg);
+          }
+        }
+        &:nth-child(3) {
+          @include breakpoint(sm) {
+            background-image: url(/wp-content/themes/aitech/src/img/card_bg-desk3.svg);
+          }
+        }
+        &:nth-child(4) {
+          @include breakpoint(sm) {
+            background-image: url(/wp-content/themes/aitech/src/img/card_bg-desk4.svg);
+          }
+        }
+        &:nth-child(5) {
+          @include breakpoint(sm) {
+            background-image: url(/wp-content/themes/aitech/src/img/card_bg-desk5.svg);
+          }
+        }
+        &:last-child {
+          @include breakpoint(sm) {
+            background-image: url(/wp-content/themes/aitech/src/img/card_bg-desk6.svg);
+          }
+        }
+      }
+    }
+
+    .home-roadmap {
+      h2 {
+        filter: grayscale(1);
+      }
+      p {
+        color: $white;
+      }
+      &__inner-item {
+        filter: grayscale(1);
+      }
+    }
+
+
+    .home-blog {
+      filter: grayscale(1);
+    }
+
+    .home-coin {
+      .content-wrap {
+        filter: grayscale(1);
+      }
+    }
+
+    .labs-section {
+      h2,
+      p,
+      .btn {
+        filter: grayscale(1);
+      }
+      &__inner {
+        .coinmarketcap-currency-widget {
+          & > div {
+            background-image: url("/wp-content/themes/aitech/src/img/bg-pattern.svg");
+            & > div {
+              &:nth-child(2) {
+                & > div {
+                  &:first-child,
+                  &:nth-child(2) {
+                    &:after {
+                      filter: grayscale(1);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .swiper-controls {
+          filter: grayscale(1);
+        }
+      }
+    }
+
+    .section-ai-tech {
+      .content {
+        .item {
+          &:before {
+            filter: grayscale(1);
+          }
+          h3,
+          p,
+          a {
+            filter: grayscale(1);
+          }
+        }
+      }
+    }
+
+    .home-wrapper {
+      .teams-section {
+        .heading {
+          h2 {
+            span {
+              filter: grayscale(1);
+            }
+          }
+          p {
+            color: $white;
+          }
+          .btn-list {
+            filter: grayscale(1);
+          }
+        }
+
+        .tab-body {
+          .tabs-slider {
+            .swiper {
+              .swiper-slide {
+                filter: grayscale(1);
+              }
+            }
+            .navigation {
+              filter: grayscale(1);
+            }
+          }
+        }
+      }
+      .partners-section {
+        .heading {
+          p {
+            color: $white;
+          }
+          h2 {
+            span {
+              filter: grayscale(1);
+            }
+          }
+          .btn-list {
+            filter: grayscale(1);
+          }
+        }
+      }
+      .solutions-form {
+        .mask-holder {
+          .icon {
+            filter: grayscale(1) brightness(1.5);
+          }
+        }
+        .form-section-holder {
+          background: linear-gradient(0deg, rgba(28, 28, 28, 0.3), rgba(28, 28, 28, 0.3)),
+          radial-gradient(20.51% 32.71% at 50% 0.89%, rgba(253, 253, 253, 0.4) 0%, rgba(85, 85, 85, 0.4) 100%);
+          h2 {
+            span {
+              background: linear-gradient(89.55deg, #E3E3E3 1.35%, #6D6E71 107.89%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: rgba(0, 0, 0, 0);
+            }
+          }
+          p {
+            color: $white;
+          }
+          &:after {
+            filter: grayscale(1);
+          }
+          .form-holder {
+            .form-block {
+              .wpcf7 {
+                form {
+                  label {
+                    input,
+                    textarea{
+                      &:hover {
+                        border: 1px solid dimgray;
+                      }
+                      &:focus {
+                        border: 1px solid dimgray;
+                      }
+                    }
+                  }
+                  .submit {
+                    &:before {
+                      background: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 100%);
+                    }
+                    .wpcf7-submit {
+                      color: #050505;
+                      &:hover {
+                        color: $white;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
 

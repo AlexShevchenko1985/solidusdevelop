@@ -352,9 +352,16 @@
             right: 0;
             height: 100%;
             width: -webkit-fill-available;
+            margin-top: -24vw;
+            @include breakpoint(sm) {
+                margin-top: 0;
+            }
+
+            &.desktop-item {
+                margin-top: 0;
+            }
 
             video, img {
-                display: block;
                 position: absolute;
                 bottom: 0;
                 right: 0;
@@ -362,10 +369,26 @@
                 position: relative;
                 width: 100%;
                 height: auto;
-            };
+            }
+
+            video {
+                display: none;
+                @include breakpoint(sm) {
+                    display: block;
+                }
+            }
 
             img {
                 height: 100%;
+                @include breakpoint(sm) {
+                    display: none;
+                }
+                &.desktop-img {
+                    display: none;
+                    @include breakpoint(sm) {
+                        display: block;
+                    }
+                }
             }
         }
 
@@ -1141,6 +1164,9 @@
             &:after {
                 filter: hue-rotate(317deg);
             }
+            .buttons-block {
+                filter: hue-rotate(317deg);
+            }
 
             .label {
                 filter: hue-rotate(317deg);
@@ -1366,7 +1392,6 @@
                 position: absolute;
 
                 video, img {
-                    display: block;
                     position: absolute;
                     bottom: 0;
                     right: 0;

@@ -100,6 +100,7 @@ $section_11 = get_field('section_11') ?? [];
                         <source src="<?php echo get_template_directory_uri() . '/build/video/Inferencing Speeds Background-2X.webm' ?>" type="video/webm">
                         <source src="<?php echo get_template_directory_uri() . '/build/video/Inferencing Speeds background-2X.mp4' ?>" type="video/mp4">
                     </video>
+                    <img src="<?php echo get_template_directory_uri() ?>/src/img/card-mobile-img1.svg" alt="Icon">
                 </div>
             </div>
         </div>
@@ -121,6 +122,7 @@ $section_11 = get_field('section_11') ?? [];
                         <source src="<?php echo get_template_directory_uri() . '/build/video/Ease-Of-Use-2X.webm' ?>" type="video/webm">
                         <source src="<?php echo get_template_directory_uri() . '/build/video/Ease-Of-Use-2X.mp4' ?>" type="video/mp4">
                     </video>
+                    <img src="<?php echo get_template_directory_uri() ?>/src/img/card-mobile-img2.svg" alt="Icon">
                 </div>
             </div>
 
@@ -137,6 +139,7 @@ $section_11 = get_field('section_11') ?? [];
                         <source src="<?php echo get_template_directory_uri() . '/build/video/59Afff - 2X.webm' ?>" type="video/webm">
                         <source src="<?php echo get_template_directory_uri() . '/build/video/59Afff - 2X.mp4' ?>" type="video/mp4">
                     </video>
+                    <img src="<?php echo get_template_directory_uri() ?>/src/img/card-mobile-img3.svg" alt="Icon">
                 </div>
             </div>
         </div>
@@ -154,6 +157,7 @@ $section_11 = get_field('section_11') ?? [];
                         <source src="<?php echo get_template_directory_uri() . '/build/video/Global Coverage-2X.webm' ?>" type="video/webm">
                         <source src="<?php echo get_template_directory_uri() . '/build/video/Global Coverage-2X.mp4' ?>" type="video/mp4">
                     </video>
+                    <img src="<?php echo get_template_directory_uri() ?>/src/img/card-mobile-img4.svg" alt="Icon">
                 </div>
             </div>
 
@@ -169,8 +173,9 @@ $section_11 = get_field('section_11') ?? [];
                     <h3><?php echo esc_html( $section_3['item_5']['title'] ) ?></h3>
                     <p><?php echo esc_html( $section_3['item_5']['content'] ) ?></p>
                 </div>
-                <div class="img-wrap">
-                    <img src="<?php echo wp_is_mobile() ? esc_url( $section_3['item_5']['a100_mobile'] ) : esc_url( $section_3['item_5']['a100'] ) ?>" alt="Economic computation power">
+                <div class="img-wrap desktop-item">
+                    <img class="desktop-img" src="<?php echo wp_is_mobile() ? esc_url( $section_3['item_5']['a100_mobile'] ) : esc_url( $section_3['item_5']['a100'] ) ?>" alt="Economic computation power">
+                    <img src="<?php echo get_template_directory_uri() ?>/src/img/card-mobile-img5.svg" alt="Icon">
                 </div>
             </div>
         </div>

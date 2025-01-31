@@ -171,8 +171,8 @@ function aitech_scripts() {
     wp_enqueue_style( 'swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), _S_VERSION );
     wp_enqueue_style('style', get_template_directory_uri() . '/build/assets/css/app.min.css', array('swiper-style'), _S_VERSION);
 
-    wp_enqueue_script('lenis', get_template_directory_uri() . '/js/lenis.js', array(), _S_VERSION, true);
-    wp_enqueue_script('custom-lenis-init', get_template_directory_uri() . '/js/lenis-init.js', array('lenis'), _S_VERSION, true);
+//    wp_enqueue_script('lenis', get_template_directory_uri() . '/js/lenis.js', array(), _S_VERSION, true);
+//    wp_enqueue_script('custom-lenis-init', get_template_directory_uri() . '/js/lenis-init.js', array('lenis'), _S_VERSION, true);
     wp_enqueue_script( 'marketplace-functions', get_template_directory_uri() . '/src/js/marketplace-functions.js', array('swiper'), _S_VERSION, true );
     wp_enqueue_script( 'homepage-functions', get_template_directory_uri() . '/src/js/homepage-functions.js', array('swiper'), _S_VERSION, true );
     wp_enqueue_script('aitech-cf7', get_template_directory_uri() . '/src/js/form/cf7.js', [], _S_VERSION, true);
@@ -200,7 +200,11 @@ function aitech_scripts() {
     wp_enqueue_script( 'video-functions', get_template_directory_uri() . '/src/js/scripts.js', array('swiper'), _S_VERSION, true );
 
     if (is_page_template('templates/aitech-labs.php')) {
+        wp_enqueue_script('theme-main-jQuery', 'https://code.jquery.com/jquery-3.7.1.min.js', [], '3.7.1', true);
         wp_enqueue_script('aitech-labs-functions', get_template_directory_uri() . '/src/js/aitech-labs-functions.js', array('swiper'), _S_VERSION, true);
+        wp_enqueue_script('select2', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js', ['theme-main-jQuery'], '4.0.13', true);
+        wp_enqueue_style('select2', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css', [], '4.0.13');
+        wp_enqueue_script('aitech-labs-select2', get_template_directory_uri() . '/src/js/select2.js', ['theme-main-jQuery'], _S_VERSION, true);
     }
 
     wp_enqueue_script('avoid-functions', get_template_directory_uri() . '/src/js/avoid.js', [], _S_VERSION, true);

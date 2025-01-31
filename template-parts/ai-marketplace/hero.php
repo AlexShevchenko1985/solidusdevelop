@@ -5,7 +5,7 @@
         $title        = get_sub_field('title');
         $text         = get_sub_field('text');
         $button       = get_sub_field('button');
-
+        $title        = get_sub_field('title');
         ?>
         <section id="section1" class="hero-inner-section">
             <?php if (!empty($video)): ?>
@@ -18,7 +18,9 @@
             <div class="container">
                 <div class="content-block">
                     <div class="heading">
-                        <h1>Solidus <span>AI</span> TECH</h1>
+                        <?php if (!empty($title)): ?>
+                            <h1><?php echo $title; ?></h1>
+                        <?php endif; ?>
 
                         <?php if (!empty($mobile_video)): ?>
                             <video playsinline="" autoplay="" muted="" loop="" poster="">

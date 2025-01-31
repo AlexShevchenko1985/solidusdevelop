@@ -23,11 +23,22 @@ get_header();
     get_template_part('template-parts/aitech-labs/hero', null, $hero);
     ?>
 
+
+
     <?php
     /**
-     * labs section
+     * incubation section
      */
-    get_template_part('template-parts/aitech-labs/labs', null, $labs);
+    get_template_part('template-parts/aitech-labs/incubation', null, $incubation);
+    ?>
+
+
+
+    <?php
+    /**
+     * why us section
+     */
+    get_template_part('template-parts/aitech-labs/why-aitech-labs', null, $why_aitech_labs);
     ?>
 
     <?php
@@ -39,9 +50,9 @@ get_header();
 
     <?php
     /**
-     * incubation section
+     * labs section
      */
-    get_template_part('template-parts/aitech-labs/incubation', null, $incubation);
+    get_template_part('template-parts/aitech-labs/labs', null, $labs);
     ?>
 
     <?php
@@ -49,13 +60,6 @@ get_header();
      * grant section
      */
     get_template_part('template-parts/aitech-labs/grant', null, $grant);
-    ?>
-
-    <?php
-    /**
-     * why us section
-     */
-    get_template_part('template-parts/aitech-labs/why-aitech-labs', null, $why_aitech_labs);
     ?>
 
     <?php

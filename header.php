@@ -107,11 +107,30 @@
                     </nav>
                 <?php endif; ?>
 
-                <div class="ajeeb">
-                    <div class="certik-emblem" data-id="bbfe9657">
-                        <a href="https://skynet.certik.com/projects/solidus-ai-tech?utm_source=SkyEmblem&utm_campaign=solidus-ai-tech&utm_medium=link">View project at certik.com</a>
-                    </div>
+                <div class="buttons-block">
+
+                    <?php
+                    $header_link_1 = get_field('header_link_1', 'options');
+                    if (!empty($header_link_1)): ?>
+                        <a class="vote-logo" href="<?php echo $header_link_1; ?>" target="_blank">
+                            <img src="https://aitech.io/wp-content/themes/solidus/build/img/images/8m.webp" width="128" height="34" alt="8m-logo">
+                        </a>
+                    <?php endif; ?>
+
+
+                    <?php
+                    $header_link_2 = get_field('header_link_2', 'options');
+                    if (!empty($header_link_2)): ?>
+                        <div class="ajeeb">
+                            <div class="certik-emblem" data-id="bbfe9657">
+                                <a href="<?php echo $header_link_2; ?>">View project at certik.com</a>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
                 </div>
+
+
                 <a href="javascript:void(0);" class="mobile-menu-btn">
                     <img class="menu-burger" src="<?php echo get_template_directory_uri() ?>/src/img/mobile-burger.svg" alt="Icon">
                     <img class="menu-cross" src="<?php echo get_template_directory_uri() ?>/src/img/menu-close.svg" alt="Icon">

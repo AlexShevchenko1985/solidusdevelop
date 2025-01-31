@@ -335,19 +335,45 @@
         }
       }
 
-      .ajeeb {
-        z-index: 10;
-        margin-right: 15px;
-        width: 180px;
-        height: 54px;
+      .buttons-block {
         display: none;
+        column-gap: 8px;
+        align-items: center;
         @include breakpoint(sm) {
-          display: block;
+          display: flex;
+        }
+        .vote-logo {
+          position: relative;
+          z-index: 1;
+          width: 126px;
+          height: 44px;
+          display: flex;
+          align-items: center;
+          border-radius: 14px;
+          background: #070707;
+          overflow: hidden;
+          padding: 0 5px;
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
 
-        &::part(ctk-clickable) {
-          left: auto !important;
-          right: 281px !important;
+        .ajeeb {
+          z-index: 10;
+          margin-right: 0;
+          width: 110px;
+          height: 40px;
+          margin-top: 5px;
+          display: none;
+          @include breakpoint(sm) {
+            display: block;
+          }
+
+          &::part(ctk-clickable) {
+            left: auto !important;
+            right: 281px !important;
+          }
         }
       }
 

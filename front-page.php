@@ -44,6 +44,14 @@ $coin_section = get_field('coin_section');
 
     <?php
     /**
+     * iframe section
+     *
+     */
+    get_template_part('template-parts/home/ai-frame', null, $card_section);
+    ?>
+
+    <?php
+    /**
      * numbers section
      *
      */

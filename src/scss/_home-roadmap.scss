@@ -81,9 +81,7 @@
     }
 
     &.preloader {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      position: relative;
       .loader-block {
         display: flex;
         justify-content: center;
@@ -93,7 +91,10 @@
         height: 250px;
         background-position: center;
         background-repeat: no-repeat;
-        position: relative;
+        position: absolute;
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        transform: translate(-50%, -50%);
         &:before {
           content: "";
           background-image: url(/wp-content/themes/aitech/src/img/ellipse.webp);
@@ -119,7 +120,6 @@
           -webkit-text-fill-color: rgba(0, 0, 0, 0);
         }
       }
-      h3,
       .content {
         display: none;
       }

@@ -14,6 +14,7 @@ function initSwiper() {
     spaceBetween: 16,
     watchOverflow: true,
     speed: 1000,
+    loopAdditionalSlides: 4,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

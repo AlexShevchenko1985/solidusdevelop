@@ -17,10 +17,18 @@ get_header();
                 <img src="<?php echo get_template_directory_uri() . '/build/img/sambanova-logo1.svg' ?>" alt="SambaNova">
                 <h1><?php echo esc_html($hero['title']) ?></h1>
                 <p><?php echo esc_html($hero['subtitle']) ?></p>
-                <div class="btn-wrap">
-                    <a href="<?php echo esc_url($hero['button_1_link']) ?>" class="btn green inverted"><?php echo esc_html($hero['button_1_text']) ?></a>
-                    <a href="<?php echo esc_url($hero['button_2_link']) ?>" class="btn green"><?php echo esc_html($hero['button_2_text']) ?></a>
-                </div>
+
+                <?php if (!empty($hero['button_1_text']) || !empty($hero['button_2_text'])): ?>
+                    <div class="btn-wrap">
+                        <?php if (!empty($hero['button_1_text'])): ?>
+                            <a href="<?php echo esc_url($hero['button_1_link']) ?>" class="btn green inverted"><?php echo esc_html($hero['button_1_text']) ?></a>
+                        <?php endif; ?>
+                        <?php if (!empty($hero['button_2_text'])): ?>
+                            <a href="<?php echo esc_url($hero['button_2_link']) ?>" class="btn green"><?php echo esc_html($hero['button_2_text']) ?></a>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+
             </div>
             <div class="hero__info">
                 <div class="girl">
@@ -72,8 +80,7 @@ get_header();
                         src="https://avachat-tg.ai.aitech.io/"
                         width="100%"
                         height="700px"
-                        style="border: none;"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                        style="border: none;">
                 </iframe>
             </div>
         </div>

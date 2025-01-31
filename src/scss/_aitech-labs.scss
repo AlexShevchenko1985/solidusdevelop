@@ -872,6 +872,61 @@
               .wpcf7-spinner {
                 display: none;
               }
+              select {
+                display: none;
+                option {
+                  display: none;
+                }
+              }
+
+
+              .select2-container {
+                width: 100% !important;
+                height: 48px;
+                margin-top: 8px;
+                .select2-selection.select2-selection--single {
+                  border: none;
+                  background: none;
+                  height: 48px;
+                }
+                .select2-selection__placeholder {
+                  color: $light-purple !important;
+                }
+                .select2-selection__rendered {
+                  font-family: 'Roboto', sans-serif;
+                  font-weight: 400;
+                  padding: 10px 16px;
+                  border: 1px solid rgba(117, 104, 151, 0.3);
+                  font-size: 12px;
+                  line-height: 26px;
+                  color: $light-purple !important;
+                  background: rgba(1, 2, 10, 0.3);
+                  border-radius: 6px;
+                  width: 100%;
+                  opacity: 1;
+                  transition: all .3s;
+                  &:hover {
+                    border: 1px solid dimgray;
+                  }
+                }
+                .select2-selection__arrow {
+                  top: 50%;
+                  transform: translateY(-50%);
+                  background-image: url("/wp-content/themes/aitech/src/img/arrow-select.svg");
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  right: 10px;
+                  width: 16px;
+                  b {
+                    display: none;
+                  }
+                }
+                &.select2-container--open {
+                  .select2-selection__arrow {
+                    background-image: url("/wp-content/themes/aitech/src/img/arrow-select.svg");
+                  }
+                }
+              }
               .wpcf7-response-output {
                 display: none;
               }
@@ -1029,4 +1084,69 @@
 
     }
   }
+}
+
+.select2-container--open .select2-dropdown {
+  background: rgba(1, 2, 10, 1);
+  border: 1px solid rgba(117, 104, 151, 0.3);
+  border-top: 1px solid rgba(117, 104, 151, 0.3) !important;
+  border-radius: 6px !important;
+  padding: 8px 0;
+  margin-top: 8px;
+
+  .select2-results__option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    padding: 8px 24px 8px 16px;
+    color: rgba(225, 227, 254, 1);
+  }
+}
+
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: transparent !important;
+  position: relative;
+  &:after {
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(/wp-content/themes/aitech/src/img/arrow-selected.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+  }
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: transparent !important;
+}
+
+.select2-results__options::-webkit-scrollbar {
+  width: 16px;
+  background-clip: padding-box;
+}
+.select2-results__options::-webkit-scrollbar-track {
+  background-color: #756897;
+  height: 8px;
+  background-clip: padding-box;
+  border-right: 12px solid rgba(0, 0, 0, 0);
+  border-top: 12px solid rgba(0, 0, 0, 0);
+  border-bottom: 12px solid rgba(0, 0, 0, 0);
+}
+
+.select2-results__options::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-color: #756897;
+  border-right: 12px solid rgba(0, 0, 0, 0);
+  border-top: 12px solid rgba(0, 0, 0, 0);
+  border-bottom: 12px solid rgba(0, 0, 0, 0);
+}
+
+.select2-results__options::-webkit-scrollbar-button {
+  display: none;
 }

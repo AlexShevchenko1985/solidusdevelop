@@ -15,18 +15,19 @@
                     <div class="swiper js-grid-slider">
                         <div class="swiper-wrapper">
                             <?php foreach ($cards as $card):
-                                $icon  = !empty($card['icon'])? $card['icon']['sizes']['thumbnail'] : get_template_directory_uri() . '/src/img/grid-icon1.svg';
-                                $video = !empty($card['video'])? $card['video'] : '';
-                                $title = !empty($card['title'])? $card['title'] : '';
-                                $text  = !empty($card['text'])? $card['text'] : '';
-                                $mp4  = !empty($card['mp4_video'])? $card['mp4_video'] : '';
+                                $icon             = !empty($card['icon'])? $card['icon']['sizes']['thumbnail'] : get_template_directory_uri() . '/src/img/grid-icon1.svg';
+                                $video            = !empty($card['video'])? $card['video'] : '';
+                                $title            = !empty($card['title'])? $card['title'] : '';
+                                $text             = !empty($card['text'])? $card['text'] : '';
+                                $mp4              = !empty($card['mp4_video'])? $card['mp4_video'] : '';
+                                $mobile_image_url = !empty($card['mobile_image'])? wp_get_attachment_image_url($card['mobile_image'], 'medium_large') : get_template_directory_uri() . '/src/img/product-mobile-img.svg';
                                 ?>
                                 <div class="swiper-slide">
                                     <div class="icon">
                                         <img src="<?php echo $icon; ?>" alt="Icon">
                                     </div>
                                     <div class="slide-holder">
-                                        <?php if (!empty($video)): ?>
+
                                             <div class="bg">
                                                 <div class="media-block">
                                                     <video playsinline="" muted="" loop="" >
@@ -35,15 +36,9 @@
                                                         <source src="<?php echo $mp4; ?>" type="video/mp4">
                                                         <?php endif; ?>
                                                     </video>
+                                                    <img src="<?php echo $mobile_image_url; ?>" alt="<?php echo $title; ?>">
                                                 </div>
                                             </div>
-                                        <?php else: ?>
-                                            <div class="bg">
-                                                <div class="media-block">
-                                                    <img src="<?php echo get_template_directory_uri() ?>/src/img/ex-img.webp" alt="Icon">
-                                                </div>
-                                            </div>
-                                        <?php endif; ?>
 
                                         <div class="content">
                                             <?php if (!empty($title)): ?>
