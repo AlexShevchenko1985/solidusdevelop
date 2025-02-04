@@ -10,8 +10,8 @@
         <section id="section1" class="hero-inner-section">
             <?php if (!empty($video)): ?>
                 <video playsinline="" autoplay="" muted="" loop="">
-                    <source src="<?php echo get_template_directory_uri() . '/src/video/ai-hero-video.webm'; ?>" type="video/webm">
                     <source src="<?php echo $video['url']; ?>" type="video/mp4">
+                    <source src="<?php echo get_template_directory_uri() . '/src/video/ai-hero-video.webm'; ?>" type="video/webm">
                 </video>
             <?php endif; ?>
 
@@ -24,8 +24,8 @@
 
                         <?php if (!empty($mobile_video)): ?>
                             <video playsinline="" autoplay="" muted="" loop="" poster="">
-                                <source src="<?php echo get_template_directory_uri() . '/src/video/ai-hero-video.webm'; ?>" type="video/webm">
                                 <source src="<?php echo $mobile_video['url']; ?>" type="video/mp4">
+                                <source src="<?php echo get_template_directory_uri() . '/src/video/ai-hero-video.webm'; ?>" type="video/webm">
                             </video>
                         <?php endif; ?>
 

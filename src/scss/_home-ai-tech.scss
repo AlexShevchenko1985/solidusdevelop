@@ -21,12 +21,15 @@
 
     .item {
       position: relative;
-      width: calc(100% - 16px);
+      width: calc(100% - 46px);
       margin-left: 16px;
+      padding-left: 30px;
+
 
       @include breakpoint(sm) {
         width: 50%;
         height: 837px;
+        padding-left: 0;
       }
 
       &:before {

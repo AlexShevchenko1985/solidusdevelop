@@ -187,11 +187,12 @@
         flex-direction: column;
         gap: 19px;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 12px;
+        line-height: 16px;
         max-width: 369px;
         font-family: Roboto Flex;
         justify-content: space-between;
+        margin-top: 24px;
 
         @include breakpoint(sm) {
           background-image: url("../../img/labs-hero-bg.webp");
@@ -199,6 +200,9 @@
           background-size: 100% 100%;
           padding: 44px 40px;
           text-align: left;
+          font-size: 18px;
+          line-height: 24px;
+          margin-top: 0;
         }
 
         a {
@@ -525,7 +529,7 @@
         bottom: 0;
         right: 0;
         z-index: 1;
-        height: fit-content;
+        height: auto;
 
         @include breakpoint(xs) {
           top: 0;
@@ -550,7 +554,10 @@
         }
 
         img {
-          height: 100%;
+          height: auto;
+          @include breakpoint(xs) {
+            height: 100%;
+          }
         }
       }
 
@@ -1004,7 +1011,7 @@
                 text-align: left;
                 font-size: 18px;
                 line-height: 18px;
-                color: $light-purple;
+                color: $white;
                 position: relative;
                 width: 100%;
                 display: block;

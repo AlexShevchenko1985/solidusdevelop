@@ -31,9 +31,11 @@
                                             <div class="bg">
                                                 <div class="media-block">
                                                     <video playsinline="" muted="" loop="" >
-                                                        <source src="<?php echo $video['url']; ?>" type="video/webm">
                                                         <?php if ( !empty( $mp4 ) ) : ?>
-                                                        <source src="<?php echo $mp4; ?>" type="video/mp4">
+                                                            <source src="<?php echo $mp4; ?>" type="video/mp4">
+                                                        <?php endif; ?>
+                                                        <?php if (!empty($video)): ?>
+                                                            <source src="<?php echo $video['url']; ?>" type="video/webm">
                                                         <?php endif; ?>
                                                     </video>
                                                     <img src="<?php echo $mobile_image_url; ?>" alt="<?php echo $title; ?>">

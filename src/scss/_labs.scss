@@ -68,7 +68,12 @@
     padding-bottom: 32px;
 
     .coinmarketcap-currency-widget {
-      height: auto;
+      height: 253px;
+      max-width: 398px;
+      @include breakpoint(sm) {
+        height: auto;
+        max-width: 100%;
+      }
 
       & > div {
         border: none !important;
@@ -77,8 +82,12 @@
         justify-content: space-between !important;
         height: 100%;
         background-image: url("../../img/labs-item-bg.png");
-        background-size: 100% 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
         padding: 34px 24px;
+        @include breakpoint(sm) {
+          background-size: 100% 100%;
+        }
 
         & > div {
           border: none !important;

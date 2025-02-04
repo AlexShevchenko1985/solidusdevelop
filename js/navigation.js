@@ -126,9 +126,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	const switcher = document.querySelector(".section-unlock .switcher");
-	const switcherImg = document.querySelector(".section-unlock .img-wrap img");
+	const switcherImg = document.querySelector(".tab-img .img-wrap img");
+
+
 
 	if (switcher) {
+
 		switcher.querySelectorAll('span').forEach((item) => {
 			item.addEventListener("click", () => {
 				const newSrc =  isMobileView ? item.dataset.src_mobile : item.dataset.src;
@@ -201,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function changeImage( img, src ) {
-	img.classList.add("is-changing");
+	img.classList.add("desktop-img");
 
 	setTimeout(() => {
 		img.src = src;

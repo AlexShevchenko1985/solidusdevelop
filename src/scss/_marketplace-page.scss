@@ -337,7 +337,7 @@ body {
         grid-template-columns: repeat(5, 1fr);
       }
       .swiper-slide {
-        max-width: 280px;
+        max-width: 260px;
         position: relative;
         @include breakpoint(sm) {
           max-width: 100%;

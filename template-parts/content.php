@@ -66,12 +66,12 @@ $x = get_field('x', 'option');
         <div class="share">
             Share this
 
-            <?php if ( !empty( $discord ) ) : ?>
-                <a href="<?php echo esc_url($discord) ?>" target="_blank" class="socials__item"><img src="<?= get_template_directory_uri() . '/build/img/tg.svg' ?>" alt="Discord"></a>
+            <?php if ( !empty( $telegram ) ) : ?>
+                <a href="<?php echo esc_url($telegram) ?>" target="_blank" class="socials__item"><img src="<?= get_template_directory_uri() . '/build/img/tg.svg' ?>" alt="Discord"></a>
             <?php endif; ?>
 
-            <?php if ( !empty( $telegram ) ) : ?>
-                <a href="<?php echo esc_url($telegram) ?>" target="_blank" class="socials__item"><img src="<?= get_template_directory_uri() . '/build/img/discord.svg' ?>" alt="Telegram"></a>
+            <?php if ( !empty( $discord ) ) : ?>
+                <a href="<?php echo esc_url($discord) ?>" target="_blank" class="socials__item"><img src="<?= get_template_directory_uri() . '/build/img/discord.svg' ?>" alt="Telegram"></a>
             <?php endif; ?>
 
             <?php if ( !empty( $x ) ) : ?>

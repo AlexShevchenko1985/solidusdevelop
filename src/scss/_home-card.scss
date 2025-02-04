@@ -22,6 +22,12 @@
 
   &__inner-item {
     position: relative;
+    max-width: 440px;
+    margin: 0 auto;
+    @include breakpoint(md) {
+      max-width: 100%;
+      margin: 0;
+    }
 
     .card-wrap {
       padding: 24px 40px 280px;
@@ -44,6 +50,7 @@
         border-radius: inherit;
         mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
         z-index: 2;
+        filter: grayscale(1);
       }
 
       @include breakpoint(md) {
@@ -78,12 +85,12 @@
 
     &:first-child {
       .card-wrap {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url(/wp-content/themes/aitech/src/img/home-card-mobile-bg-1.webp);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url(/wp-content/themes/aitech/src/img/home-card-mobile-bg1.svg);
       }
 
       @include breakpoint(md) {
         .card-wrap {
-          background-image: url(/wp-content/themes/aitech/src/img/home-card-bg-1.webp);
+          background-image: url(/wp-content/themes/aitech/src/img/home-card-bg1.svg);
         }
 
         .corner-element {
@@ -97,10 +104,10 @@
         }
 
         h3 {
-          margin-left: 80px;
+          margin-left: 66px;
         }
         .card-subtitle {
-          margin-left: 80px;
+          margin-left: 66px;
         }
 
         .card-content {
@@ -115,19 +122,20 @@
       }
 
       .card-wrap {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url(/wp-content/themes/aitech/src/img/home-card-mobile-bg-2.svg);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url(/wp-content/themes/aitech/src/img/home-card-mobile-bg2.webp);
+        filter: grayscale(1);
       }
 
       @include breakpoint(md) {
         .card-wrap {
-          background-image: url(/wp-content/themes/aitech/src/img/home-card-bg-2.svg);
+          background-image: url(/wp-content/themes/aitech/src/img/home-card-bg2.svg);
         }
         h3 {
-          margin-left: 80px;
+          margin-left: 66px;
           max-width: 270px;
         }
         .card-subtitle {
-          margin-left: 80px;
+          margin-left: 66px;
         }
         .card-content {
           max-width: 287px;
@@ -150,7 +158,7 @@
       }
 
       .card-wrap {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url(/wp-content/themes/aitech/src/img/home-card-mobile-bg-3.webp);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url(/wp-content/themes/aitech/src/img/home-card-mobile-bg3.svg);
 
         @include breakpoint(md) {
           padding: 24px 40px 24px;
@@ -191,7 +199,7 @@
         }
 
         .card-wrap {
-          background-image: url(/wp-content/themes/aitech/src/img/home-card-bg-3.webp);
+          background-image: url(/wp-content/themes/aitech/src/img/home-card-bg3.svg);
         }
 
         .corner-element {
@@ -212,11 +220,13 @@
 
       .card-wrap {
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 300px), url(/wp-content/themes/aitech/src/img/telegram-mobile.svg);
+        filter: grayscale(1);
       }
 
       @include breakpoint(md) {
         .card-wrap {
-          background-image: url(/wp-content/themes/aitech/src/img/home-card-bg-4.webp);
+          background-image: url(/wp-content/themes/aitech/src/img/home-card-bg4.svg);
+          filter: none;
         }
         h3 {
           margin-left: 66px;
@@ -252,6 +262,7 @@
       background-image: url("../../img/home-corner-element-corner.svg");
       width: 80px;
       height: 150px;
+      filter: grayscale(1);
 
       img {
         width: 50px;
@@ -287,6 +298,7 @@
       -webkit-text-fill-color: rgba(0, 0, 0, 0);
       margin-bottom: 16px;
       margin-left: 40px;
+      filter: grayscale(1);
 
       @include breakpoint(sm) {
         font-size: 40px;
@@ -304,6 +316,7 @@
       font-weight: 400;
       line-height: 16px;
       margin-left: 40px;
+      filter: grayscale(1);
 
       @include breakpoint(md) {
         margin-left: 0;
@@ -317,6 +330,7 @@
       font-size: 12px;
       line-height: 16px;
       font-weight: 400;
+      filter: grayscale(1);
 
       ul {
         list-style-type: disc;

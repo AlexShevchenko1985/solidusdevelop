@@ -14,10 +14,10 @@
                         </div>
                     <?php else: ?>
                         <video playsinline="" autoplay="" muted="" loop="" poster="">
-                            <source src="<?php echo $video['url']; ?>" type="video/webm">
                             <?php if (!empty($video_mp4)): ?>
                                 <source src="<?php echo $video_mp4; ?>" type="video/mp4">
                             <?php endif; ?>
+                            <source src="<?php echo $video['url']; ?>" type="video/webm">
                         </video>
                     <?php endif; ?>
                 </div>

@@ -76,6 +76,7 @@
     <?php endif; ?>
 
 	<div class="logo-slider">
+        <div class="container">
         <?php if ( !empty($args['title']) ) : ?>
         <p><?= esc_html($args['title']) ?></p>
         <?php endif; ?>
@@ -101,6 +102,7 @@
 
             </div>
             <?php endif; ?>
+        </div>
         </div>
     </div>
 </section>

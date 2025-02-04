@@ -28,7 +28,7 @@
         </div>
         <div class="img-wrap">
             <video playsinline autoplay muted loop poster="">
-                <source src="<?php echo get_template_directory_uri() ?>/src/img/Coin-1X2.mp4' ?>" type="video/mp4">
+                <source src="<?php echo get_template_directory_uri() . '/build/video/coin-2_x_new.webm' ?>" type="video/webm">
             </video>
         </div>
     </div>

@@ -120,36 +120,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const logoItems = document.querySelectorAll('.partners-section .logo-item');
-  let animationInterval;
-
-
-  function toggleAnimation() {
-    logoItems.forEach(item => {
-      if (item.classList.contains('back-side-active')) {
-        item.classList.add('front-side-active');
-        item.classList.remove('back-side-active');
-      } else {
-        item.classList.remove('front-side-active');
-        item.classList.add('back-side-active');
-      }
-    });
-  }
-
-  function startAnimation() {
-    animationInterval = setInterval(toggleAnimation, 2500);
-  }
-
-  function stopAnimation() {
-    clearInterval(animationInterval);
-  }
-
-  logoItems.forEach(item => {
-    item.addEventListener('mouseenter', stopAnimation);
-    item.addEventListener('mouseleave', startAnimation);
-  });
-
-  startAnimation();
+  // const logoItems = document.querySelectorAll('.partners-section .logo-item');
+  // let animationInterval;
+  //
+  //
+  // function toggleAnimation() {
+  //   logoItems.forEach(item => {
+  //     if (item.classList.contains('back-side-active')) {
+  //       item.classList.add('front-side-active');
+  //       item.classList.remove('back-side-active');
+  //     } else {
+  //       item.classList.remove('front-side-active');
+  //       item.classList.add('back-side-active');
+  //     }
+  //   });
+  // }
+  //
+  // function startAnimation() {
+  //   animationInterval = setInterval(toggleAnimation, 2500);
+  // }
+  //
+  // function stopAnimation() {
+  //   clearInterval(animationInterval);
+  // }
+  //
+  // logoItems.forEach(item => {
+  //   item.addEventListener('mouseenter', stopAnimation);
+  //   item.addEventListener('mouseleave', startAnimation);
+  // });
+  //
+  // startAnimation();
 
   const powerfulProductsHolder = document.querySelector('.powerful-products-holder');
   if (!powerfulProductsHolder) {
